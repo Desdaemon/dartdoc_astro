@@ -1,0 +1,2 @@
+exclude:
+  - '../polars_dart/packages/polars/lib/src'
