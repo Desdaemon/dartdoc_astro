@@ -262,6 +262,16 @@ Parameter|Type|Default|
 `offset`|<code>int?</code>||
 `hint`|<code>dynamic</code>||
 
+## `DataFrameExt` extensions
+### Methods
+#### `[]`
+<code><strong>[Series] []</strong>(key);</code>
+
+ Retrieves the columns either by name or index.
+Parameter|Type|Default|
+-|-|-|
+`key`|<code>Object</code>||
+
 [dynamic]: #
 [DataFrame]: /reference/classes/dataframe
 [Series]: /reference/classes/series

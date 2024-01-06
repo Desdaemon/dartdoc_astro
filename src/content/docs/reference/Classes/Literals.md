@@ -79,6 +79,19 @@ Parameter|Type|Default|
 -|-|-|
 `field0`|<code>[PSeries]</code>||
 
+## `LiteralsExt` extensions
+### Methods
+#### `LiteralsExt.from`
+<code><strong>static [Literals] from</strong>(value, dtype);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`value`|<code>dynamic</code>||
+`dtype`|<code>[DataType]</code>||
+
 [Int64List]: /reference/classes/int64list
 [DataType]: /reference/classes/datatype
 [PSeries]: /reference/classes/pseries
+[Literals]: /reference/classes/literals
+[dynamic]: #

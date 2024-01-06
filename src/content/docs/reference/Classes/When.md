@@ -36,5 +36,6 @@ Parameter|Type|Default|
 -|-|-|
 `otherwise`|<code>Object?</code>||
 
+
 [Expr]: /reference/classes/expr
 [When]: /reference/classes/when

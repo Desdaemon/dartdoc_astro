@@ -106,5 +106,6 @@ Parameter|Type|Default|
 
  Some logical types we cannot know statically, e.g. Datetime
 
+
 [TimeUnit]: /reference/enums/timeunit
 [DataType]: /reference/classes/datatype

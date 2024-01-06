@@ -130,9 +130,17 @@ Parameter|Type|Default|
 `series`|<code>[Series]</code>||
 `hint`|<code>dynamic</code>||
 
+## `LiteralValueExt` extensions
+### Properties
+#### `expr`
+<code>[Expr] get expr;</code>
+
+ Returns an expression representing this literal value.
+
 [DataType]: /reference/classes/datatype
 [TimeUnit]: /reference/enums/timeunit
 [SpecialEqPSeries]: /reference/classes/specialeqpseries
 [LiteralValue]: /reference/classes/literalvalue
 [Series]: /reference/classes/series
 [dynamic]: #
+[Expr]: /reference/classes/expr

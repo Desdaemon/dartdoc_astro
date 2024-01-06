@@ -50,5 +50,6 @@ Parameter|Type|Default|
 `n`|<code>int?</code>||
 `hint`|<code>dynamic</code>||
 
+
 [dynamic]: #
 [LazyFrame]: /reference/classes/lazyframe

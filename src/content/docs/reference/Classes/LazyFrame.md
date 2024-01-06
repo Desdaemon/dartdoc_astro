@@ -339,6 +339,7 @@ Parameter|Type|Default|
 `offset`|<code>int?</code>||
 `hint`|<code>dynamic</code>||
 
+
 [dynamic]: #
 [LazyFrame]: /reference/classes/lazyframe
 [Expr]: /reference/classes/expr

@@ -15,4 +15,5 @@ Parameter|Type|Default|
 -|-|-|
 `field0`|<code>[WindowMapping]</code>||
 
+
 [WindowMapping]: /reference/enums/windowmapping

@@ -47,3 +47,4 @@ Parameter|Type|Default|
 -|-|-|
 `other`|<code>Object</code>||
 
+

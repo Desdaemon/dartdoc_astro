@@ -37,4 +37,5 @@ Parameter|Type|Default|
 -|-|-|
 `other`|<code>Object</code>||
 
+
 [DataType]: /reference/classes/datatype

@@ -1095,6 +1095,245 @@ Parameter|Type|Default|
 `ambiguous`|<code>[Ambiguous]</code>|`Ambiguous.raise`|
 `hint`|<code>dynamic</code>||
 
+## `ExprExt` extensions
+### Properties
+#### `aggGroups`
+<code>[Expr] get aggGroups;</code>
+
+
+#### `explode`
+<code>[Expr] get explode;</code>
+
+
+#### `flatten`
+<code>[Expr] get flatten;</code>
+
+ Alias for [explode].
+#### `first`
+<code>[Expr] get first;</code>
+
+
+#### `last`
+<code>[Expr] get last;</code>
+
+
+#### `implode`
+<code>[Expr] get implode;</code>
+
+
+#### `nUnique`
+<code>[Expr] get nUnique;</code>
+
+
+#### `nanMax`
+<code>[Expr] get nanMax;</code>
+
+
+#### `nanMin`
+<code>[Expr] get nanMin;</code>
+
+
+#### `str`
+<code>[StrNamespace] get str;</code>
+
+
+### Methods
+#### `<`
+<code><strong>[Expr] <</strong>(other);</code>
+
+ Returns an expression evaluating whether this is less than [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `<=`
+<code><strong>[Expr] <=</strong>(other);</code>
+
+ Returns an expression evaluating whether this is no greater than [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `>`
+<code><strong>[Expr] ></strong>(other);</code>
+
+ Returns an expression evaluating whether this is greater than [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `>=`
+<code><strong>[Expr] >=</strong>(other);</code>
+
+ Returns an expression evaluating whether this is no lesser than [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `+`
+<code><strong>[Expr] +</strong>(other);</code>
+
+ Returns an expression representing the sum of this and [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `-`
+<code><strong>[Expr] -</strong>(other);</code>
+
+ Returns an expression representing the difference of this and [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `*`
+<code><strong>[Expr] *</strong>(other);</code>
+
+ Returns an expression representing the product of this and [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `/`
+<code><strong>[Expr] /</strong>(other);</code>
+
+ Returns an expression representing the division of this and [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `~/`
+<code><strong>[Expr] ~/</strong>(other);</code>
+
+ Returns an expression representing the integral division of this and [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `%`
+<code><strong>[Expr] %</strong>(other);</code>
+
+ Performs a modulo operation on this and [other].
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `&`
+<code><strong>[Expr] &</strong>(other);</code>
+
+ Returns an expression evaluating whether both this and [other] are true.
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `|`
+<code><strong>[Expr] |</strong>(other);</code>
+
+ Returns an expression evaluating whether either this or [other] is true.
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `^`
+<code><strong>[Expr] ^</strong>(other);</code>
+
+ Returns an expression evaluating whether at most one of this and [other] is true,
+ i.e. whether this and [other] are not equal.
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `head`
+<code><strong>[Expr] head</strong>({<i>length</i>});</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`length`|<code>int</code>|`10`|
+#### `tail`
+<code><strong>[Expr] tail</strong>({<i>length</i>});</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`length`|<code>int</code>|`10`|
+#### `alias`
+<code><strong>[Expr] alias</strong>(name);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`name`|<code>String</code>||
+#### `cast`
+<code><strong>[Expr] cast</strong>(dataType, {<i>strict</i>});</code>
+
+ Attempt to [cast](https://docs.pola.rs/user-guide/expressions/casting) a column's [DataType] to a new one.
+
+ By default, strict mode is enabled and restricts certain types of casts:
+ - String-to-numeric casts will throw if the string cannot be parsed as a number.
+ - Downcasts (e.g. [int64] to [int32]) that result in overflowing values will throw.
+
+ When strict mode is disabled, these casts will return null instead.
+Parameter|Type|Default|
+-|-|-|
+`dataType`|<code>[DataType]</code>||
+`strict`|<code>bool</code>|`true`|
+#### `equalMissing`
+<code><strong>[Expr] equalMissing</strong>(other);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `notEqualMissing`
+<code><strong>[Expr] notEqualMissing</strong>(other);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>Object?</code>||
+#### `exclude`
+<code><strong>[Expr] exclude</strong>(columns);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`columns`|<code>Iterable\<String></code>||
+#### `filter`
+<code><strong>[Expr] filter</strong>({<strong>required</strong> by});</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`by`|<code>Object?</code>||
+#### `get`
+<code><strong>[Expr] get</strong>(idx);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`idx`|<code>Object?</code>||
+#### `gather`
+<code><strong>[Expr] gather</strong>(idx);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`idx`|<code>Object?</code>||
+#### `slice`
+<code><strong>[Expr] slice</strong>(offset, length);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`offset`|<code>int</code>||
+`length`|<code>int</code>||
+#### `sort`
+<code><strong>[Expr] sort</strong>({<i>descending</i>, <i>multithreaded</i>, <i>maintainOrder</i>, <i>nullsLast</i>});</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`descending`|<code>bool</code>|`false`|
+`multithreaded`|<code>bool</code>|`true`|
+`maintainOrder`|<code>bool</code>|`false`|
+`nullsLast`|<code>bool</code>|`false`|
+#### `std`
+<code><strong>[Expr] std</strong>(ddof);</code>
+
+ Calculate the standard deviation of this expression with the specified
+ [ddof] or [delta degrees of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)).
+Parameter|Type|Default|
+-|-|-|
+`ddof`|<code>int</code>||
+
 [Expr]: /reference/classes/expr
 [LiteralValue]: /reference/classes/literalvalue
 [Operator]: /reference/enums/operator
@@ -1109,3 +1348,4 @@ Parameter|Type|Default|
 [IsSorted]: /reference/enums/issorted
 [TimeUnit?]: /reference/enums/timeunit
 [Ambiguous]: /reference/enums/ambiguous
+[StrNamespace]: /reference/classes/strnamespace

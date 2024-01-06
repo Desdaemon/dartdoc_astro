@@ -31,5 +31,6 @@ Parameter|Type|Default|
 `fields`|<code>List\<Field></code>||
 `hint`|<code>dynamic</code>||
 
+
 [dynamic]: #
 [Schema]: /reference/classes/schema

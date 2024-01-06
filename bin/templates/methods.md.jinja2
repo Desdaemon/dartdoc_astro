@@ -1,0 +1,10 @@
+{% for it in it.methods if it.isPublic %}
+{% if loop.first %}
+### Methods
+{% endif %}
+#### `{%if it.isStatic %}{{className}}.{% endif %}{{it.name}}`
+<code><strong>{% if it.isStatic %}static {% endif %}{{it.returnType | link}} {{it.name}}</strong>({{it.params | params}});</code>
+
+{{it.docs}}
+{% include "params_table.md.jinja2" %}
+{% endfor %}

@@ -1,0 +1,17 @@
+---
+title: {{it.name}}
+description: |
+  {{it.docs | summarize}}
+---
+<code><strong>{{it.returnType | link}} {{it.name}}</strong>({{it.params | params}}){% if it.modifier %} {{it.modifier}}{% endif %};</code>
+
+{{it.docs}}
+
+{% include "params_table.md.jinja2" %}
+
+### Implementation
+```dart
+{{it | displaySource}}
+```
+
+{{generateReferences()}}

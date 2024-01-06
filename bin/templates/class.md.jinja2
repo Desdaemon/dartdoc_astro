@@ -26,15 +26,15 @@ description: |
 {{it.docs}}
 {% include "params_table.md.jinja2" %}
 {% endfor %}
-{% for it in it.methods if it.isPublic %}
-{% if loop.first %}
-### Methods
-{% endif %}
-#### `{%if it.isStatic %}{{className}}.{% endif %}{{it.name}}`
-<code><strong>{% if it.isStatic %}static {% endif %}{{it.returnType | link}} {{it.name}}</strong>({{it.params | params}});</code>
+{% include "methods.md.jinja2" %}
 
-{{it.docs}}
-{% include "params_table.md.jinja2" %}
+{% for it in it.extensions %}
+{% if loop.first %}
+## `{{it.name}}` extensions
+{% endif %}
+{% include "props.md.jinja2" %}
+{% set className = it.name %}
+{% include "methods.md.jinja2" %}
 {% endfor %}
 
 {{generateReferences()}}

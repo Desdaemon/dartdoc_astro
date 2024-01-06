@@ -545,6 +545,51 @@ Parameter|Type|Default|
 `ddof`|<code>int</code>||
 `hint`|<code>dynamic</code>||
 
+## `SeriesExt` extensions
+### Methods
+#### `[]`
+<code><strong>double? []</strong>(index);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`index`|<code>int</code>||
+#### `+`
+<code><strong>[Series] +</strong>(other);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Series]</code>||
+#### `-`
+<code><strong>[Series] -</strong>(other);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Series]</code>||
+#### `*`
+<code><strong>[Series] *</strong>(other);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Series]</code>||
+#### `/`
+<code><strong>[Series] /</strong>(other);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Series]</code>||
+#### `%`
+<code><strong>[Series] %</strong>(other);</code>
+
+
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Series]</code>||
+
 [dynamic]: #
 [Series]: /reference/classes/series
 [void]: #
