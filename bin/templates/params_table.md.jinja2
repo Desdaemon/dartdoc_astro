@@ -1,0 +1,7 @@
+{% for param in it.params %}
+{% if loop.first %}
+Parameter|Type|Default|
+-|-|-|
+{% endif %}
+`{{param.name}}`|<code>{{param.type | link}}</code>|{% if param.default %}`{{param.default}}`{% endif %}|
+{% endfor %}

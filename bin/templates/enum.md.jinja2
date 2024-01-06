@@ -1,0 +1,20 @@
+---
+title: "{{it.name}}"
+description: |
+  {{it.docs | summarize}}
+---
+{{it.docs}}
+
+### Values
+
+<dl>
+{% for it in it.fields if it.isEnumConstant %}
+  <dt><code>{{it.name}}</code></dt>
+  <dd>
+  
+{{it.docs}}
+  </dd>
+{% endfor %}
+</dl>
+
+{% include "props.md.jinja2" %}

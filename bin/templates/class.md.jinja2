@@ -1,0 +1,40 @@
+---
+title: "{{it.name}}"
+description: |
+  {{it.docs | summarize}}
+---
+{{it.docs}}
+
+{% for it in it.fields if it.isPublic and not it.isSynthetic %}
+{% if loop.first %}
+### Fields
+{% endif %}
+#### `{{it.name}}`
+<code>{% if it.isStatic %}static {% endif %}{% if it.isFinal %}final {% endif %}{{it.type | link}} {{it.name}};</code>
+
+{{it.docs}}
+{% endfor %}
+{% include "props.md.jinja2" %}
+{% set className = it.name %}
+{% for it in it.constructors if it.isPublic %}
+{% if loop.first %}
+### Constructors
+{% endif %}
+#### `.{{it.name | defaultIfBlank('new')}}`
+<code><strong>{% if it.isConst %}const {% endif %}{% if it.isFactory %}factory {% endif %}{{className}}{% if it.name.isNotEmpty %}.{{it.name}}{% endif %}</strong>({{it.params | params}});</code>
+
+{{it.docs}}
+{% include "params_table.md.jinja2" %}
+{% endfor %}
+{% for it in it.methods if it.isPublic %}
+{% if loop.first %}
+### Methods
+{% endif %}
+#### `{%if it.isStatic %}{{className}}.{% endif %}{{it.name}}`
+<code><strong>{% if it.isStatic %}static {% endif %}{{it.returnType | link}} {{it.name}}</strong>({{it.params | params}});</code>
+
+{{it.docs}}
+{% include "params_table.md.jinja2" %}
+{% endfor %}
+
+{{generateReferences()}}

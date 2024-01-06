@@ -5,27 +5,21 @@ description: |
 ---
 
 
-
-## Constructors
-### `.dcoDecode`
+### Constructors
+#### `.dcoDecode`
 <code><strong>OptionSchema.dcoDecode</strong>(wire);</code>
 
 
-Parameter|Type|Default
--|-|-
-`wire`|<code>dynamic</code>|``|
-
-
-### `.sseDecode`
+Parameter|Type|Default|
+-|-|-|
+`wire`|<code>dynamic</code>||
+#### `.sseDecode`
 <code><strong>OptionSchema.sseDecode</strong>(ptr, externalSizeOnNative);</code>
 
 
-Parameter|Type|Default
--|-|-
-`ptr`|<code>int</code>|``|
-`externalSizeOnNative`|<code>int</code>|``|
-
-
-## Methods
+Parameter|Type|Default|
+-|-|-|
+`ptr`|<code>int</code>||
+`externalSizeOnNative`|<code>int</code>||
 
 [dynamic]: #

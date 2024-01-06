@@ -9,7 +9,9 @@ import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:glob/glob.dart';
 import 'package:glob/list_local_fs.dart';
+import 'package:jinja/loaders.dart';
 import 'package:yaml/yaml.dart' as yaml;
+import 'package:jinja/jinja.dart';
 
 void eprintln(Object? msg) => io.stderr.writeln(msg);
 
@@ -163,43 +165,50 @@ class CompositeLibrary {
   @inline
   bool _isVisible(LibraryExportElement export, Element elm) =>
       _isPublic(elm) &&
+      !(elm.documentationComment?.contains('@nodoc') ?? false) &&
       _filter
           .putIfAbsent(export, () => Filter.fromExport(export))
           .isAllowed(elm.name!);
 }
 
 Future<void> main(List<String> arguments) async {
+  await run(arguments).drain();
+}
+
+Stream<Future<void>> run(List<String> arguments) async* {
   final config = Config.merge(arguments);
   if (config.included.isEmpty) {
     config.included = const ['.'];
   }
-  final excluded = dbg(config.excluded.map(canonicalize).toSet(), 'excluded');
+  final excluded = [
+    for (final excluded in config.excluded)
+      Glob(canonicalize(excluded, strict: false))
+  ];
   final collection = AnalysisContextCollection(
     includedPaths: config.included,
-    excludedPaths: excluded.toList(growable: false),
     resourceProvider: provider,
   );
   for (final root in config.included) {
     await for (final libPath in Glob('$root/**.dart').list()) {
-      if (excluded.any((path) => libPath.path.contains(path))) continue;
+      if (excluded.any((path) => path.matches(libPath.path))) continue;
       final lib = await collection
           .contextFor(root)
           .currentSession
           .getResolvedLibrary(libPath.path);
       if (lib case ResolvedLibraryResult(element: final library)) {
         final composite = CompositeLibrary(library);
-        await createListing(library.units.first);
-        await createGlobals(composite.select((unit) => unit.topLevelVariables));
-        await createTopLevelAccessors(
+        yield createListing(library.units.first);
+        yield createGlobals(composite.select((unit) => unit.topLevelVariables));
+        yield createTopLevelAccessors(
           composite.select((unit) => unit.accessors),
         );
-        await createTopLevelFunctions(
+        yield createTopLevelFunctions(
           composite.select((unit) => unit.functions),
         );
-        await createEnums(composite.select((unit) => unit.enums));
-        await createClasses(composite.select((unit) => unit.classes));
-        await createMixins(composite.select((unit) => unit.mixins));
-        await createExtensions(composite.select((unit) => unit.extensions));
+        yield createEnums(composite.select((unit) => unit.enums));
+        yield createClasses(composite.select((unit) => unit.classes));
+        yield createMixins(composite.select((unit) => unit.mixins));
+        yield createExtensions(composite.select((unit) => unit.extensions));
       } else {
         eprintln('${libPath.path} could not be resolved:\n$lib');
       }
@@ -246,10 +255,18 @@ Future<void> createTopLevelFunctions(List<FunctionElement> functions) async {
 }
 
 Future<void> createEnums(List<EnumElement> enums) async {
-  if (enums.isEmpty) return;
-  print('  Enums:');
   for (final enu in enums) {
-    print('  - $enu');
+    final sink = io.File('./src/content/docs/reference/Enums/${enu.name}.md')
+        .openWrite();
+    final template = env.getTemplate('enum.md.jinja2');
+    final collector = ReferenceCollector();
+    template.environment.filters['link'] = collector.link;
+    try {
+      template.renderTo(sink, {'it': enu});
+    } finally {
+      await sink.flush();
+      await sink.close();
+    }
   }
 }
 
@@ -290,59 +307,93 @@ class ReferenceCollector {
   }
 }
 
+dynamic getAttribute(String key, Object? obj) {
+  switch ((key, obj)) {
+    case ('name', Element? elm):
+      return elm?.name;
+    case ('docs', Element? elm):
+      return elm?.documentationComment?.replaceAll('///', '');
+    case ('isPublic', Element elm):
+      return _isPublic(elm);
+    case ('methods', InstanceElement inst):
+      return inst.methods;
+    case ('fields', InstanceElement inst):
+      return inst.fields;
+    case ('constructors', InterfaceElement elm):
+      return elm.constructors;
+    case ('props', InstanceElement inst):
+      return inst.accessors;
+    case ('isConst', ConstructorElement ctor):
+      return ctor.isConst;
+    case ('isFactory', ConstructorElement ctor):
+      return ctor.isFactory;
+    case ('isNotEmpty', String val):
+      return val.isNotEmpty;
+    case ('params', FunctionTypedElement func):
+      return func.parameters;
+    case ('returnType', FunctionTypedElement func):
+      return func.returnType;
+    case ('isStatic', ClassMemberElement member):
+      return member.isStatic;
+    case ('type', VariableElement param):
+      return param.type;
+    case ('default', ParameterElement param):
+      return param.defaultValueCode;
+    case ('isFinal', VariableElement param):
+      return param.isFinal;
+    case ('isStatic', VariableElement param):
+      return param.isStatic;
+    case ('isSynthetic', Element param):
+      return param.isSynthetic;
+    case ('isEnumConstant', FieldElement field):
+      return field.isEnumConstant;
+    case ('makesSyntheticVariable', PropertyAccessorElement prop):
+      // not defined as a variable, but by a getter and/or a setter
+      return prop.variable.isSynthetic;
+    case ('isGetter', PropertyAccessorElement prop):
+      return prop.isGetter;
+    case ('isSetter', PropertyAccessorElement prop):
+      return prop.isSetter;
+    default:
+      throw Exception((obj: '${obj.runtimeType}($obj)', key: key));
+  }
+}
+
+final env = Environment(
+  getAttribute: getAttribute,
+  trimBlocks: true,
+  filters: {
+    'summarize': (String? doc) => doc?.split('\n').firstOrNull,
+    'params': _methodParams,
+    'defaultIfBlank': (String? doc, String replacement) =>
+        (doc?.isEmpty ?? true) ? replacement : doc,
+    'display': (Object? obj) => switch (obj) {
+          Element? elm => elm?.getDisplayString(withNullability: true),
+          _ => obj,
+        },
+  },
+  loader: FileSystemLoader(
+    paths: [Uri.base.resolve('bin/templates').toFilePath()],
+    extensions: {'jinja2'},
+  ),
+);
+
 Future<void> createClasses(List<ClassElement> classes) async {
   for (final clazz in classes) {
+    final sink =
+        io.File('./src/content/docs/reference/Classes/${clazz.name}.md')
+            .openWrite();
+    final template = env.getTemplate('class.md.jinja2');
     final collector = ReferenceCollector();
-    final docs = clazz.documentationComment?.replaceAll('///', '') ?? '';
-    final summary = docs.split('\n').firstOrNull;
-    final frontMatter = '---\n'
-        'title: "${clazz.name}"\n'
-        'description: |\n'
-        '  $summary\n'
-        '---\n\n';
-
-    String methodDoc(List<ParameterElement> params) {
-      if (params.isEmpty) return '';
-      return [
-        'Parameter|Type|Default',
-        '-|-|-',
-        for (final param in params)
-          '`${param.displayName}`|<code>${collector.link(param.type)}</code>|`${param.defaultValueCode ?? ''}`|'
-      ].join('\n');
+    template.environment.filters['link'] = collector.link;
+    template.environment.globals['generateReferences'] =
+        collector.generateReferences;
+    try {
+      template.renderTo(sink, {'it': clazz});
+    } finally {
+      await sink.flush();
+      await sink.close();
     }
-
-    final ctors = [
-      '## Constructors',
-      for (final ctor in clazz.constructors)
-        if (_isPublic(ctor))
-          '### `.${ctor.name.isEmpty ? 'new' : ctor.name}`\n'
-              '<code><strong>${ctor.isConst ? 'const ' : ''}${ctor.isFactory ? 'factory ' : ''}${clazz.name}${ctor.name.isEmpty ? '' : '.${ctor.name}'}</strong>(${_methodParams(ctor.parameters)});</code>\n\n'
-              '${ctor.documentationComment?.replaceAll('///', '') ?? ''}'
-              '\n'
-              '${methodDoc(ctor.parameters)}\n'
-              '\n'
-    ].join('\n');
-
-    final methods = [
-      '## Methods',
-      for (final method in clazz.methods)
-        if (_isPublic(method))
-          '### `${method.name}`\n'
-              '<code><strong>${collector.link(method.returnType)} ${method.name}</strong>(${_methodParams(method.parameters)});</code>\n\n'
-              '${method.documentationComment?.replaceAll('///', '') ?? ''}'
-              '\n'
-              '${methodDoc(method.parameters)}\n'
-              '\n'
-    ].join('\n');
-
-    io.File('./src/content/docs/reference/Classes/${clazz.name}.md')
-        .writeAsStringSync(
-      '$frontMatter\n'
-      '$docs\n'
-      '$ctors\n'
-      '$methods\n\n'
-      '${collector.generateReferences()}',
-    );
   }
 }
 

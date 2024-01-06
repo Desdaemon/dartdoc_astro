@@ -1,2 +1,4 @@
+include:
+  - ../polars_dart/packages/polars/lib
 exclude:
-  - '../polars_dart/packages/polars/lib/src'
+  - ../polars_dart/packages/polars/lib/src/**

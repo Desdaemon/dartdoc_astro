@@ -3,1366 +3,1097 @@ title: "Expr"
 description: |
    Expressions for use in query and aggregration operations.
 ---
-
-
  Expressions for use in query and aggregration operations.
-## Constructors
-### `.alias`
+
+### Constructors
+#### `.alias`
 <code><strong>const factory Expr.alias</strong>(field0, field1);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>[Expr]</code>|``|
-`field1`|<code>String</code>|``|
-
-
-### `.column`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>[Expr]</code>||
+`field1`|<code>String</code>||
+#### `.column`
 <code><strong>const factory Expr.column</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>String</code>|``|
-
-
-### `.columns`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>String</code>||
+#### `.columns`
 <code><strong>const factory Expr.columns</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>List\<String></code>|``|
-
-
-### `.dtypeColumn`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>List\<String></code>||
+#### `.dtypeColumn`
 <code><strong>const factory Expr.dtypeColumn</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>List\<DataType></code>|``|
-
-
-### `.literal`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>List\<DataType></code>||
+#### `.literal`
 <code><strong>const factory Expr.literal</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>[LiteralValue]</code>|``|
-
-
-### `.binaryExpr`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>[LiteralValue]</code>||
+#### `.binaryExpr`
 <code><strong>const factory Expr.binaryExpr</strong>({<strong>required</strong> left, <strong>required</strong> op, <strong>required</strong> right});</code>
 
 
-Parameter|Type|Default
--|-|-
-`left`|<code>[Expr]</code>|``|
-`op`|<code>[Operator]</code>|``|
-`right`|<code>[Expr]</code>|``|
-
-
-### `.cast`
+Parameter|Type|Default|
+-|-|-|
+`left`|<code>[Expr]</code>||
+`op`|<code>[Operator]</code>||
+`right`|<code>[Expr]</code>||
+#### `.cast`
 <code><strong>const factory Expr.cast</strong>({<strong>required</strong> expr, <strong>required</strong> dataType, <strong>required</strong> strict});</code>
 
 
-Parameter|Type|Default
--|-|-
-`expr`|<code>[Expr]</code>|``|
-`dataType`|<code>[DataType]</code>|``|
-`strict`|<code>bool</code>|``|
-
-
-### `.sort`
+Parameter|Type|Default|
+-|-|-|
+`expr`|<code>[Expr]</code>||
+`dataType`|<code>[DataType]</code>||
+`strict`|<code>bool</code>||
+#### `.sort`
 <code><strong>const factory Expr.sort</strong>({<strong>required</strong> expr, <i>options</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`expr`|<code>[Expr]</code>|``|
-`options`|<code>[SortOptions]</code>|``|
-
-
-### `.gather`
+Parameter|Type|Default|
+-|-|-|
+`expr`|<code>[Expr]</code>||
+`options`|<code>[SortOptions]</code>||
+#### `.gather`
 <code><strong>const factory Expr.gather</strong>({<strong>required</strong> expr, <strong>required</strong> idx, <strong>required</strong> returnsScalar});</code>
 
 
-Parameter|Type|Default
--|-|-
-`expr`|<code>[Expr]</code>|``|
-`idx`|<code>[Expr]</code>|``|
-`returnsScalar`|<code>bool</code>|``|
-
-
-### `.sortBy`
+Parameter|Type|Default|
+-|-|-|
+`expr`|<code>[Expr]</code>||
+`idx`|<code>[Expr]</code>||
+`returnsScalar`|<code>bool</code>||
+#### `.sortBy`
 <code><strong>const factory Expr.sortBy</strong>({<strong>required</strong> expr, <i>by</i>, <i>descending</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`expr`|<code>[Expr]</code>|``|
-`by`|<code>List\<Expr></code>|``|
-`descending`|<code>List\<bool></code>|``|
-
-
-### `.agg`
+Parameter|Type|Default|
+-|-|-|
+`expr`|<code>[Expr]</code>||
+`by`|<code>List\<Expr></code>||
+`descending`|<code>List\<bool></code>||
+#### `.agg`
 <code><strong>const factory Expr.agg</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>[AggExpr]</code>|``|
-
-
-### `.ternary`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>[AggExpr]</code>||
+#### `.ternary`
 <code><strong>const factory Expr.ternary</strong>({<strong>required</strong> predicate, <strong>required</strong> truthy, <strong>required</strong> falsy});</code>
 
 
-Parameter|Type|Default
--|-|-
-`predicate`|<code>[Expr]</code>|``|
-`truthy`|<code>[Expr]</code>|``|
-`falsy`|<code>[Expr]</code>|``|
-
-
-### `.explode`
+Parameter|Type|Default|
+-|-|-|
+`predicate`|<code>[Expr]</code>||
+`truthy`|<code>[Expr]</code>||
+`falsy`|<code>[Expr]</code>||
+#### `.explode`
 <code><strong>const factory Expr.explode</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>[Expr]</code>|``|
-
-
-### `.filter`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>[Expr]</code>||
+#### `.filter`
 <code><strong>const factory Expr.filter</strong>({<strong>required</strong> input, <strong>required</strong> by});</code>
 
 
-Parameter|Type|Default
--|-|-
-`input`|<code>[Expr]</code>|``|
-`by`|<code>[Expr]</code>|``|
-
-
-### `.wildcard`
+Parameter|Type|Default|
+-|-|-|
+`input`|<code>[Expr]</code>||
+`by`|<code>[Expr]</code>||
+#### `.wildcard`
 <code><strong>const factory Expr.wildcard</strong>();</code>
 
 
-
-
-
-### `.window`
+#### `.window`
 <code><strong>const factory Expr.window</strong>({<strong>required</strong> function, <strong>required</strong> partitionBy, <strong>required</strong> options});</code>
 
 
-Parameter|Type|Default
--|-|-
-`function`|<code>[Expr]</code>|``|
-`partitionBy`|<code>List\<Expr></code>|``|
-`options`|<code>[WindowType]</code>|``|
-
-
-### `.slice`
+Parameter|Type|Default|
+-|-|-|
+`function`|<code>[Expr]</code>||
+`partitionBy`|<code>List\<Expr></code>||
+`options`|<code>[WindowType]</code>||
+#### `.slice`
 <code><strong>const factory Expr.slice</strong>({<strong>required</strong> input, <strong>required</strong> offset, <strong>required</strong> length});</code>
 
 
-Parameter|Type|Default
--|-|-
-`input`|<code>[Expr]</code>|``|
-`offset`|<code>[Expr]</code>|``|
-`length`|<code>[Expr]</code>|``|
-
-
-### `.exclude`
+Parameter|Type|Default|
+-|-|-|
+`input`|<code>[Expr]</code>||
+`offset`|<code>[Expr]</code>||
+`length`|<code>[Expr]</code>||
+#### `.exclude`
 <code><strong>const factory Expr.exclude</strong>(field0, field1);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>[Expr]</code>|``|
-`field1`|<code>List\<Excluded></code>|``|
-
-
-### `.keepName`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>[Expr]</code>||
+`field1`|<code>List\<Excluded></code>||
+#### `.keepName`
 <code><strong>const factory Expr.keepName</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>[Expr]</code>|``|
-
-
-### `.count`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>[Expr]</code>||
+#### `.count`
 <code><strong>const factory Expr.count</strong>();</code>
 
 
-
-
-
-### `.nth`
+#### `.nth`
 <code><strong>const factory Expr.nth</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>int</code>|``|
-
-
-### `.internal`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>int</code>||
+#### `.internal`
 <code><strong>const factory Expr.internal</strong>(field0);</code>
 
 
-Parameter|Type|Default
--|-|-
-`field0`|<code>[PExpr]</code>|``|
-
-
-## Methods
-### `abs`
+Parameter|Type|Default|
+-|-|-|
+`field0`|<code>[PExpr]</code>||
+### Methods
+#### `abs`
 <code><strong>[Expr] abs</strong>({<i>hint</i>});</code>
 
  Similar to [gather] but allows for scalars.
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `all`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `all`
 <code><strong>[Expr] all</strong>({<i>ignoreNulls</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `ignoreNulls`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `any`
+`hint`|<code>dynamic</code>||
+#### `any`
 <code><strong>[Expr] any</strong>({<i>ignoreNulls</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `ignoreNulls`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `append`
+`hint`|<code>dynamic</code>||
+#### `append`
 <code><strong>[Expr] append</strong>({<strong>required</strong> other, <i>upcast</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`other`|<code>[Expr]</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Expr]</code>||
 `upcast`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `arccos`
+`hint`|<code>dynamic</code>||
+#### `arccos`
 <code><strong>[Expr] arccos</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `arccosh`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `arccosh`
 <code><strong>[Expr] arccosh</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `arcsin`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `arcsin`
 <code><strong>[Expr] arcsin</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `arcsinh`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `arcsinh`
 <code><strong>[Expr] arcsinh</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `arctan`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `arctan`
 <code><strong>[Expr] arctan</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `arctan2`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `arctan2`
 <code><strong>[Expr] arctan2</strong>({<strong>required</strong> x, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`x`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `arctanh`
+Parameter|Type|Default|
+-|-|-|
+`x`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `arctanh`
 <code><strong>[Expr] arctanh</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `argMax`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `argMax`
 <code><strong>[Expr] argMax</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `argMin`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `argMin`
 <code><strong>[Expr] argMin</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `argSort`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `argSort`
 <code><strong>[Expr] argSort</strong>({<i>descending</i>, <i>nullsLast</i>, <i>multithreaded</i>, <i>maintainOrder</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `descending`|<code>bool</code>|`false`|
 `nullsLast`|<code>bool</code>|`false`|
 `multithreaded`|<code>bool</code>|`true`|
 `maintainOrder`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `argUnique`
+`hint`|<code>dynamic</code>||
+#### `argUnique`
 <code><strong>[Expr] argUnique</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `backwardFill`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `backwardFill`
 <code><strong>[Expr] backwardFill</strong>({<i>limit</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`limit`|<code>int?</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `cbrt`
+Parameter|Type|Default|
+-|-|-|
+`limit`|<code>int?</code>||
+`hint`|<code>dynamic</code>||
+#### `cbrt`
 <code><strong>[Expr] cbrt</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `ceil`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `ceil`
 <code><strong>[Expr] ceil</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `clip`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `clip`
 <code><strong>[Expr] clip</strong>({<strong>required</strong> min, <strong>required</strong> max, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`min`|<code>[Expr]</code>|``|
-`max`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `clipMax`
+Parameter|Type|Default|
+-|-|-|
+`min`|<code>[Expr]</code>||
+`max`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `clipMax`
 <code><strong>[Expr] clipMax</strong>({<strong>required</strong> max, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`max`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `clipMin`
+Parameter|Type|Default|
+-|-|-|
+`max`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `clipMin`
 <code><strong>[Expr] clipMin</strong>({<strong>required</strong> min, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`min`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `cos`
+Parameter|Type|Default|
+-|-|-|
+`min`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `cos`
 <code><strong>[Expr] cos</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `cosh`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `cosh`
 <code><strong>[Expr] cosh</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `cot`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `cot`
 <code><strong>[Expr] cot</strong>({<i>hint</i>});</code>
 
  Calculate the cotangent of this expression.
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `count`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `count`
 <code><strong>[Expr] count</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `cumCount`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `cumCount`
 <code><strong>[Expr] cumCount</strong>({<i>reverse</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `reverse`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `cumMax`
+`hint`|<code>dynamic</code>||
+#### `cumMax`
 <code><strong>[Expr] cumMax</strong>({<i>reverse</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `reverse`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `cumMin`
+`hint`|<code>dynamic</code>||
+#### `cumMin`
 <code><strong>[Expr] cumMin</strong>({<i>reverse</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `reverse`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `cumProd`
+`hint`|<code>dynamic</code>||
+#### `cumProd`
 <code><strong>[Expr] cumProd</strong>({<i>reverse</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `reverse`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `cumSum`
+`hint`|<code>dynamic</code>||
+#### `cumSum`
 <code><strong>[Expr] cumSum</strong>({<i>reverse</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `reverse`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `degrees`
+`hint`|<code>dynamic</code>||
+#### `degrees`
 <code><strong>[Expr] degrees</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `div`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `div`
 <code><strong>[Expr] div</strong>({<strong>required</strong> other, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`other`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `dot`
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `dot`
 <code><strong>[Expr] dot</strong>({<strong>required</strong> other, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`other`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `dropNans`
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `dropNans`
 <code><strong>[Expr] dropNans</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `dropNulls`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `dropNulls`
 <code><strong>[Expr] dropNulls</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `entropy`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `entropy`
 <code><strong>[Expr] entropy</strong>({<strong>required</strong> base, <i>normalize</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`base`|<code>double</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`base`|<code>double</code>||
 `normalize`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `exp`
+`hint`|<code>dynamic</code>||
+#### `exp`
 <code><strong>[Expr] exp</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `fillNan`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `fillNan`
 <code><strong>[Expr] fillNan</strong>({<strong>required</strong> value, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`value`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `fillNull`
+Parameter|Type|Default|
+-|-|-|
+`value`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `fillNull`
 <code><strong>[Expr] fillNull</strong>({<strong>required</strong> value, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`value`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `floor`
+Parameter|Type|Default|
+-|-|-|
+`value`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `floor`
 <code><strong>[Expr] floor</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `forwardFill`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `forwardFill`
 <code><strong>[Expr] forwardFill</strong>({<i>limit</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`limit`|<code>int?</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `isFinite`
+Parameter|Type|Default|
+-|-|-|
+`limit`|<code>int?</code>||
+`hint`|<code>dynamic</code>||
+#### `isFinite`
 <code><strong>[Expr] isFinite</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `isIn`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `isIn`
 <code><strong>[Expr] isIn</strong>({<strong>required</strong> other, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`other`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `isNan`
+Parameter|Type|Default|
+-|-|-|
+`other`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `isNan`
 <code><strong>[Expr] isNan</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `isNotNan`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `isNotNan`
 <code><strong>[Expr] isNotNan</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `isNotNull`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `isNotNull`
 <code><strong>[Expr] isNotNull</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `isNull`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `isNull`
 <code><strong>[Expr] isNull</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `log`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `log`
 <code><strong>[Expr] log</strong>({<strong>required</strong> base, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`base`|<code>double</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `log1P`
+Parameter|Type|Default|
+-|-|-|
+`base`|<code>double</code>||
+`hint`|<code>dynamic</code>||
+#### `log1P`
 <code><strong>[Expr] log1P</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `lowerBound`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `lowerBound`
 <code><strong>[Expr] lowerBound</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `not`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `not`
 <code><strong>[Expr] not</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `nullCount`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `nullCount`
 <code><strong>[Expr] nullCount</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `pow`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `pow`
 <code><strong>[Expr] pow</strong>({<strong>required</strong> exponent, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`exponent`|<code>double</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `product`
+Parameter|Type|Default|
+-|-|-|
+`exponent`|<code>double</code>||
+`hint`|<code>dynamic</code>||
+#### `product`
 <code><strong>[Expr] product</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `radians`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `radians`
 <code><strong>[Expr] radians</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `reshape`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `reshape`
 <code><strong>[Expr] reshape</strong>({<strong>required</strong> dims, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`dims`|<code>[Int64List]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `reverse`
+Parameter|Type|Default|
+-|-|-|
+`dims`|<code>[Int64List]</code>||
+`hint`|<code>dynamic</code>||
+#### `reverse`
 <code><strong>[Expr] reverse</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingMax`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `rollingMax`
 <code><strong>[Expr] rollingMax</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_max
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingMean`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `rollingMean`
 <code><strong>[Expr] rollingMean</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_mean
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingMedian`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `rollingMedian`
 <code><strong>[Expr] rollingMedian</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_median
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingMin`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `rollingMin`
 <code><strong>[Expr] rollingMin</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_min
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingQuantile`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `rollingQuantile`
 <code><strong>[Expr] rollingQuantile</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_quantile
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingStd`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `rollingStd`
 <code><strong>[Expr] rollingStd</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_std
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingSum`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `rollingSum`
 <code><strong>[Expr] rollingSum</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_sum
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `rollingVar`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `rollingVar`
 <code><strong>[Expr] rollingVar</strong>({<i>windowSize</i>, <i>minPeriods</i>, <i>weights</i>, <i>center</i>, <i>by</i>, <i>closedWindow</i>, <i>hint</i>});</code>
 
  TODO: Docs for rolling_var
-Parameter|Type|Default
--|-|-
-`windowSize`|<code>Duration?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`windowSize`|<code>Duration?</code>||
 `minPeriods`|<code>int</code>|`1`|
-`weights`|<code>Float64List?</code>|``|
+`weights`|<code>Float64List?</code>||
 `center`|<code>bool</code>|`false`|
-`by`|<code>String?</code>|``|
-`closedWindow`|<code>[ClosedWindow?]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `round`
+`by`|<code>String?</code>||
+`closedWindow`|<code>[ClosedWindow?]</code>||
+`hint`|<code>dynamic</code>||
+#### `round`
 <code><strong>[Expr] round</strong>({<strong>required</strong> decimals, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`decimals`|<code>int</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `roundSigFigs`
+Parameter|Type|Default|
+-|-|-|
+`decimals`|<code>int</code>||
+`hint`|<code>dynamic</code>||
+#### `roundSigFigs`
 <code><strong>[Expr] roundSigFigs</strong>({<strong>required</strong> digits, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`digits`|<code>int</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `setSortedFlag`
+Parameter|Type|Default|
+-|-|-|
+`digits`|<code>int</code>||
+`hint`|<code>dynamic</code>||
+#### `setSortedFlag`
 <code><strong>[Expr] setSortedFlag</strong>({<strong>required</strong> sorted, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`sorted`|<code>[IsSorted]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `shift`
+Parameter|Type|Default|
+-|-|-|
+`sorted`|<code>[IsSorted]</code>||
+`hint`|<code>dynamic</code>||
+#### `shift`
 <code><strong>[Expr] shift</strong>({<strong>required</strong> n, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`n`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `shiftAndFill`
+Parameter|Type|Default|
+-|-|-|
+`n`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `shiftAndFill`
 <code><strong>[Expr] shiftAndFill</strong>({<strong>required</strong> n, <strong>required</strong> fillValue, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`n`|<code>[Expr]</code>|``|
-`fillValue`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `shrinkDtype`
+Parameter|Type|Default|
+-|-|-|
+`n`|<code>[Expr]</code>||
+`fillValue`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `shrinkDtype`
 <code><strong>[Expr] shrinkDtype</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `sin`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `sin`
 <code><strong>[Expr] sin</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `sinh`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `sinh`
 <code><strong>[Expr] sinh</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `sqrt`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `sqrt`
 <code><strong>[Expr] sqrt</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `tan`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `tan`
 <code><strong>[Expr] tan</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `tanh`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `tanh`
 <code><strong>[Expr] tanh</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `toDot`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `toDot`
 <code><strong>String toDot</strong>({<i>hint</i>});</code>
 
  Returns a dot representation of this expression.
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `toPhysical`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `toPhysical`
 <code><strong>[Expr] toPhysical</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `unique`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `unique`
 <code><strong>[Expr] unique</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `uniqueStable`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `uniqueStable`
 <code><strong>[Expr] uniqueStable</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `upperBound`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `upperBound`
 <code><strong>[Expr] upperBound</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `valueCounts`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `valueCounts`
 <code><strong>[Expr] valueCounts</strong>({<i>sort</i>, <i>parallel</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
+Parameter|Type|Default|
+-|-|-|
 `sort`|<code>bool</code>|`false`|
 `parallel`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strConcat`
+`hint`|<code>dynamic</code>||
+#### `strConcat`
 <code><strong>[Expr] strConcat</strong>({<strong>required</strong> delimiter, <i>ignoreNulls</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`delimiter`|<code>String</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`delimiter`|<code>String</code>||
 `ignoreNulls`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strContains`
+`hint`|<code>dynamic</code>||
+#### `strContains`
 <code><strong>[Expr] strContains</strong>({<strong>required</strong> pat, <i>strict</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
 `strict`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strContainsLiteral`
+`hint`|<code>dynamic</code>||
+#### `strContainsLiteral`
 <code><strong>[Expr] strContainsLiteral</strong>({<strong>required</strong> pat, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strCountMatches`
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strCountMatches`
 <code><strong>[Expr] strCountMatches</strong>({<strong>required</strong> pat, <i>literal</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
 `literal`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strEndsWith`
+`hint`|<code>dynamic</code>||
+#### `strEndsWith`
 <code><strong>[Expr] strEndsWith</strong>({<strong>required</strong> pat, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strExplode`
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strExplode`
 <code><strong>[Expr] strExplode</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `strExtract`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `strExtract`
 <code><strong>[Expr] strExtract</strong>({<strong>required</strong> pat, <strong>required</strong> groupIndex, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>String</code>|``|
-`groupIndex`|<code>int</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strExtractAll`
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>String</code>||
+`groupIndex`|<code>int</code>||
+`hint`|<code>dynamic</code>||
+#### `strExtractAll`
 <code><strong>[Expr] strExtractAll</strong>({<strong>required</strong> pat, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strLenBytes`
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strLenBytes`
 <code><strong>[Expr] strLenBytes</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `strLenChars`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `strLenChars`
 <code><strong>[Expr] strLenChars</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `strReplace`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `strReplace`
 <code><strong>[Expr] strReplace</strong>({<strong>required</strong> pat, <strong>required</strong> val, <i>literal</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
-`val`|<code>[Expr]</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
+`val`|<code>[Expr]</code>||
 `literal`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strReplaceAll`
+`hint`|<code>dynamic</code>||
+#### `strReplaceAll`
 <code><strong>[Expr] strReplaceAll</strong>({<strong>required</strong> pat, <strong>required</strong> val, <i>literal</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
-`val`|<code>[Expr]</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
+`val`|<code>[Expr]</code>||
 `literal`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strReplaceN`
+`hint`|<code>dynamic</code>||
+#### `strReplaceN`
 <code><strong>[Expr] strReplaceN</strong>({<strong>required</strong> pat, <strong>required</strong> val, <i>literal</i>, <strong>required</strong> n, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`pat`|<code>[Expr]</code>|``|
-`val`|<code>[Expr]</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`pat`|<code>[Expr]</code>||
+`val`|<code>[Expr]</code>||
 `literal`|<code>bool</code>|`false`|
-`n`|<code>int</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strSlice`
+`n`|<code>int</code>||
+`hint`|<code>dynamic</code>||
+#### `strSlice`
 <code><strong>[Expr] strSlice</strong>({<strong>required</strong> start, <i>length</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`start`|<code>int</code>|``|
-`length`|<code>int?</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strSplit`
+Parameter|Type|Default|
+-|-|-|
+`start`|<code>int</code>||
+`length`|<code>int?</code>||
+`hint`|<code>dynamic</code>||
+#### `strSplit`
 <code><strong>[Expr] strSplit</strong>({<strong>required</strong> by, <i>inclusive</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`by`|<code>[Expr]</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`by`|<code>[Expr]</code>||
 `inclusive`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strSplitExact`
+`hint`|<code>dynamic</code>||
+#### `strSplitExact`
 <code><strong>[Expr] strSplitExact</strong>({<strong>required</strong> by, <strong>required</strong> n, <i>inclusive</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`by`|<code>[Expr]</code>|``|
-`n`|<code>int</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`by`|<code>[Expr]</code>||
+`n`|<code>int</code>||
 `inclusive`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strSplitn`
+`hint`|<code>dynamic</code>||
+#### `strSplitn`
 <code><strong>[Expr] strSplitn</strong>({<strong>required</strong> by, <strong>required</strong> n, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`by`|<code>[Expr]</code>|``|
-`n`|<code>int</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strStripChars`
+Parameter|Type|Default|
+-|-|-|
+`by`|<code>[Expr]</code>||
+`n`|<code>int</code>||
+`hint`|<code>dynamic</code>||
+#### `strStripChars`
 <code><strong>[Expr] strStripChars</strong>({<strong>required</strong> matches, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`matches`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strStripCharsEnd`
+Parameter|Type|Default|
+-|-|-|
+`matches`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strStripCharsEnd`
 <code><strong>[Expr] strStripCharsEnd</strong>({<strong>required</strong> matches, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`matches`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strStripCharsStart`
+Parameter|Type|Default|
+-|-|-|
+`matches`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strStripCharsStart`
 <code><strong>[Expr] strStripCharsStart</strong>({<strong>required</strong> matches, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`matches`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strStripPrefix`
+Parameter|Type|Default|
+-|-|-|
+`matches`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strStripPrefix`
 <code><strong>[Expr] strStripPrefix</strong>({<strong>required</strong> prefix, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`prefix`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strStripSuffix`
+Parameter|Type|Default|
+-|-|-|
+`prefix`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strStripSuffix`
 <code><strong>[Expr] strStripSuffix</strong>({<strong>required</strong> suffix, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`suffix`|<code>[Expr]</code>|``|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strToDate`
+Parameter|Type|Default|
+-|-|-|
+`suffix`|<code>[Expr]</code>||
+`hint`|<code>dynamic</code>||
+#### `strToDate`
 <code><strong>[Expr] strToDate</strong>({<i>format</i>, <i>strict</i>, <i>exact</i>, <i>cache</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`format`|<code>String?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`format`|<code>String?</code>||
 `strict`|<code>bool</code>|`true`|
 `exact`|<code>bool</code>|`true`|
 `cache`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strToDatetime`
+`hint`|<code>dynamic</code>||
+#### `strToDatetime`
 <code><strong>[Expr] strToDatetime</strong>({<i>timeUnit</i>, <i>timeZone</i>, <i>format</i>, <i>strict</i>, <i>exact</i>, <i>cache</i>, <i>ambiguous</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`timeUnit`|<code>[TimeUnit?]</code>|``|
-`timeZone`|<code>String?</code>|``|
-`format`|<code>String?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`timeUnit`|<code>[TimeUnit?]</code>||
+`timeZone`|<code>String?</code>||
+`format`|<code>String?</code>||
 `strict`|<code>bool</code>|`true`|
 `exact`|<code>bool</code>|`true`|
 `cache`|<code>bool</code>|`true`|
 `ambiguous`|<code>[Ambiguous]</code>|`Ambiguous.raise`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strToInteger`
+`hint`|<code>dynamic</code>||
+#### `strToInteger`
 <code><strong>[Expr] strToInteger</strong>({<strong>required</strong> base, <i>strict</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`base`|<code>int</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`base`|<code>int</code>||
 `strict`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strToLowercase`
+`hint`|<code>dynamic</code>||
+#### `strToLowercase`
 <code><strong>[Expr] strToLowercase</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `strToTime`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `strToTime`
 <code><strong>[Expr] strToTime</strong>({<i>format</i>, <i>strict</i>, <i>exact</i>, <i>cache</i>, <i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`format`|<code>String?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`format`|<code>String?</code>||
 `strict`|<code>bool</code>|`true`|
 `exact`|<code>bool</code>|`true`|
 `cache`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>|``|
-
-
-### `strToUppercase`
+`hint`|<code>dynamic</code>||
+#### `strToUppercase`
 <code><strong>[Expr] strToUppercase</strong>({<i>hint</i>});</code>
 
 
-Parameter|Type|Default
--|-|-
-`hint`|<code>dynamic</code>|``|
-
-
-### `strptime`
+Parameter|Type|Default|
+-|-|-|
+`hint`|<code>dynamic</code>||
+#### `strptime`
 <code><strong>[Expr] strptime</strong>({<strong>required</strong> dtype, <i>format</i>, <i>strict</i>, <i>exact</i>, <i>cache</i>, <i>ambiguous</i>, <i>hint</i>});</code>
 
  Formats this datetime-compatible value to a string representation.
-Parameter|Type|Default
--|-|-
-`dtype`|<code>[DataType]</code>|``|
-`format`|<code>String?</code>|``|
+Parameter|Type|Default|
+-|-|-|
+`dtype`|<code>[DataType]</code>||
+`format`|<code>String?</code>||
 `strict`|<code>bool</code>|`true`|
 `exact`|<code>bool</code>|`true`|
 `cache`|<code>bool</code>|`true`|
 `ambiguous`|<code>[Ambiguous]</code>|`Ambiguous.raise`|
-`hint`|<code>dynamic</code>|``|
-
-
+`hint`|<code>dynamic</code>||
 
 [Expr]: /reference/classes/expr
 [LiteralValue]: /reference/classes/literalvalue
