@@ -7,12 +7,11 @@ description: |
 <code>[RustOpaque]</code> &rsaquo; `Series`
 
 
-
 ### Constructors
 <dl>
 <dt>
 
-<span class="dart-code"><strong>Series.[dcoDecode](dcodecode)</strong>(<span class="nobr">List\<dynamic> wire</span>);</span>
+<span class="dart-code"><strong>Series.[dcoDecode](dcodecode)</strong>(<span class="nobr">List&lt;dynamic&gt; wire</span>);</span>
 </dt>
 <dt>
 
@@ -48,7 +47,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<double?> [<strong>asDoubles](asdoubles)</strong>({<span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;double?&gt; [<strong>asDoubles](asdoubles)</strong>({<span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -56,7 +55,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<Duration?> [<strong>asDurations](asdurations)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;Duration?&gt; [<strong>asDurations](asdurations)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -64,7 +63,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<int?> [<strong>asInts](asints)</strong>({<span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;int?&gt; [<strong>asInts](asints)</strong>({<span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -72,7 +71,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<DateTime?> [<strong>asLocalDatetime](aslocaldatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;DateTime?&gt; [<strong>asLocalDatetime](aslocaldatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -80,7 +79,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<DateTime?> [<strong>asNaiveDatetime](asnaivedatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;DateTime?&gt; [<strong>asNaiveDatetime](asnaivedatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -88,7 +87,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<String?> [<strong>asStrings](asstrings)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;String?&gt; [<strong>asStrings](asstrings)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -96,7 +95,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<DateTime?> [<strong>asUtcDatetime](asutcdatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;DateTime?&gt; [<strong>asUtcDatetime](asutcdatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -236,7 +235,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">Stream\<dynamic> [<strong>iter](iter)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">Stream&lt;dynamic&gt; [<strong>iter](iter)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -457,7 +456,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<dynamic> [<strong>toList](tolist)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;dynamic&gt; [<strong>toList](tolist)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -488,27 +487,27 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">double? [<strong>operator</strong> <strong>[]](/reference/Classes/SeriesExt/op_get)</strong>(<span class="nobr">int index</span>);</span>
+<span class="dart-code">double? [<strong>operator</strong> <strong>[]](/reference/extensions/seriesext/op_get)</strong>(<span class="nobr">int index</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Series] [<strong>operator</strong> <strong>+](/reference/Classes/SeriesExt/op_add)</strong>(<span class="nobr">[Series] other</span>);</span>
+<span class="dart-code">[Series] [<strong>operator</strong> <strong>+](/reference/extensions/seriesext/op_add)</strong>(<span class="nobr">[Series] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Series] [<strong>operator</strong> <strong>-](/reference/Classes/SeriesExt/op_sub)</strong>(<span class="nobr">[Series] other</span>);</span>
+<span class="dart-code">[Series] [<strong>operator</strong> <strong>-](/reference/extensions/seriesext/op_sub)</strong>(<span class="nobr">[Series] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Series] [<strong>operator</strong> <strong>*](/reference/Classes/SeriesExt/op_mul)</strong>(<span class="nobr">[Series] other</span>);</span>
+<span class="dart-code">[Series] [<strong>operator</strong> <strong>*](/reference/extensions/seriesext/op_mul)</strong>(<span class="nobr">[Series] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Series] [<strong>operator</strong> <strong>/](/reference/Classes/SeriesExt/op_div)</strong>(<span class="nobr">[Series] other</span>);</span>
+<span class="dart-code">[Series] [<strong>operator</strong> <strong>/](/reference/extensions/seriesext/op_div)</strong>(<span class="nobr">[Series] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Series] [<strong>operator</strong> <strong>%](/reference/Classes/SeriesExt/op_mod)</strong>(<span class="nobr">[Series] other</span>);</span>
+<span class="dart-code">[Series] [<strong>operator</strong> <strong>%](/reference/extensions/seriesext/op_mod)</strong>(<span class="nobr">[Series] other</span>);</span>
 </dt>
 </dl>
 
@@ -519,11 +518,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>[move=](/reference/Classes/RustOpaque/move)</strong>(bool?);</span>
+<span class="dart-code"><strong>[move=](/reference/classes/rustopaque/move)</strong>(bool?);</span>
 </dt>
 <dt>
 
-<span class="dart-code">bool <strong>get [isDisposed](/reference/Classes/RustOpaque/isdisposed)</strong>;</span>
+<span class="dart-code">bool <strong>get [isDisposed](/reference/classes/rustopaque/isdisposed)</strong>;</span>
 </dt>
 <dd>
 
@@ -535,7 +534,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Pointer\<Void> [<strong>cstEncode](/reference/Classes/RustOpaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">Pointer&lt;Void&gt; [<strong>cstEncode](/reference/classes/rustopaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -543,7 +542,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">int [<strong>sseEncode](/reference/Classes/RustOpaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">int [<strong>sseEncode](/reference/classes/rustopaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -551,7 +550,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">void [<strong>dispose](/reference/Classes/RustOpaque/dispose)</strong>();</span>
+<span class="dart-code">void [<strong>dispose](/reference/classes/rustopaque/dispose)</strong>();</span>
 </dt>
 <dd>
 
@@ -561,8 +560,6 @@ description: |
 
 [RustOpaque]: /reference/classes/rustopaque
 [Series]: /reference/classes/series
-[dynamic]: #
-[void]: #
 [Operator]: /reference/enums/operator
 [DataType]: /reference/classes/datatype
 [Int64List]: /reference/classes/int64list

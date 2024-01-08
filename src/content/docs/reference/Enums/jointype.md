@@ -45,6 +45,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List\<JoinType> <strong>get [values](values)</strong>;</span>
+<span class="dart-code">List&lt;JoinType&gt; <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>

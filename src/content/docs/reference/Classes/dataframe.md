@@ -7,12 +7,11 @@ description: |
 <code>[RustOpaque]</code> &rsaquo; `DataFrame`
 
 
-
 ### Constructors
 <dl>
 <dt>
 
-<span class="dart-code"><strong>DataFrame.[dcoDecode](dcodecode)</strong>(<span class="nobr">List\<dynamic> wire</span>);</span>
+<span class="dart-code"><strong>DataFrame.[dcoDecode](dcodecode)</strong>(<span class="nobr">List&lt;dynamic&gt; wire</span>);</span>
 </dt>
 <dt>
 
@@ -24,7 +23,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List\<String> <strong>get [columnNames](columnnames)</strong>;</span>
+<span class="dart-code">List&lt;String&gt; <strong>get [columnNames](columnnames)</strong>;</span>
 </dt>
 <dd>
 
@@ -104,7 +103,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[VecSeries] [<strong>columns](columns)</strong>({<span class="nobr"><strong>required</strong> List\<String> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[VecSeries] [<strong>columns](columns)</strong>({<span class="nobr"><strong>required</strong> List&lt;String&gt; columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -112,7 +111,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">Future\<DataFrame> [<strong>describe](describe)</strong>({<span class="nobr">Float64List? <i>percentiles</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">Future&lt;DataFrame&gt; [<strong>describe](describe)</strong>({<span class="nobr">Float64List? <i>percentiles</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -136,7 +135,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<DataType> [<strong>dtypes](dtypes)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;DataType&gt; [<strong>dtypes](dtypes)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -152,7 +151,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List\<dynamic> [<strong>getRow](getrow)</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">List&lt;dynamic&gt; [<strong>getRow](getrow)</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -168,7 +167,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">Stream\<List\<dynamic>> [<strong>iter](iter)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">Stream&lt;List&lt;dynamic&gt;&gt; [<strong>iter](iter)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -193,7 +192,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>static</strong> [DataFrame] [<strong>ofLits](oflits)</strong>({<span class="nobr">List\<(String, Literals)>? <i>series</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>static</strong> [DataFrame] [<strong>ofLits](oflits)</strong>({<span class="nobr">List&lt;(String, Literals)&gt;? <i>series</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -225,7 +224,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[DataFrame] [<strong>select](select)</strong>({<span class="nobr"><strong>required</strong> List\<String> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[DataFrame] [<strong>select](select)</strong>({<span class="nobr"><strong>required</strong> List&lt;String&gt; columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -233,7 +232,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">void [<strong>sortInPlace](sortinplace)</strong>({<span class="nobr">List\<String> <i>byColumn</i></span>, <span class="nobr">List\<bool> <i>descending</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">void [<strong>sortInPlace](sortinplace)</strong>({<span class="nobr">List&lt;String&gt; <i>byColumn</i></span>, <span class="nobr">List&lt;bool&gt; <i>descending</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -264,7 +263,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Series] [<strong>operator</strong> <strong>[]](/reference/Classes/DataFrameExt/op_get)</strong>(<span class="nobr">Object key</span>);</span>
+<span class="dart-code">[Series] [<strong>operator</strong> <strong>[]](/reference/extensions/dataframeext/op_get)</strong>(<span class="nobr">Object key</span>);</span>
 </dt>
 <dd>
 
@@ -279,11 +278,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>[move=](/reference/Classes/RustOpaque/move)</strong>(bool?);</span>
+<span class="dart-code"><strong>[move=](/reference/classes/rustopaque/move)</strong>(bool?);</span>
 </dt>
 <dt>
 
-<span class="dart-code">bool <strong>get [isDisposed](/reference/Classes/RustOpaque/isdisposed)</strong>;</span>
+<span class="dart-code">bool <strong>get [isDisposed](/reference/classes/rustopaque/isdisposed)</strong>;</span>
 </dt>
 <dd>
 
@@ -295,7 +294,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Pointer\<Void> [<strong>cstEncode](/reference/Classes/RustOpaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">Pointer&lt;Void&gt; [<strong>cstEncode](/reference/classes/rustopaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -303,7 +302,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">int [<strong>sseEncode](/reference/Classes/RustOpaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">int [<strong>sseEncode](/reference/classes/rustopaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -311,7 +310,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">void [<strong>dispose](/reference/Classes/RustOpaque/dispose)</strong>();</span>
+<span class="dart-code">void [<strong>dispose](/reference/classes/rustopaque/dispose)</strong>();</span>
 </dt>
 <dd>
 
@@ -321,10 +320,7 @@ description: |
 
 [RustOpaque]: /reference/classes/rustopaque
 [VecSeries]: /reference/classes/vecseries
-[(int, int)]: #
 [DataFrame]: /reference/classes/dataframe
-[dynamic]: #
 [Series]: /reference/classes/series
 [LazyFrame]: /reference/classes/lazyframe
 [Schema]: /reference/classes/schema
-[void]: #

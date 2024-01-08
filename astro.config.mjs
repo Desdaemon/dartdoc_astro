@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 import tailwind from "@astrojs/tailwind";
+import dartdoc from "./src/plugin"
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,6 +10,7 @@ export default defineConfig({
     starlight({
       title: "polars-dart",
       customCss: ["./src/tailwind.css"],
+      plugins: [dartdoc],
       social: {
         github: "https://github.com/Desdaemon/dartdoc_astro",
       },

@@ -7,12 +7,11 @@ description: |
 <code>[RustOpaque]</code> &rsaquo; `LazyGroupBy`
 
 
-
 ### Constructors
 <dl>
 <dt>
 
-<span class="dart-code"><strong>LazyGroupBy.[dcoDecode](dcodecode)</strong>(<span class="nobr">List\<dynamic> wire</span>);</span>
+<span class="dart-code"><strong>LazyGroupBy.[dcoDecode](dcodecode)</strong>(<span class="nobr">List&lt;dynamic&gt; wire</span>);</span>
 </dt>
 <dt>
 
@@ -24,7 +23,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>agg](agg)</strong>({<span class="nobr"><strong>required</strong> List\<Expr> exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>agg](agg)</strong>({<span class="nobr"><strong>required</strong> List&lt;Expr&gt; exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -56,11 +55,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>[move=](/reference/Classes/RustOpaque/move)</strong>(bool?);</span>
+<span class="dart-code"><strong>[move=](/reference/classes/rustopaque/move)</strong>(bool?);</span>
 </dt>
 <dt>
 
-<span class="dart-code">bool <strong>get [isDisposed](/reference/Classes/RustOpaque/isdisposed)</strong>;</span>
+<span class="dart-code">bool <strong>get [isDisposed](/reference/classes/rustopaque/isdisposed)</strong>;</span>
 </dt>
 <dd>
 
@@ -72,7 +71,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Pointer\<Void> [<strong>cstEncode](/reference/Classes/RustOpaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">Pointer&lt;Void&gt; [<strong>cstEncode](/reference/classes/rustopaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -80,7 +79,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">int [<strong>sseEncode](/reference/Classes/RustOpaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">int [<strong>sseEncode](/reference/classes/rustopaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -88,7 +87,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">void [<strong>dispose](/reference/Classes/RustOpaque/dispose)</strong>();</span>
+<span class="dart-code">void [<strong>dispose](/reference/classes/rustopaque/dispose)</strong>();</span>
 </dt>
 <dd>
 
@@ -98,5 +97,3 @@ description: |
 
 [RustOpaque]: /reference/classes/rustopaque
 [LazyFrame]: /reference/classes/lazyframe
-[dynamic]: #
-[void]: #

@@ -19,6 +19,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List\<ClosedWindow> <strong>get [values](values)</strong>;</span>
+<span class="dart-code">List&lt;ClosedWindow&gt; <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>

@@ -3,7 +3,7 @@ title: "scanCsv"
 description: |
    Prepares a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file for reading into a [LazyFrame].
 ---
-<span class="dart-code"><strong>Future\<LazyFrame> scanCsv</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr"><strong>required</strong> [OptionSchema] dtypeOverwrite</span>, <span class="nobr">bool? <i>hasHeader</i></span>, <span class="nobr">String? <i>commentChar</i></span>, <span class="nobr">String? <i>eolChar</i></span>, <span class="nobr">String? <i>quoteChar</i></span>, <span class="nobr">int <i>skipRows</i></span>, <span class="nobr">int <i>skipRowsAfterHeader</i></span>, <span class="nobr">[RowCount?] <i>rowCount</i></span>, <span class="nobr">[CsvEncoding?] <i>encoding</i></span>, <span class="nobr">int? <i>nRows</i></span>, <span class="nobr">[NullValues?] <i>nullValues</i></span>, <span class="nobr">bool <i>ignoreErrors</i></span>, <span class="nobr">bool <i>rechunk</i></span>, <span class="nobr">bool <i>tryParseDates</i></span>, <span class="nobr">int? <i>inferSchemaLength</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>Future&lt;LazyFrame&gt; scanCsv</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr"><strong>required</strong> [OptionSchema] dtypeOverwrite</span>, <span class="nobr">bool? <i>hasHeader</i></span>, <span class="nobr">String? <i>commentChar</i></span>, <span class="nobr">String? <i>eolChar</i></span>, <span class="nobr">String? <i>quoteChar</i></span>, <span class="nobr">int <i>skipRows</i></span>, <span class="nobr">int <i>skipRowsAfterHeader</i></span>, <span class="nobr">[RowCount?] <i>rowCount</i></span>, <span class="nobr">[CsvEncoding?] <i>encoding</i></span>, <span class="nobr">int? <i>nRows</i></span>, <span class="nobr">[NullValues?] <i>nullValues</i></span>, <span class="nobr">bool <i>ignoreErrors</i></span>, <span class="nobr">bool <i>rechunk</i></span>, <span class="nobr">bool <i>tryParseDates</i></span>, <span class="nobr">int? <i>inferSchemaLength</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Prepares a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file for reading into a [LazyFrame].
 
@@ -79,4 +79,3 @@ Future<LazyFrame> scanCsv(
 [RowCount?]: /reference/classes/rowcount
 [CsvEncoding?]: /reference/enums/csvencoding
 [NullValues?]: /reference/classes/nullvalues
-[dynamic]: #

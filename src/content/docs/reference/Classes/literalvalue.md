@@ -3,7 +3,6 @@ title: "LiteralValue"
 description: |
    Literal values for use in [Expr]essions.
 ---
-
  Literal values for use in [Expr]essions.
 
 ### Constructors
@@ -145,7 +144,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] <strong>get [expr](/reference/Classes/LiteralValueExt/expr)</strong>;</span>
+<span class="dart-code">[Expr] <strong>get [expr](/reference/extensions/literalvalueext/expr)</strong>;</span>
 </dt>
 <dd>
 
@@ -161,5 +160,4 @@ description: |
 [SpecialEqPSeries]: /reference/classes/specialeqpseries
 [LiteralValue]: /reference/classes/literalvalue
 [Series]: /reference/classes/series
-[dynamic]: #
 [Expr]: /reference/classes/expr

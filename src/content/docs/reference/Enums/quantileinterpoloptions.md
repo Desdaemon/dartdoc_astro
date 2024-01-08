@@ -20,6 +20,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List\<QuantileInterpolOptions> <strong>get [values](values)</strong>;</span>
+<span class="dart-code">List&lt;QuantileInterpolOptions&gt; <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>

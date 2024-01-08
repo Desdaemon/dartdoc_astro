@@ -10,8 +10,8 @@
 {%- if not it.isSetter %}{{it.returnType | link}} {% endif -%}
 <strong>{%- if it.isGetter %}get {% endif -%}
 [{{it.name}}](
-{%- if className -%}
-/reference/Classes/{{className}}/
+{%- if foreignClass -%}
+/reference/{{foreignClass | describe | lower}}/{{foreignClass.name | slug}}/
 {%- endif -%}{{it.name | slug}})</strong>
 {%- if it.isSetter %}({{it.type | link}}){% endif %};</span>
 </dt>

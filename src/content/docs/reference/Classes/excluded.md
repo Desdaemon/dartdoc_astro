@@ -5,7 +5,6 @@ description: |
 ---
 
 
-
 ### Constructors
 <dl>
 <dt>
@@ -26,7 +25,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Object <strong>get [field0](/reference/Classes/_$Excluded/field0)</strong>;</span>
+<span class="dart-code">Object <strong>get [field0](/reference/mixins/_excluded/field0)</strong>;</span>
 </dt>
 </dl>
 

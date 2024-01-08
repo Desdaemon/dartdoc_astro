@@ -3,7 +3,6 @@ title: "StrNamespace"
 description: |
    Sugar for `Expr.str*` methods.
 ---
-
  Sugar for `Expr.str*` methods.
 
  See [Strings](https://docs.pola.rs/user-guide/expressions/strings) for more details.

@@ -3,7 +3,6 @@ title: "RowCount"
 description: |
    Options for including a row count column.
 ---
-
  Options for including a row count column.
 
 ### Constructors

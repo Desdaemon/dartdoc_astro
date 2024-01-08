@@ -3,7 +3,7 @@ title: "dtypes"
 description: |
 
 ---
-<span class="dart-code"><strong>[Expr] dtypes</strong>(<span class="nobr">Iterable\<DataType> dtypes</span>);</span>
+<span class="dart-code"><strong>[Expr] dtypes</strong>(<span class="nobr">Iterable&lt;DataType&gt; dtypes</span>);</span>
 
 
 ### Implementation

@@ -3,7 +3,6 @@ title: "DataType"
 description: |
    Supported datatypes in a [DataFrame].
 ---
-
  Supported datatypes in a [DataFrame].
 
 ### Constructors
@@ -156,7 +155,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory DataType.[struct](struct)</strong>(<span class="nobr">List\<Field> field0</span>);</span>
+<span class="dart-code"><strong>const factory DataType.[struct](struct)</strong>(<span class="nobr">List&lt;Field&gt; field0</span>);</span>
 </dt>
 <dt>
 

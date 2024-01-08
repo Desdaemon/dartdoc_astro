@@ -5,7 +5,6 @@ description: |
 ---
 
 
-
 ### Constructors
 <dl>
 <dt>
@@ -27,13 +26,13 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[WindowMapping] <strong>get [field0](/reference/Classes/_$WindowType/field0)</strong>;</span>
+<span class="dart-code">[WindowMapping] <strong>get [field0](/reference/mixins/_windowtype/field0)</strong>;</span>
 </dt>
 <dt>
 
-<span class="dart-code">[$WindowTypeCopyWith\<WindowType>] <strong>get [copyWith](/reference/Classes/_$WindowType/copywith)</strong>;</span>
+<span class="dart-code">[$WindowTypeCopyWith&lt;WindowType&gt;] <strong>get [copyWith](/reference/mixins/_windowtype/copywith)</strong>;</span>
 </dt>
 </dl>
 
 [WindowMapping]: /reference/enums/windowmapping
-[$WindowTypeCopyWith\<WindowType>]: /reference/classes/windowtypecopywith
+[$WindowTypeCopyWith&lt;WindowType&gt;]: /reference/classes/windowtypecopywith

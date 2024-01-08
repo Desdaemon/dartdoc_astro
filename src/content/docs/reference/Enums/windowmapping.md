@@ -32,6 +32,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List\<WindowMapping> <strong>get [values](values)</strong>;</span>
+<span class="dart-code">List&lt;WindowMapping&gt; <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>

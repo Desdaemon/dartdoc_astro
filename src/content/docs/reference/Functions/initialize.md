@@ -3,7 +3,7 @@ title: "initialize"
 description: |
 
 ---
-<span class="dart-code"><strong>Future\<void> initialize</strong>({<span class="nobr">[ExternalLibrary?] <i>dylib</i></span>});</span>
+<span class="dart-code"><strong>Future&lt;void&gt; initialize</strong>({<span class="nobr">[ExternalLibrary?] <i>dylib</i></span>});</span>
 
 
 ### Implementation

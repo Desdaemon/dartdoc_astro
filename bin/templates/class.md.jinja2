@@ -3,7 +3,7 @@ title: "{{it.name}}"
 description: |
 {{it.docs | summarize | indent(2)}}
 ---
-{% if not it.super.isObject -%}
+{% if it.super and not it.super.isObject -%}
 *Inheritance*:  
 {% for type in [it.super] recursive %}
 {% if type.super %}
@@ -12,8 +12,10 @@ description: |
 <code>{{type | link}}</code> &rsaquo; {% endfor -%}
 `{{it.name}}`
 {% endif %}
+{%- block beforeDoc -%}{%- endblock -%}
 
 {{it.docs}}
+{% block constructors -%}
 {% set className = it.name %}
 {% for it in it.constructors if it.isPublic %}
 {% if loop.first %}
@@ -43,6 +45,9 @@ description: |
 {% endif %}
 {% endfor %}
 {% set className = false %}
+{%- endblock constructors -%}
+
+{%- block fields -%}
 {% for it in it.fields if it.isPublic and not it.isSynthetic %}
 {% if loop.first %}
 
@@ -65,15 +70,17 @@ description: |
 </dl>
 {% endif %}
 {% endfor %}
+{%- endblock fields -%}
 {% include "props.md.jinja2" %}
 {% include "methods.md.jinja2" %}
 
+{% block extensions -%}
 {% for it in it.extensions %}
 {% if loop.first %}
 
 ## `{{it.name}}` extensions
 {% endif %}
-{% set className = it.name %}
+{% set foreignClass = it %}
 {% include "props.md.jinja2" %}
 {% include "methods.md.jinja2" %}
 {% endfor %}
@@ -82,9 +89,10 @@ description: |
 {% set it = it.element %}
 
 ## Inherited from `{{it.name}}`
-{% set className = it.name %}
+{% set foreignClass = it %}
 {% include "props.md.jinja2" %}
 {% include "methods.md.jinja2" %}
 {% endfor %}
+{%- endblock extensions %}
 
 {{generateReferences()}}

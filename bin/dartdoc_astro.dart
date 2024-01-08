@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io' as io;
 
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
@@ -101,14 +102,14 @@ final ResourceProvider provider = PhysicalResourceProvider();
 Stream<Future<void>> run(List<String> arguments) async* {
   final config = Config.merge(arguments);
   if (config.included.isEmpty) {
-    config.included = const ['.'];
+    config.included = [canonicalize(Uri.base.toFilePath())];
   }
   final excluded = [
     for (final excluded in config.excluded)
       Glob(canonicalize(excluded, strict: false))
   ];
   final collection = AnalysisContextCollection(
-    includedPaths: config.included,
+    includedPaths: dbg(config.included, 'config.included'),
     resourceProvider: provider,
   );
   for (final root in config.included) {

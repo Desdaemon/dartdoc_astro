@@ -97,34 +97,47 @@ class Renderer {
   }
 
   Future<void> createClasses(List<ClassElement> classes) async {
-    for (final clazz in classes) {
-      final sink = io.File('$root/Classes/${_slug(clazz.name)}.md').openWrite();
-      final template = env
-          .copyWith(getAttribute: getAttribute)
-          .getTemplate('class.md.jinja2');
-      final collector = ReferenceCollector();
-      template.environment.filters['link'] = collector.link;
-      template.environment.filters['params'] =
-          ParamsRenderer(collector.link).call;
-      try {
-        template.renderTo(sink, {
-          'it': clazz,
-          'generateReferences': collector.generateReferences,
-        });
-        await Future.wait([
-          for (final method in clazz.methods)
-            _createFunctionImpl(
-              method,
-              '$root/Classes/${clazz.name}/${_slug(method.name)}.md',
-              frontMatter: const {
-                'sidebar': {'hidden': true}
-              },
-            ),
-        ]);
-      } finally {
-        await sink.flush();
-        await sink.close();
-      }
+    await Future.wait([
+      for (final clazz in classes)
+        _createInstanced(clazz, templateName: 'class.md.jinja2')
+    ]);
+  }
+
+  Future<void> _createInstanced<T extends InstanceElement>(
+    T interface, {
+    required String templateName,
+  }) async {
+    final descriptor = _describeElementType(interface, throwIfAbsent: true)!;
+    final base = '$root/$descriptor/${_slug(interface.name)}';
+    await io.Directory(base).create(recursive: true);
+    final sink = io.File('$base.md').openWrite();
+    final template =
+        env.copyWith(getAttribute: getAttribute).getTemplate(templateName);
+    final collector = ReferenceCollector();
+    template.environment.filters['link'] = collector.link;
+    template.environment.filters['params'] =
+        ParamsRenderer(collector.link).call;
+    try {
+      template.renderTo(sink, {
+        'it': interface,
+        'generateReferences': collector.generateReferences,
+      });
+      await Future.wait([
+        for (final prop in interface.accessors)
+          if (prop.variable.isSynthetic)
+            _createFunctionImpl(prop, '$base/${_slug(prop.name)}.md'),
+        for (final method in interface.methods)
+          _createFunctionImpl(
+            method,
+            '$base/${_slug(method.name)}.md',
+            frontMatter: const {
+              'sidebar': {'hidden': true}
+            },
+          ),
+      ]);
+    } finally {
+      await sink.flush();
+      await sink.close();
     }
   }
 
@@ -137,11 +150,10 @@ class Renderer {
   }
 
   Future<void> createExtensions(List<ExtensionElement> extensions) async {
-    if (extensions.isEmpty) return;
-    print('  Extensions:');
-    for (final ext in extensions) {
-      print('  - $ext');
-    }
+    await Future.wait([
+      for (final ext in extensions)
+        _createInstanced(ext, templateName: 'extension.md.jinja2')
+    ]);
   }
 
   dynamic getAttribute(String key, Object? obj) {
@@ -203,6 +215,8 @@ class Renderer {
         if (prop.isSetter) return prop.parameters.first.type;
       case ('type', VariableElement param):
         return param.type;
+      case ('extendedType', ExtensionElement ext):
+        return ext.extendedType;
       case ('default', ParameterElement param):
         return param.defaultValueCode;
       case ('isFinal', VariableElement param):
@@ -255,6 +269,8 @@ final env = Environment(
         },
     'indent': _indent,
     'slug': _slug,
+    'describe': (Element? elm) =>
+        _describeElementType(elm, throwIfAbsent: true)!,
   },
   loader: FileSystemLoader(
     paths: [Uri.base.resolve('bin/templates').toFilePath()],
@@ -311,22 +327,36 @@ class ParamsRenderer {
   }
 }
 
+String? _describeElementType(Element? obj, {bool throwIfAbsent = false}) {
+  return switch (obj) {
+    ClassElement _ => 'Classes',
+    EnumElement _ => 'Enums',
+    MixinElement _ => 'Mixins',
+    ExtensionElement _ => 'Extensions',
+    _ when throwIfAbsent => throw Exception(
+        'Please register ${obj.runtimeType} with _describeElementType'),
+    _ => null
+  };
+}
+
+String _linkElement(Element? elm) {
+  if (elm != null) {
+    if (_describeElementType(elm) case final descriptor?) {
+      return '/reference/${descriptor.toLowerCase()}/${_slug(elm.name)}';
+    }
+  }
+  return '#';
+}
+
 class ReferenceCollector {
   final Map<String, String> references = {};
 
   String link(DartType ty) {
-    final key = ty.toString().replaceAll('<', r'\<');
-    if (ty.element?.library?.name.startsWith('dart.') ?? false) {
+    final key = htmlEscape.convert(ty.getDisplayString(withNullability: true));
+    if (ty.element?.library?.name.startsWith('dart.') ?? true) {
       return key;
     }
-    final link = references.putIfAbsent(key, () {
-      return switch (ty.element) {
-        ClassElement clazz => '/reference/classes/${_slug(clazz.name)}',
-        EnumElement enu => '/reference/enums/${_slug(enu.name)}',
-        MixinElement mixin => '/reference/mixins/${_slug(mixin.name)}',
-        _ => '#'
-      };
-    });
+    final link = references.putIfAbsent(key, () => _linkElement(ty.element));
     if (link != '#') {
       return '[$key]';
     } else {

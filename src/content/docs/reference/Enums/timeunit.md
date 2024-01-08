@@ -30,6 +30,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List\<TimeUnit> <strong>get [values](values)</strong>;</span>
+<span class="dart-code">List&lt;TimeUnit&gt; <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>

@@ -36,6 +36,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List\<UniqueKeepStrategy> <strong>get [values](values)</strong>;</span>
+<span class="dart-code">List&lt;UniqueKeepStrategy&gt; <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>
