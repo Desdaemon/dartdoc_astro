@@ -3,39 +3,48 @@ title: "Field"
 description: |
   
 ---
+*Inheritance*  
+<code>Object</code> &rsaquo;
+ `Field`
 
-
-### Fields
-#### `name`
-<code>final String name;</code>
-
-
-#### `dtype`
-<code>final [DataType] dtype;</code>
-
-
-### Properties
-#### `hashCode`
-<code>int get hashCode;</code>
 
 
 ### Constructors
-#### `.new`
-<code><strong>const Field</strong>({<strong>required</strong> name, <strong>required</strong> dtype});</code>
+<dl>
+<dt>
 
+<span class="dart-code"><strong>const Field</strong>({<span class="nobr"><strong>required</strong> String name</span>, <span class="nobr"><strong>required</strong> [DataType] dtype</span>});</span>
+</dt>
+</dl>
 
-Parameter|Type|Default|
--|-|-|
-`name`|<code>String</code>||
-`dtype`|<code>[DataType]</code>||
-### Methods
-#### `==`
-<code><strong>bool ==</strong>(other);</code>
+### Fields
+<dl>
+<dt>
 
+<span class="dart-code"><strong>final </strong>String <strong>name</strong>;</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`other`|<code>Object</code>||
+<span class="dart-code"><strong>final </strong>[DataType] <strong>dtype</strong>;</span>
+</dt>
+</dl>
+
+### Properties
+<dl>
+<dt>
+
+<span class="dart-code">int <strong>get [hashCode](hashCode)</strong>;</span>
+</dt>
+</dl>
+
+### Operators
+<dl>
+<dt>
+
+<span class="dart-code">bool [operator <strong>==](==)</strong>(<span class="nobr">Object other</span>);</span>
+</dt>
+</dl>
+
 
 
 [DataType]: /reference/classes/datatype

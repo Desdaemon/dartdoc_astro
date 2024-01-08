@@ -8,30 +8,17 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>left</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>right</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>both</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>none</code></dt>
-  <dd>
-  
-
-  </dd>
+<dt><span class="dart-code">left</span></dt>
+<dt><span class="dart-code">right</span></dt>
+<dt><span class="dart-code">both</span></dt>
+<dt><span class="dart-code">none</span></dt>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<ClosedWindow> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<ClosedWindow> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>

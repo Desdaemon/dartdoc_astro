@@ -3,15 +3,9 @@ title: parseRow
 description: |
    Use this function to parse the results of [DataFrame.iter] and similar methods.
 ---
-<code><strong>Future\<List\<dynamic>> parseRow</strong>(row, {<i>growable</i>}) async;</code>
+<span class="dart-code"><strong>Future\<List\<dynamic>> parseRow</strong>(<span class="nobr">FutureOr\<List\<dynamic>> row</span>, {<span class="nobr">bool <i>growable</i></span>}) async;</span>
 
  Use this function to parse the results of [DataFrame.iter] and similar methods.
-
-Parameter|Type|Default|
--|-|-|
-`row`|<code>FutureOr\<List\<dynamic>></code>||
-`growable`|<code>bool</code>|`true`|
-
 ### Implementation
 ```dart
 /// Use this function to parse the results of [DataFrame.iter] and similar methods.

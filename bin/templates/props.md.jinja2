@@ -1,9 +1,24 @@
 {% for it in it.props if it.isPublic and it.makesSyntheticVariable %}
 {% if loop.first %}
-### Properties
-{% endif %}
-#### `{{it.name}}{% if it.isSetter %}={% endif %}`
-<code>{{it.returnType | link}} {%if it.isGetter %}get {% endif %}{%if it.isSetter %}set {% endif %}{{it.name}}{% if it.isSetter %}({{it.returnType | link}}){% endif %};</code>
 
-{{it.docs}}
+### Properties
+<dl>
+{% endif %}
+<dt>
+
+<span class="dart-code">
+{%- if not it.isSetter %}{{it.returnType | link}} {% endif -%}
+<strong>{%- if it.isGetter %}get {% endif -%}
+[{{it.name}}]({{it.name}})</strong>
+{%- if it.isSetter %}({{it.type | link}}){% endif %};</span>
+</dt>
+{% if it.docs %}
+<dd>
+
+{{it.docs | summarize}}
+</dd>
+{% endif %}
+{% if loop.last %}
+</dl>
+{% endif %}
 {% endfor %}

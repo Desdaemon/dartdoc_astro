@@ -3,38 +3,40 @@ title: "When"
 description: |
   
 ---
+*Inheritance*  
+<code>Object</code> &rsaquo;
+ `When`
 
-
-### Properties
-#### `expr`
-<code>[Expr] get expr;</code>
 
 
 ### Constructors
-#### `.new`
-<code><strong>When</strong>(condition, then);</code>
+<dl>
+<dt>
 
+<span class="dart-code"><strong>When</strong>(<span class="nobr">Object? condition</span>, <span class="nobr">Object? then</span>);</span>
+</dt>
+</dl>
 
-Parameter|Type|Default|
--|-|-|
-`condition`|<code>Object?</code>||
-`then`|<code>Object?</code>||
+### Properties
+<dl>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [expr](expr)</strong>;</span>
+</dt>
+</dl>
+
 ### Methods
-#### `when`
-<code><strong>[When] when</strong>(condition, {<strong>required</strong> then});</code>
+<dl>
+<dt>
 
+<span class="dart-code">[When] [<strong>when](when)</strong>(<span class="nobr">Object? condition</span>, {<span class="nobr"><strong>required</strong> Object? then</span>});</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`condition`|<code>Object?</code>||
-`then`|<code>Object?</code>||
-#### `otherwise`
-<code><strong>[Expr] otherwise</strong>(otherwise);</code>
+<span class="dart-code">[Expr] [<strong>otherwise](otherwise)</strong>(<span class="nobr">Object? otherwise</span>);</span>
+</dt>
+</dl>
 
-
-Parameter|Type|Default|
--|-|-|
-`otherwise`|<code>Object?</code>||
 
 
 [Expr]: /reference/classes/expr

@@ -3,347 +3,352 @@ title: "LazyFrame"
 description: |
   
 ---
+*Inheritance*  
+<code>[RustOpaque]</code> &rsaquo;
+ `LazyFrame`
+
 
 
 ### Constructors
-#### `.dcoDecode`
-<code><strong>LazyFrame.dcoDecode</strong>(wire);</code>
+<dl>
+<dt>
 
+<span class="dart-code"><strong>LazyFrame.[dcoDecode](dcoDecode)</strong>(<span class="nobr">List\<dynamic> wire</span>);</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`wire`|<code>dynamic</code>||
-#### `.sseDecode`
-<code><strong>LazyFrame.sseDecode</strong>(ptr, externalSizeOnNative);</code>
+<span class="dart-code"><strong>LazyFrame.[sseDecode](sseDecode)</strong>(<span class="nobr">int ptr</span>, <span class="nobr">int externalSizeOnNative</span>);</span>
+</dt>
+</dl>
 
+### Properties
+<dl>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`ptr`|<code>int</code>||
-`externalSizeOnNative`|<code>int</code>||
+<span class="dart-code">[LazyFrame] <strong>get [first](first)</strong>;</span>
+</dt>
+<dd>
+
+ Get the first row.
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] <strong>get [last](last)</strong>;</span>
+</dt>
+<dd>
+
+ Get the last row.
+</dd>
+</dl>
+
 ### Methods
-#### `cache`
-<code><strong>[LazyFrame] cache</strong>({<i>hint</i>});</code>
+<dl>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>cache](cache)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Caches the results into a new [LazyFrame].
+</dd>
+<dt>
 
- This should be used to prevent computations running multiple times.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `collect`
-<code><strong>Future\<DataFrame> collect</strong>({<i>streaming</i>, <i>hint</i>});</code>
+<span class="dart-code">Future\<DataFrame> [<strong>collect](collect)</strong>({<span class="nobr">bool <i>streaming</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Executes all lazy operations and collects results into a [DataFrame].
+</dd>
+<dt>
 
- Can also optionally be run in [streaming mode](https://docs.pola.rs/user-guide/concepts/streaming).
-Parameter|Type|Default|
--|-|-|
-`streaming`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>||
-#### `crossJoin`
-<code><strong>[LazyFrame] crossJoin</strong>({<strong>required</strong> other, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>crossJoin](crossJoin)</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Creates the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) from both frames,
  preserving the order of this frame's keys.
-Parameter|Type|Default|
--|-|-|
-`other`|<code>[LazyFrame]</code>||
-`hint`|<code>dynamic</code>||
-#### `dropNulls`
-<code><strong>[LazyFrame] dropNulls</strong>({<i>subset</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>dropNulls](dropNulls)</strong>({<span class="nobr">List\<Expr>? <i>subset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Drop null rows.
+</dd>
+<dt>
 
- Same as `frame.filter(col('*').isNotNull)`.
-Parameter|Type|Default|
--|-|-|
-`subset`|<code>List\<Expr>?</code>||
-`hint`|<code>dynamic</code>||
-#### `explode`
-<code><strong>[LazyFrame] explode</strong>({<strong>required</strong> columns, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>explode](explode)</strong>({<span class="nobr"><strong>required</strong> List\<Expr> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Explode each column.
-Parameter|Type|Default|
--|-|-|
-`columns`|<code>List\<Expr></code>||
-`hint`|<code>dynamic</code>||
-#### `fetch`
-<code><strong>Future\<DataFrame> fetch</strong>({<strong>required</strong> nRows, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">Future\<DataFrame> [<strong>fetch](fetch)</strong>({<span class="nobr"><strong>required</strong> int nRows</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Similar to [collect], but overrides the number of rows read by each operation.
+</dd>
+<dt>
 
- The final row count is not guaranteed to be equal [nRows].
-Parameter|Type|Default|
--|-|-|
-`nRows`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `filter`
-<code><strong>[LazyFrame] filter</strong>({<strong>required</strong> pred, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>filter](filter)</strong>({<span class="nobr"><strong>required</strong> [Expr] pred</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Filter by the specified predicate expression.
-Parameter|Type|Default|
--|-|-|
-`pred`|<code>[Expr]</code>||
-`hint`|<code>dynamic</code>||
-#### `first`
-<code><strong>[LazyFrame] first</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
 
- Get the first row.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `groupBy`
-<code><strong>[LazyGroupBy] groupBy</strong>({<strong>required</strong> exprs, <i>maintainOrder</i>, <i>hint</i>});</code>
+<span class="dart-code">[LazyGroupBy] [<strong>groupBy](groupBy)</strong>({<span class="nobr"><strong>required</strong> List\<Expr> exprs</span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Define conditions by which to group and aggregate rows.
-Parameter|Type|Default|
--|-|-|
-`exprs`|<code>List\<Expr></code>||
-`maintainOrder`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>||
-#### `innerJoin`
-<code><strong>[LazyFrame] innerJoin</strong>({<strong>required</strong> other, <strong>required</strong> leftOn, <strong>required</strong> rightOn, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>innerJoin](innerJoin)</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr"><strong>required</strong> [Expr] leftOn</span>, <span class="nobr"><strong>required</strong> [Expr] rightOn</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Performs an [inner join](https://en.wikipedia.org/wiki/Join_(SQL)#Inner_join_and_NULL_values) with [other].
-Parameter|Type|Default|
--|-|-|
-`other`|<code>[LazyFrame]</code>||
-`leftOn`|<code>[Expr]</code>||
-`rightOn`|<code>[Expr]</code>||
-`hint`|<code>dynamic</code>||
-#### `join`
-<code><strong>[LazyFrame] join</strong>({<strong>required</strong> other, <i>on</i>, <i>leftOn</i>, <i>rightOn</i>, <i>suffix</i>, <i>how</i>, <i>allowParallel</i>, <i>forceParallel</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>join](join)</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr">List\<Expr>? <i>on</i></span>, <span class="nobr">List\<Expr>? <i>leftOn</i></span>, <span class="nobr">List\<Expr>? <i>rightOn</i></span>, <span class="nobr">String <i>suffix</i></span>, <span class="nobr">[JoinType] <i>how</i></span>, <span class="nobr">bool <i>allowParallel</i></span>, <span class="nobr">bool <i>forceParallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Joins this table to [other].
+</dd>
+<dt>
 
- Use [on] to specify columns on both frames to join on, or specify separately
- using [leftOn] and [rightOn].
-
- [suffix] specifies the suffix to add to duplicate columns of [other].
-
- Example:
- ```dart
- final joined = left
-   .join(
-     other: right,
-     leftOn: [col('foo'), col('bar')],
-     rightOn: [col('foo'), col('bar')],
-     how: JoinType.Inner,
-   );
- ```
-Parameter|Type|Default|
--|-|-|
-`other`|<code>[LazyFrame]</code>||
-`on`|<code>List\<Expr>?</code>||
-`leftOn`|<code>List\<Expr>?</code>||
-`rightOn`|<code>List\<Expr>?</code>||
-`suffix`|<code>String</code>|`r"_right"`|
-`how`|<code>[JoinType]</code>|`JoinType.left`|
-`allowParallel`|<code>bool</code>|`true`|
-`forceParallel`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>||
-#### `last`
-<code><strong>[LazyFrame] last</strong>({<i>hint</i>});</code>
-
- Get the last row.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `leftJoin`
-<code><strong>[LazyFrame] leftJoin</strong>({<strong>required</strong> other, <strong>required</strong> leftOn, <strong>required</strong> rightOn, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>leftJoin](leftJoin)</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr"><strong>required</strong> [Expr] leftOn</span>, <span class="nobr"><strong>required</strong> [Expr] rightOn</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Performs a [left outer join](https://en.wikipedia.org/wiki/Join_(SQL)#Left_outer_join) with [other].
-Parameter|Type|Default|
--|-|-|
-`other`|<code>[LazyFrame]</code>||
-`leftOn`|<code>[Expr]</code>||
-`rightOn`|<code>[Expr]</code>||
-`hint`|<code>dynamic</code>||
-#### `limit`
-<code><strong>[LazyFrame] limit</strong>({<strong>required</strong> n, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>limit](limit)</strong>({<span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Limit this dataframe to the first [n] rows.
+</dd>
+<dt>
 
- To avoid scanning the rows, use [fetch].
-Parameter|Type|Default|
--|-|-|
-`n`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `max`
-<code><strong>[LazyFrame] max</strong>({<i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>max](max)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their max values.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `mean`
-<code><strong>[LazyFrame] mean</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>mean](mean)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their means.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `median`
-<code><strong>[LazyFrame] median</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>median](median)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their medians.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `melt`
-<code><strong>[LazyFrame] melt</strong>({<strong>required</strong> idVars, <strong>required</strong> valueVars, <i>variableName</i>, <i>valueName</i>, <i>streamable</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>melt](melt)</strong>({<span class="nobr"><strong>required</strong> List\<String> idVars</span>, <span class="nobr"><strong>required</strong> List\<String> valueVars</span>, <span class="nobr">String? <i>variableName</i></span>, <span class="nobr">String? <i>valueName</i></span>, <span class="nobr">bool <i>streamable</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  [Melt](https://docs.pola.rs/user-guide/transformations/melt) this
  dataframe from the wide format to the long format.
-Parameter|Type|Default|
--|-|-|
-`idVars`|<code>List\<String></code>||
-`valueVars`|<code>List\<String></code>||
-`variableName`|<code>String?</code>||
-`valueName`|<code>String?</code>||
-`streamable`|<code>bool</code>|`true`|
-`hint`|<code>dynamic</code>||
-#### `min`
-<code><strong>[LazyFrame] min</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>min](min)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their min values.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `nullCount`
-<code><strong>[LazyFrame] nullCount</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
 
+<span class="dart-code">[LazyFrame] [<strong>nullCount](nullCount)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `outerJoin`
-<code><strong>[LazyFrame] outerJoin</strong>({<strong>required</strong> other, <strong>required</strong> leftOn, <strong>required</strong> rightOn, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>outerJoin](outerJoin)</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr"><strong>required</strong> [Expr] leftOn</span>, <span class="nobr"><strong>required</strong> [Expr] rightOn</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Performs a [full outer join](https://en.wikipedia.org/wiki/Join_(SQL)#Full_outer_join) with [other].
-Parameter|Type|Default|
--|-|-|
-`other`|<code>[LazyFrame]</code>||
-`leftOn`|<code>[Expr]</code>||
-`rightOn`|<code>[Expr]</code>||
-`hint`|<code>dynamic</code>||
-#### `quantile`
-<code><strong>[LazyFrame] quantile</strong>({<strong>required</strong> quantile, <strong>required</strong> interpol, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>quantile](quantile)</strong>({<span class="nobr"><strong>required</strong> [Expr] quantile</span>, <span class="nobr"><strong>required</strong> [QuantileInterpolOptions] interpol</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their quantiles.
-Parameter|Type|Default|
--|-|-|
-`quantile`|<code>[Expr]</code>||
-`interpol`|<code>[QuantileInterpolOptions]</code>||
-`hint`|<code>dynamic</code>||
-#### `reverse`
-<code><strong>[LazyFrame] reverse</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>reverse](reverse)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Reverse the order of this dataframe's columns.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `select`
-<code><strong>[LazyFrame] select</strong>({<strong>required</strong> exprs, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>select](select)</strong>({<span class="nobr"><strong>required</strong> List\<Expr> exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Select (and rename) columns from the query.
-Parameter|Type|Default|
--|-|-|
-`exprs`|<code>List\<Expr></code>||
-`hint`|<code>dynamic</code>||
-#### `slice`
-<code><strong>[LazyFrame] slice</strong>({<strong>required</strong> offset, <strong>required</strong> len, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>slice](slice)</strong>({<span class="nobr"><strong>required</strong> int offset</span>, <span class="nobr"><strong>required</strong> int len</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Slice the frame.
-Parameter|Type|Default|
--|-|-|
-`offset`|<code>int</code>||
-`len`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `sort`
-<code><strong>[LazyFrame] sort</strong>({<strong>required</strong> byColumn, <i>descending</i>, <i>nullsLast</i>, <i>multithreaded</i>, <i>maintainOrder</i>, <i>hint</i>});</code>
+</dd>
+<dt>
 
+<span class="dart-code">[LazyFrame] [<strong>sort](sort)</strong>({<span class="nobr"><strong>required</strong> String byColumn</span>, <span class="nobr">bool <i>descending</i></span>, <span class="nobr">bool <i>nullsLast</i></span>, <span class="nobr">bool <i>multithreaded</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`byColumn`|<code>String</code>||
-`descending`|<code>bool</code>|`false`|
-`nullsLast`|<code>bool</code>|`false`|
-`multithreaded`|<code>bool</code>|`true`|
-`maintainOrder`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>||
-#### `std`
-<code><strong>[LazyFrame] std</strong>({<strong>required</strong> ddof, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>std](std)</strong>({<span class="nobr"><strong>required</strong> int ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their standard deviances.
-Parameter|Type|Default|
--|-|-|
-`ddof`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `sum`
-<code><strong>[LazyFrame] sum</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>sum](sum)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their sums.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `tail`
-<code><strong>[LazyFrame] tail</strong>({<strong>required</strong> n, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>tail](tail)</strong>({<span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Get the last [n] rows.
-Parameter|Type|Default|
--|-|-|
-`n`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `unique`
-<code><strong>[LazyFrame] unique</strong>({<i>subset</i>, <strong>required</strong> keepStrategy, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>unique](unique)</strong>({<span class="nobr">List\<String>? <i>subset</i></span>, <span class="nobr"><strong>required</strong> [UniqueKeepStrategy] keepStrategy</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Keep unique rows without maintaining order.
-Parameter|Type|Default|
--|-|-|
-`subset`|<code>List\<String>?</code>||
-`keepStrategy`|<code>[UniqueKeepStrategy]</code>||
-`hint`|<code>dynamic</code>||
-#### `variance`
-<code><strong>[LazyFrame] variance</strong>({<strong>required</strong> ddof, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>variance](variance)</strong>({<span class="nobr"><strong>required</strong> int ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate all columns as their variances.
-Parameter|Type|Default|
--|-|-|
-`ddof`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `withColumn`
-<code><strong>[LazyFrame] withColumn</strong>({<strong>required</strong> expr, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>withColumn](withColumn)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Add a column to this dataframe.
-Parameter|Type|Default|
--|-|-|
-`expr`|<code>[Expr]</code>||
-`hint`|<code>dynamic</code>||
-#### `withColumns`
-<code><strong>[LazyFrame] withColumns</strong>({<strong>required</strong> exprs, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>withColumns](withColumns)</strong>({<span class="nobr"><strong>required</strong> List\<Expr> exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Add columns to this dataframe.
-Parameter|Type|Default|
--|-|-|
-`exprs`|<code>List\<Expr></code>||
-`hint`|<code>dynamic</code>||
-#### `withRowCount`
-<code><strong>[LazyFrame] withRowCount</strong>({<strong>required</strong> name, <i>offset</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>withRowCount](withRowCount)</strong>({<span class="nobr"><strong>required</strong> String name</span>, <span class="nobr">int? <i>offset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Add a new column at index 0 denoting the row number.
-Parameter|Type|Default|
--|-|-|
-`name`|<code>String</code>||
-`offset`|<code>int?</code>||
-`hint`|<code>dynamic</code>||
+</dd>
+</dl>
 
 
-[dynamic]: #
+
+## Inherited from `RustOpaque`
+
+### Properties
+<dl>
+<dt>
+
+<span class="dart-code"><strong>[move=](move=)</strong>(bool?);</span>
+</dt>
+<dt>
+
+<span class="dart-code">bool <strong>get [isDisposed](isDisposed)</strong>;</span>
+</dt>
+<dd>
+
+ Whether the underlying `Arc` is disposed.
+</dd>
+</dl>
+
+### Methods
+<dl>
+<dt>
+
+<span class="dart-code">Pointer\<Void> [<strong>cstEncode](cstEncode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+</dt>
+<dd>
+
+ {@macro flutter_rust_bridge.only_for_generated_code}
+</dd>
+<dt>
+
+<span class="dart-code">int [<strong>sseEncode](sseEncode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+</dt>
+<dd>
+
+ {@macro flutter_rust_bridge.only_for_generated_code}
+</dd>
+<dt>
+
+<span class="dart-code">void [<strong>dispose](dispose)</strong>();</span>
+</dt>
+<dd>
+
+ Dispose the underlying `Arc`.
+</dd>
+</dl>
+
+[RustOpaque]: /reference/classes/rustopaque
 [LazyFrame]: /reference/classes/lazyframe
+[dynamic]: #
 [Expr]: /reference/classes/expr
 [LazyGroupBy]: /reference/classes/lazygroupby
 [JoinType]: /reference/enums/jointype
 [QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions
 [UniqueKeepStrategy]: /reference/enums/uniquekeepstrategy
+[void]: #

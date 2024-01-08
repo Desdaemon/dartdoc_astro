@@ -8,25 +8,16 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>raise</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>earliest</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>latest</code></dt>
-  <dd>
-  
-
-  </dd>
+<dt><span class="dart-code">raise</span></dt>
+<dt><span class="dart-code">earliest</span></dt>
+<dt><span class="dart-code">latest</span></dt>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<Ambiguous> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<Ambiguous> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>

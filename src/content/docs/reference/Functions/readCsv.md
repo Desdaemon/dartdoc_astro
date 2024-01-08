@@ -3,7 +3,7 @@ title: readCsv
 description: |
    Reads a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file into a [DataFrame].
 ---
-<code><strong>Future\<DataFrame> readCsv</strong>({<strong>required</strong> path, <i>dtypesSlice</i>, <i>hasHeader</i>, <i>columns</i>, <i>commentChar</i>, <i>eolChar</i>, <i>chunkSize</i>, <i>sampleSize</i>, <i>rowCount</i>, <i>encoding</i>, <i>nRows</i>, <i>nThreads</i>, <i>nullValues</i>, <i>projection</i>, <i>quoteChar</i>, <i>skipRows</i>, <i>skipRowsAfterHeader</i>, <i>ignoreErrors</i>, <i>rechunk</i>, <i>tryParseDates</i>, <i>lowMemory</i>, <i>hint</i>});</code>
+<span class="dart-code"><strong>Future\<DataFrame> readCsv</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr">List\<DataType>? <i>dtypesSlice</i></span>, <span class="nobr">bool? <i>hasHeader</i></span>, <span class="nobr">List\<String>? <i>columns</i></span>, <span class="nobr">String? <i>commentChar</i></span>, <span class="nobr">String? <i>eolChar</i></span>, <span class="nobr">int? <i>chunkSize</i></span>, <span class="nobr">int? <i>sampleSize</i></span>, <span class="nobr">[RowCount?] <i>rowCount</i></span>, <span class="nobr">[CsvEncoding?] <i>encoding</i></span>, <span class="nobr">int? <i>nRows</i></span>, <span class="nobr">int? <i>nThreads</i></span>, <span class="nobr">[NullValues?] <i>nullValues</i></span>, <span class="nobr">Uint32List? <i>projection</i></span>, <span class="nobr">String? <i>quoteChar</i></span>, <span class="nobr">int <i>skipRows</i></span>, <span class="nobr">int <i>skipRowsAfterHeader</i></span>, <span class="nobr">bool <i>ignoreErrors</i></span>, <span class="nobr">bool <i>rechunk</i></span>, <span class="nobr">bool <i>tryParseDates</i></span>, <span class="nobr">bool <i>lowMemory</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Reads a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file into a [DataFrame].
 
@@ -20,32 +20,6 @@ description: |
  - `projection`: Select only columns at the specified indices.
  - `rechunk`: Relocate the dataframe into contiguous memory after parsing.
               Slow, but improves performance for later operations.
-
-Parameter|Type|Default|
--|-|-|
-`path`|<code>String</code>||
-`dtypesSlice`|<code>List\<DataType>?</code>||
-`hasHeader`|<code>bool?</code>||
-`columns`|<code>List\<String>?</code>||
-`commentChar`|<code>String?</code>||
-`eolChar`|<code>String?</code>||
-`chunkSize`|<code>int?</code>||
-`sampleSize`|<code>int?</code>||
-`rowCount`|<code>[RowCount?]</code>||
-`encoding`|<code>[CsvEncoding?]</code>||
-`nRows`|<code>int?</code>||
-`nThreads`|<code>int?</code>||
-`nullValues`|<code>[NullValues?]</code>||
-`projection`|<code>Uint32List?</code>||
-`quoteChar`|<code>String?</code>|`'"'`|
-`skipRows`|<code>int</code>|`0`|
-`skipRowsAfterHeader`|<code>int</code>|`0`|
-`ignoreErrors`|<code>bool</code>|`false`|
-`rechunk`|<code>bool</code>|`false`|
-`tryParseDates`|<code>bool</code>|`true`|
-`lowMemory`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>||
-
 ### Implementation
 ```dart
 /// Reads a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file into a [DataFrame].

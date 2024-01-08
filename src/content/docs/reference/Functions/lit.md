@@ -3,14 +3,9 @@ title: lit
 description: |
    Alias for `Object.expr`.
 ---
-<code><strong>[Expr] lit</strong>(value);</code>
+<span class="dart-code"><strong>[Expr] lit</strong>(<span class="nobr">Object? value</span>);</span>
 
  Alias for `Object.expr`.
-
-Parameter|Type|Default|
--|-|-|
-`value`|<code>Object?</code>||
-
 ### Implementation
 ```dart
 /// Alias for `Object.expr`.

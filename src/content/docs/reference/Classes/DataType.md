@@ -3,109 +3,185 @@ title: "DataType"
 description: |
    Supported datatypes in a [DataFrame].
 ---
+*Inheritance*  
+<code>Object</code> &rsaquo;
+ `DataType`
+
  Supported datatypes in a [DataFrame].
 
 ### Constructors
-#### `.boolean`
-<code><strong>const factory DataType.boolean</strong>();</code>
+<dl>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[boolean](boolean)</strong>();</span>
+</dt>
+<dd>
 
  Boolean
-#### `.uint8`
-<code><strong>const factory DataType.uint8</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[uint8](uint8)</strong>();</span>
+</dt>
+<dd>
 
  Unsigned 8-bit integer
-#### `.uint16`
-<code><strong>const factory DataType.uint16</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[uint16](uint16)</strong>();</span>
+</dt>
+<dd>
 
  Unsigned 16-bit integer
-#### `.uint32`
-<code><strong>const factory DataType.uint32</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[uint32](uint32)</strong>();</span>
+</dt>
+<dd>
 
  Unsigned 32-bit integer
-#### `.uint64`
-<code><strong>const factory DataType.uint64</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[uint64](uint64)</strong>();</span>
+</dt>
+<dd>
 
  Unsigned 64-bit integer
-#### `.int8`
-<code><strong>const factory DataType.int8</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[int8](int8)</strong>();</span>
+</dt>
+<dd>
 
  Signed 8-bit integer
-#### `.int16`
-<code><strong>const factory DataType.int16</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[int16](int16)</strong>();</span>
+</dt>
+<dd>
 
  Signed 16-bit integer
-#### `.int32`
-<code><strong>const factory DataType.int32</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[int32](int32)</strong>();</span>
+</dt>
+<dd>
 
  Signed 32-bit integer
-#### `.int64`
-<code><strong>const factory DataType.int64</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[int64](int64)</strong>();</span>
+</dt>
+<dd>
 
  Signed 64-bit integer, the default [int] on native platforms.
-#### `.float32`
-<code><strong>const factory DataType.float32</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[float32](float32)</strong>();</span>
+</dt>
+<dd>
 
  Single-precision floating point number
-#### `.float64`
-<code><strong>const factory DataType.float64</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[float64](float64)</strong>();</span>
+</dt>
+<dd>
 
  Double-precision floating point number, aka a [double].
-#### `.utf8`
-<code><strong>const factory DataType.utf8</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[utf8](utf8)</strong>();</span>
+</dt>
+<dd>
 
  String data
-#### `.binary`
-<code><strong>const factory DataType.binary</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[binary](binary)</strong>();</span>
+</dt>
+<dd>
 
  Raw bytes.
-#### `.date`
-<code><strong>const factory DataType.date</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[date](date)</strong>();</span>
+</dt>
+<dd>
 
  A 32-bit date representing the elapsed time since UNIX epoch (1970-01-01)
  in days (32 bits).
-#### `.datetime`
-<code><strong>const factory DataType.datetime</strong>(field0,[<i>field1</i>]);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[datetime](datetime)</strong>(<span class="nobr">[TimeUnit] field0</span>, [<i><span class="nobr">String? field1</span></i>]);</span>
+</dt>
+<dd>
 
  A 64-bit date representing the elapsed time since UNIX epoch (1970-01-01)
  in the given timeunit (64 bits), with optional timezone.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[TimeUnit]</code>||
-`field1`|<code>String?</code>||
-#### `.duration`
-<code><strong>const factory DataType.duration</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[duration](duration)</strong>(<span class="nobr">[TimeUnit] field0</span>);</span>
+</dt>
+<dd>
 
  64-bit integer representing difference between times in milliseconds or nanoseconds
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[TimeUnit]</code>||
-#### `.time`
-<code><strong>const factory DataType.time</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[time](time)</strong>();</span>
+</dt>
+<dd>
 
  A 64-bit time representing the elapsed time since midnight in nanoseconds
-#### `.list`
-<code><strong>const factory DataType.list</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[list](list)</strong>(<span class="nobr">[DataType] field0</span>);</span>
+</dt>
+<dd>
 
  A typed list.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[DataType]</code>||
-#### `.struct`
-<code><strong>const factory DataType.struct</strong>(field0);</code>
+</dd>
+<dt>
 
+<span class="dart-code"><strong>const factory DataType.[struct](struct)</strong>(<span class="nobr">List\<Field> field0</span>);</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>List\<Field></code>||
-#### `.Null`
-<code><strong>const factory DataType.Null</strong>();</code>
+<span class="dart-code"><strong>const factory DataType.[Null](Null)</strong>();</span>
+</dt>
+<dd>
 
  Null value.
-#### `.unknown`
-<code><strong>const factory DataType.unknown</strong>();</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory DataType.[unknown](unknown)</strong>();</span>
+</dt>
+<dd>
 
  Some logical types we cannot know statically, e.g. Datetime
+</dd>
+</dl>
 
+
+
+## Inherited from `_$DataType`
 
 [TimeUnit]: /reference/enums/timeunit
 [DataType]: /reference/classes/datatype

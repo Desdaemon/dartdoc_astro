@@ -3,35 +3,81 @@ title: "{{it.name}}"
 description: |
   {{it.docs | summarize}}
 ---
-{{it.docs}}
+*Inheritance*  
+{% for it in [it.super] if it recursive -%}
+{% if it and it.super -%}
+{{loop([it.super])}}
+{%- endif -%}
+<code>{{it | link}}</code> &rsaquo;
+{% endfor %} `{{it.name}}`
 
-{% for it in it.fields if it.isPublic and not it.isSynthetic %}
-{% if loop.first %}
-### Fields
-{% endif %}
-#### `{{it.name}}`
-<code>{% if it.isStatic %}static {% endif %}{% if it.isFinal %}final {% endif %}{{it.type | link}} {{it.name}};</code>
-
 {{it.docs}}
-{% endfor %}
-{% include "props.md.jinja2" %}
 {% set className = it.name %}
 {% for it in it.constructors if it.isPublic %}
 {% if loop.first %}
+
 ### Constructors
+<dl>
 {% endif %}
-#### `.{{it.name | defaultIfBlank('new')}}`
-<code><strong>{% if it.isConst %}const {% endif %}{% if it.isFactory %}factory {% endif %}{{className}}{% if it.name.isNotEmpty %}.{{it.name}}{% endif %}</strong>({{it.params | params}});</code>
+<dt>
+
+<span class="dart-code"><strong>{% if it.isConst %}const {% endif -%}
+{%- if it.isFactory %}factory {% endif %}{{className}}
+{%- if it.name.isNotEmpty %}.[{{it.name}}]({{it.name}}){% endif %}</strong>({{it.params | params}});</span>
+</dt>
+{% if it.name and it.docs %}
+<dd>
+
+{{it.docs | summarize}}
+</dd>
+{% elif it.docs %}
+<dd>
 
 {{it.docs}}
-{% include "params_table.md.jinja2" %}
+</dd>
+{% endif %}
+{% if loop.last %}
+</dl>
+{% endif %}
 {% endfor %}
+{% for it in it.fields if it.isPublic and not it.isSynthetic %}
+{% if loop.first %}
+
+### Fields
+<dl>
+{% endif %}
+<dt>
+
+<span class="dart-code"><strong>
+{%- if it.isStatic %}static {% endif %}
+{%- if it.isFinal %}final {% endif %}</strong>{{it.type | link}} <strong>{{it.name}}</strong>;</span>
+</dt>
+{% if it.docs %}
+<dd>
+
+{{it.docs}}
+</dd>
+{% endif %}
+{% if loop.last %}
+</dl>
+{% endif %}
+{% endfor %}
+{% include "props.md.jinja2" %}
 {% include "methods.md.jinja2" %}
 
 {% for it in it.extensions %}
 {% if loop.first %}
+
 ## `{{it.name}}` extensions
 {% endif %}
+{% include "props.md.jinja2" %}
+{% set className = it.name %}
+{% include "methods.md.jinja2" %}
+{% endfor %}
+
+{% for it in it.supers if it.name != "Object" %}
+
+## Inherited from `{{it.name}}`
 {% include "props.md.jinja2" %}
 {% set className = it.name %}
 {% include "methods.md.jinja2" %}

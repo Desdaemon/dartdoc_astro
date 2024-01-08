@@ -3,114 +3,75 @@ title: "AggExpr"
 description: |
   
 ---
+*Inheritance*  
+<code>Object</code> &rsaquo;
+ `AggExpr`
+
 
 
 ### Constructors
-#### `.min`
-<code><strong>const factory AggExpr.min</strong>({<strong>required</strong> input, <strong>required</strong> propagateNans});</code>
+<dl>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[min](min)</strong>({<span class="nobr"><strong>required</strong> [Expr] input</span>, <span class="nobr"><strong>required</strong> bool propagateNans</span>});</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[max](max)</strong>({<span class="nobr"><strong>required</strong> [Expr] input</span>, <span class="nobr"><strong>required</strong> bool propagateNans</span>});</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[median](median)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[nUnique](nUnique)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[first](first)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[last](last)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[mean](mean)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[implode](implode)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[count](count)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[quantile](quantile)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr"><strong>required</strong> [Expr] quantile</span>, <span class="nobr"><strong>required</strong> [QuantileInterpolOptions] interpol</span>});</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[sum](sum)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[aggGroups](aggGroups)</strong>(<span class="nobr">[Expr] field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[std](std)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">int field1</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory AggExpr.[Var](Var)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">int field1</span>);</span>
+</dt>
+</dl>
 
 
-Parameter|Type|Default|
--|-|-|
-`input`|<code>[Expr]</code>||
-`propagateNans`|<code>bool</code>||
-#### `.max`
-<code><strong>const factory AggExpr.max</strong>({<strong>required</strong> input, <strong>required</strong> propagateNans});</code>
 
-
-Parameter|Type|Default|
--|-|-|
-`input`|<code>[Expr]</code>||
-`propagateNans`|<code>bool</code>||
-#### `.median`
-<code><strong>const factory AggExpr.median</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.nUnique`
-<code><strong>const factory AggExpr.nUnique</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.first`
-<code><strong>const factory AggExpr.first</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.last`
-<code><strong>const factory AggExpr.last</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.mean`
-<code><strong>const factory AggExpr.mean</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.implode`
-<code><strong>const factory AggExpr.implode</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.count`
-<code><strong>const factory AggExpr.count</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.quantile`
-<code><strong>const factory AggExpr.quantile</strong>({<strong>required</strong> expr, <strong>required</strong> quantile, <strong>required</strong> interpol});</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`expr`|<code>[Expr]</code>||
-`quantile`|<code>[Expr]</code>||
-`interpol`|<code>[QuantileInterpolOptions]</code>||
-#### `.sum`
-<code><strong>const factory AggExpr.sum</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.aggGroups`
-<code><strong>const factory AggExpr.aggGroups</strong>(field0);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-#### `.std`
-<code><strong>const factory AggExpr.std</strong>(field0, field1);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-`field1`|<code>int</code>||
-#### `.Var`
-<code><strong>const factory AggExpr.Var</strong>(field0, field1);</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[Expr]</code>||
-`field1`|<code>int</code>||
-
+## Inherited from `_$AggExpr`
 
 [Expr]: /reference/classes/expr
 [QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions

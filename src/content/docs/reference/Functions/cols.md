@@ -3,13 +3,8 @@ title: cols
 description: |
   
 ---
-<code><strong>[Expr] cols</strong>(columns);</code>
+<span class="dart-code"><strong>[Expr] cols</strong>(<span class="nobr">Iterable\<String> columns</span>);</span>
 
-
-
-Parameter|Type|Default|
--|-|-|
-`columns`|<code>Iterable\<String></code>||
 
 ### Implementation
 ```dart

@@ -3,53 +3,101 @@ title: "LazyGroupBy"
 description: |
   
 ---
+*Inheritance*  
+<code>[RustOpaque]</code> &rsaquo;
+ `LazyGroupBy`
+
 
 
 ### Constructors
-#### `.dcoDecode`
-<code><strong>LazyGroupBy.dcoDecode</strong>(wire);</code>
+<dl>
+<dt>
 
+<span class="dart-code"><strong>LazyGroupBy.[dcoDecode](dcoDecode)</strong>(<span class="nobr">List\<dynamic> wire</span>);</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`wire`|<code>dynamic</code>||
-#### `.sseDecode`
-<code><strong>LazyGroupBy.sseDecode</strong>(ptr, externalSizeOnNative);</code>
+<span class="dart-code"><strong>LazyGroupBy.[sseDecode](sseDecode)</strong>(<span class="nobr">int ptr</span>, <span class="nobr">int externalSizeOnNative</span>);</span>
+</dt>
+</dl>
 
-
-Parameter|Type|Default|
--|-|-|
-`ptr`|<code>int</code>||
-`externalSizeOnNative`|<code>int</code>||
 ### Methods
-#### `agg`
-<code><strong>[LazyFrame] agg</strong>({<strong>required</strong> exprs, <i>hint</i>});</code>
+<dl>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>agg](agg)</strong>({<span class="nobr"><strong>required</strong> List\<Expr> exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Group by and aggregate.
+</dd>
+<dt>
 
- Select a column with [col] and choose an aggregation. If you want to aggregate all columns
- use <code>[col]\("*")</code>.
-Parameter|Type|Default|
--|-|-|
-`exprs`|<code>List\<Expr></code>||
-`hint`|<code>dynamic</code>||
-#### `head`
-<code><strong>[LazyFrame] head</strong>({<i>n</i>, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>head](head)</strong>({<span class="nobr">int? <i>n</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Return the first [n] rows of each group.
-Parameter|Type|Default|
--|-|-|
-`n`|<code>int?</code>||
-`hint`|<code>dynamic</code>||
-#### `tail`
-<code><strong>[LazyFrame] tail</strong>({<i>n</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[LazyFrame] [<strong>tail](tail)</strong>({<span class="nobr">int? <i>n</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Return the last [n] rows of each group.
-Parameter|Type|Default|
--|-|-|
-`n`|<code>int?</code>||
-`hint`|<code>dynamic</code>||
+</dd>
+</dl>
 
 
-[dynamic]: #
+
+## Inherited from `RustOpaque`
+
+### Properties
+<dl>
+<dt>
+
+<span class="dart-code"><strong>[move=](move=)</strong>(bool?);</span>
+</dt>
+<dt>
+
+<span class="dart-code">bool <strong>get [isDisposed](isDisposed)</strong>;</span>
+</dt>
+<dd>
+
+ Whether the underlying `Arc` is disposed.
+</dd>
+</dl>
+
+### Methods
+<dl>
+<dt>
+
+<span class="dart-code">Pointer\<Void> [<strong>cstEncode](cstEncode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+</dt>
+<dd>
+
+ {@macro flutter_rust_bridge.only_for_generated_code}
+</dd>
+<dt>
+
+<span class="dart-code">int [<strong>sseEncode](sseEncode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+</dt>
+<dd>
+
+ {@macro flutter_rust_bridge.only_for_generated_code}
+</dd>
+<dt>
+
+<span class="dart-code">void [<strong>dispose](dispose)</strong>();</span>
+</dt>
+<dd>
+
+ Dispose the underlying `Arc`.
+</dd>
+</dl>
+
+[RustOpaque]: /reference/classes/rustopaque
 [LazyFrame]: /reference/classes/lazyframe
+[dynamic]: #
+[void]: #

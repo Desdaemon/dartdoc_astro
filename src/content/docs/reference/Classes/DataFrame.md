@@ -3,280 +3,329 @@ title: "DataFrame"
 description: |
   
 ---
+*Inheritance*  
+<code>[RustOpaque]</code> &rsaquo;
+ `DataFrame`
+
 
 
 ### Constructors
-#### `.dcoDecode`
-<code><strong>DataFrame.dcoDecode</strong>(wire);</code>
+<dl>
+<dt>
 
+<span class="dart-code"><strong>DataFrame.[dcoDecode](dcoDecode)</strong>(<span class="nobr">List\<dynamic> wire</span>);</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`wire`|<code>dynamic</code>||
-#### `.sseDecode`
-<code><strong>DataFrame.sseDecode</strong>(ptr, externalSizeOnNative);</code>
+<span class="dart-code"><strong>DataFrame.[sseDecode](sseDecode)</strong>(<span class="nobr">int ptr</span>, <span class="nobr">int externalSizeOnNative</span>);</span>
+</dt>
+</dl>
 
+### Properties
+<dl>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`ptr`|<code>int</code>||
-`externalSizeOnNative`|<code>int</code>||
-### Methods
-#### `clone`
-<code><strong>[DataFrame] clone</strong>({<i>hint</i>});</code>
-
-
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `column`
-<code><strong>[Series] column</strong>({<strong>required</strong> column, <i>hint</i>});</code>
-
- Select a single column by name.
-
- Note: A clone of the column is returned, rather than a reference.
-Parameter|Type|Default|
--|-|-|
-`column`|<code>String</code>||
-`hint`|<code>dynamic</code>||
-#### `columnAt`
-<code><strong>[Series] columnAt</strong>({<strong>required</strong> index, <i>hint</i>});</code>
-
- Select the column at the given index.
-Parameter|Type|Default|
--|-|-|
-`index`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `columns`
-<code><strong>[VecSeries] columns</strong>({<strong>required</strong> columns, <i>hint</i>});</code>
-
- Select multiple columns by name.
-
- Note: Clones of the columns are returned, rather than a reference.
-Parameter|Type|Default|
--|-|-|
-`columns`|<code>List\<String></code>||
-`hint`|<code>dynamic</code>||
-#### `describe`
-<code><strong>Future\<DataFrame> describe</strong>({<i>percentiles</i>, <i>hint</i>});</code>
-
- Output statistics about this dataframe.
-Parameter|Type|Default|
--|-|-|
-`percentiles`|<code>Float64List?</code>||
-`hint`|<code>dynamic</code>||
-#### `drop`
-<code><strong>[DataFrame] drop</strong>({<strong>required</strong> column, <i>hint</i>});</code>
-
- Drops a column by name, producing a new dataframe.
-Parameter|Type|Default|
--|-|-|
-`column`|<code>String</code>||
-`hint`|<code>dynamic</code>||
-#### `dropInPlace`
-<code><strong>[Series] dropInPlace</strong>({<strong>required</strong> column, <i>hint</i>});</code>
-
- Drops a column in-place and returns it.
-Parameter|Type|Default|
--|-|-|
-`column`|<code>String</code>||
-`hint`|<code>dynamic</code>||
-#### `dtypes`
-<code><strong>List\<DataType> dtypes</strong>({<i>hint</i>});</code>
-
- Returns the datatypes of this dataframe's columns.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `dump`
-<code><strong>String dump</strong>({<i>hint</i>});</code>
-
- Dump the contents of this entire dataframe.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `estimatedSize`
-<code><strong>int estimatedSize</strong>({<i>hint</i>});</code>
-
- Returns the amount of bytes occupied by this series.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `getColumnNames`
-<code><strong>List\<String> getColumnNames</strong>({<i>hint</i>});</code>
+<span class="dart-code">List\<String> <strong>get [columnNames](columnNames)</strong>;</span>
+</dt>
+<dd>
 
  Get the names of this dataframe's columns.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `getColumns`
-<code><strong>[VecSeries] getColumns</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[VecSeries] <strong>get [columns](columns)</strong>;</span>
+</dt>
+<dd>
 
  Get all columns of this dataframe.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `getRow`
-<code><strong>List\<dynamic> getRow</strong>({<strong>required</strong> index, <i>hint</i>});</code>
+</dd>
+<dt>
 
- Get a row of data from this dataframe.
+<span class="dart-code">int <strong>get [estimatedSize](estimatedSize)</strong>;</span>
+</dt>
+<dd>
 
- Prefer other functions to this inside a hot loop, as this function performs
- data copies and conversions to and from the native representation.
-Parameter|Type|Default|
--|-|-|
-`index`|<code>int</code>||
-`hint`|<code>dynamic</code>||
-#### `head`
-<code><strong>[DataFrame] head</strong>({<i>length</i>, <i>hint</i>});</code>
+ Returns the amount of bytes occupied by this series.
+</dd>
+<dt>
 
- Returns the first few rows of this dataframe.
-Parameter|Type|Default|
--|-|-|
-`length`|<code>int?</code>||
-`hint`|<code>dynamic</code>||
-#### `height`
-<code><strong>int height</strong>({<i>hint</i>});</code>
+<span class="dart-code">int <strong>get [height](height)</strong>;</span>
+</dt>
+<dd>
 
  Returns the height of this dataframe, aka the number of rows.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `isEmpty`
-<code><strong>bool isEmpty</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">bool <strong>get [isEmpty](isEmpty)</strong>;</span>
+</dt>
+<dd>
 
  Returns whether this dataframe has no rows.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `iter`
-<code><strong>Stream\<List\<dynamic>> iter</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">(int, int) <strong>get [shape](shape)</strong>;</span>
+</dt>
+<dd>
+
+ Returns the height and width of this dataframe.
+</dd>
+<dt>
+
+<span class="dart-code">int <strong>get [width](width)</strong>;</span>
+</dt>
+<dd>
+
+ Returns the width of this dataframe, aka the number of columns.
+</dd>
+</dl>
+
+### Methods
+<dl>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>clone](clone)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dt>
+
+<span class="dart-code">[Series] [<strong>column](column)</strong>({<span class="nobr"><strong>required</strong> String column</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Select a single column by name.
+</dd>
+<dt>
+
+<span class="dart-code">[Series] [<strong>columnAt](columnAt)</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Select the column at the given index.
+</dd>
+<dt>
+
+<span class="dart-code">[VecSeries] [<strong>columns](columns)</strong>({<span class="nobr"><strong>required</strong> List\<String> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Select multiple columns by name.
+</dd>
+<dt>
+
+<span class="dart-code">Future\<DataFrame> [<strong>describe](describe)</strong>({<span class="nobr">Float64List? <i>percentiles</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Output statistics about this dataframe.
+</dd>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>drop](drop)</strong>({<span class="nobr"><strong>required</strong> String column</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Drops a column by name, producing a new dataframe.
+</dd>
+<dt>
+
+<span class="dart-code">[Series] [<strong>dropInPlace](dropInPlace)</strong>({<span class="nobr"><strong>required</strong> String column</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Drops a column in-place and returns it.
+</dd>
+<dt>
+
+<span class="dart-code">List\<DataType> [<strong>dtypes](dtypes)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Returns the datatypes of this dataframe's columns.
+</dd>
+<dt>
+
+<span class="dart-code">String [<strong>dump](dump)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Dump the contents of this entire dataframe.
+</dd>
+<dt>
+
+<span class="dart-code">List\<dynamic> [<strong>getRow](getRow)</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Get a row of data from this dataframe.
+</dd>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>head](head)</strong>({<span class="nobr">int? <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ Returns the first few rows of this dataframe.
+</dd>
+<dt>
+
+<span class="dart-code">Stream\<List\<dynamic>> [<strong>iter](iter)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Iterate through this dataframe's rows.
+</dd>
+<dt>
 
- Use [parseRow] to retrieve the canonical values for these rows.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `lazy`
-<code><strong>[LazyFrame] lazy</strong>({<i>projectionPushdown</i>, <i>predicatePushdown</i>, <i>typeCoercion</i>, <i>simplifyExpressions</i>, <i>slicePushdown</i>, <i>streaming</i>, <i>hint</i>});</code>
+<span class="dart-code">[LazyFrame] [<strong>lazy](lazy)</strong>({<span class="nobr">bool? <i>projectionPushdown</i></span>, <span class="nobr">bool? <i>predicatePushdown</i></span>, <span class="nobr">bool? <i>typeCoercion</i></span>, <span class="nobr">bool? <i>simplifyExpressions</i></span>, <span class="nobr">bool? <i>slicePushdown</i></span>, <span class="nobr">bool? <i>streaming</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Returns a [LazyFrame] to which operations can be applied lazily.
  As opposed to [LazyFrame], [DataFrame] by default applies its operations eagerly.
-Parameter|Type|Default|
--|-|-|
-`projectionPushdown`|<code>bool?</code>||
-`predicatePushdown`|<code>bool?</code>||
-`typeCoercion`|<code>bool?</code>||
-`simplifyExpressions`|<code>bool?</code>||
-`slicePushdown`|<code>bool?</code>||
-`streaming`|<code>bool?</code>||
-`hint`|<code>dynamic</code>||
-#### `max`
-<code><strong>Future\<DataFrame> max</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>max](max)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Aggregate the columns to their maximum values.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `DataFrame.ofLits`
-<code><strong>static [DataFrame] ofLits</strong>({<i>series</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>static</strong> [DataFrame] DataFrame.[<strong>ofLits](ofLits)</strong>({<span class="nobr">List\<(String, Literals)>? <i>series</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Returns a new, empty dataframe.
-Parameter|Type|Default|
--|-|-|
-`series`|<code>List\<(String, Literals)>?</code>||
-`hint`|<code>dynamic</code>||
-#### `reverse`
-<code><strong>[DataFrame] reverse</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>reverse](reverse)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Returns a dataframe with columns from this dataframe in reverse order.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `sample`
-<code><strong>Future\<DataFrame> sample</strong>({<strong>required</strong> n, <i>withReplacement</i>, <i>shuffle</i>, <i>seed</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>sample](sample)</strong>({<span class="nobr"><strong>required</strong> [Series] n</span>, <span class="nobr">bool <i>withReplacement</i></span>, <span class="nobr">bool <i>shuffle</i></span>, <span class="nobr">int? <i>seed</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Sample [n] datapoints from this dataframe.
-Parameter|Type|Default|
--|-|-|
-`n`|<code>[Series]</code>||
-`withReplacement`|<code>bool</code>|`false`|
-`shuffle`|<code>bool</code>|`false`|
-`seed`|<code>int?</code>||
-`hint`|<code>dynamic</code>||
-#### `schema`
-<code><strong>[Schema] schema</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[Schema] [<strong>schema](schema)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Returns the [Schema] of this dataframe.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `select`
-<code><strong>[DataFrame] select</strong>({<strong>required</strong> columns, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>select](select)</strong>({<span class="nobr"><strong>required</strong> List\<String> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Makes a new dataframe with the specified columns from this dataframe.
-Parameter|Type|Default|
--|-|-|
-`columns`|<code>List\<String></code>||
-`hint`|<code>dynamic</code>||
-#### `shape`
-<code><strong>(int, int) shape</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
 
- Returns the height and width of this dataframe.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `sortInPlace`
-<code><strong>void sortInPlace</strong>({<i>byColumn</i>, <i>descending</i>, <i>maintainOrder</i>, <i>hint</i>});</code>
+<span class="dart-code">void [<strong>sortInPlace](sortInPlace)</strong>({<span class="nobr">List\<String> <i>byColumn</i></span>, <span class="nobr">List\<bool> <i>descending</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Sorts this dataframe by the specified columns.
-Parameter|Type|Default|
--|-|-|
-`byColumn`|<code>List\<String></code>|`const []`|
-`descending`|<code>List\<bool></code>|`const []`|
-`maintainOrder`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>||
-#### `tail`
-<code><strong>[DataFrame] tail</strong>({<i>length</i>, <i>hint</i>});</code>
+</dd>
+<dt>
+
+<span class="dart-code">[DataFrame] [<strong>tail](tail)</strong>({<span class="nobr">int? <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Returns the last few rows of this dataframe.
-Parameter|Type|Default|
--|-|-|
-`length`|<code>int?</code>||
-`hint`|<code>dynamic</code>||
-#### `width`
-<code><strong>int width</strong>({<i>hint</i>});</code>
+</dd>
+<dt>
 
- Returns the width of this dataframe, aka the number of columns.
-Parameter|Type|Default|
--|-|-|
-`hint`|<code>dynamic</code>||
-#### `withRowCount`
-<code><strong>[DataFrame] withRowCount</strong>({<strong>required</strong> name, <i>offset</i>, <i>hint</i>});</code>
+<span class="dart-code">[DataFrame] [<strong>withRowCount](withRowCount)</strong>({<span class="nobr"><strong>required</strong> String name</span>, <span class="nobr">int? <i>offset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
 
  Add a new column at index 0 denoting the row number.
-Parameter|Type|Default|
--|-|-|
-`name`|<code>String</code>||
-`offset`|<code>int?</code>||
-`hint`|<code>dynamic</code>||
+</dd>
+</dl>
+
 
 ## `DataFrameExt` extensions
-### Methods
-#### `[]`
-<code><strong>[Series] []</strong>(key);</code>
+
+### Operators
+<dl>
+<dt>
+
+<span class="dart-code">[Series] [operator <strong>[]]([])</strong>(<span class="nobr">Object key</span>);</span>
+</dt>
+<dd>
 
  Retrieves the columns either by name or index.
-Parameter|Type|Default|
--|-|-|
-`key`|<code>Object</code>||
+</dd>
+</dl>
 
-[dynamic]: #
-[DataFrame]: /reference/classes/dataframe
-[Series]: /reference/classes/series
+
+## Inherited from `RustOpaque`
+
+### Properties
+<dl>
+<dt>
+
+<span class="dart-code"><strong>[move=](move=)</strong>(bool?);</span>
+</dt>
+<dt>
+
+<span class="dart-code">bool <strong>get [isDisposed](isDisposed)</strong>;</span>
+</dt>
+<dd>
+
+ Whether the underlying `Arc` is disposed.
+</dd>
+</dl>
+
+### Methods
+<dl>
+<dt>
+
+<span class="dart-code">Pointer\<Void> [<strong>cstEncode](cstEncode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+</dt>
+<dd>
+
+ {@macro flutter_rust_bridge.only_for_generated_code}
+</dd>
+<dt>
+
+<span class="dart-code">int [<strong>sseEncode](sseEncode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+</dt>
+<dd>
+
+ {@macro flutter_rust_bridge.only_for_generated_code}
+</dd>
+<dt>
+
+<span class="dart-code">void [<strong>dispose](dispose)</strong>();</span>
+</dt>
+<dd>
+
+ Dispose the underlying `Arc`.
+</dd>
+</dl>
+
+[RustOpaque]: /reference/classes/rustopaque
 [VecSeries]: /reference/classes/vecseries
+[(int, int)]: #
+[DataFrame]: /reference/classes/dataframe
+[dynamic]: #
+[Series]: /reference/classes/series
 [LazyFrame]: /reference/classes/lazyframe
 [Schema]: /reference/classes/schema
-[(int, int)]: #
 [void]: #

@@ -29,6 +29,30 @@ class Once<T> {
   T getOrInit(T Function() init) => _value ??= init();
 }
 
+T catchContext<T>(String context, T Function() proc) {
+  try {
+    return proc();
+  } catch (err) {
+    eprintln(context);
+    rethrow;
+  }
+}
+
+extension<T> on Iterable<T> {
+  (List<T>, List<T>) partitionBy(bool Function(T) condition) {
+    final left = <T>[];
+    final right = <T>[];
+    for (final elm in this) {
+      if (condition(elm)) {
+        right.add(elm);
+      } else {
+        left.add(elm);
+      }
+    }
+    return (left, right);
+  }
+}
+
 // extension<T> on Iterable<T> {
 //   /// Parallel [map]. [mapper] should not be a closure so as to not share data with the main isolate.
 //   Stream<U> parMap<U>(FutureOr<U> Function(T) mapper) =>

@@ -8,25 +8,16 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>ascending</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>descending</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>not</code></dt>
-  <dd>
-  
-
-  </dd>
+<dt><span class="dart-code">ascending</span></dt>
+<dt><span class="dart-code">descending</span></dt>
+<dt><span class="dart-code">not</span></dt>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<IsSorted> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<IsSorted> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>

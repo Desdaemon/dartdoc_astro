@@ -8,40 +8,43 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>left</code></dt>
-  <dd>
+<dt><span class="dart-code">left</span></dt>
+<dd>
   
  Left outer join.
-  </dd>
-  <dt><code>inner</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">inner</span></dt>
+<dd>
   
  Inner join.
-  </dd>
-  <dt><code>outer</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">outer</span></dt>
+<dd>
   
  Full outer join.
-  </dd>
-  <dt><code>cross</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">cross</span></dt>
+<dd>
   
  Cartesian (cross-product) join.
-  </dd>
-  <dt><code>semi</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">semi</span></dt>
+<dd>
   
  [Semijoin](https://en.wikipedia.org/wiki/Relational_algebra#Semijoin_(%E2%8B%89_and_%E2%8B%8A)).
-  </dd>
-  <dt><code>anti</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">anti</span></dt>
+<dd>
   
  [Antijoin](https://en.wikipedia.org/wiki/Relational_algebra#Antijoin_(%E2%96%B7)).
-  </dd>
+</dd>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<JoinType> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<JoinType> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>

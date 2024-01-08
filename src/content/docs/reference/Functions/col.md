@@ -3,13 +3,8 @@ title: col
 description: |
   
 ---
-<code><strong>[Expr] col</strong>(column);</code>
+<span class="dart-code"><strong>[Expr] col</strong>(<span class="nobr">String column</span>);</span>
 
-
-
-Parameter|Type|Default|
--|-|-|
-`column`|<code>String</code>||
 
 ### Implementation
 ```dart

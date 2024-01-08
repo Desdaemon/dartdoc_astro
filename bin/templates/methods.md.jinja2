@@ -1,10 +1,28 @@
-{% for it in it.methods if it.isPublic %}
+{% for category in it.methods if it.isPublic %}
+{% set categoryDisplay = ['Methods', 'Operators'][loop.index0] %}
+{% for it in category %}
 {% if loop.first %}
-### Methods
-{% endif %}
-#### `{%if it.isStatic %}{{className}}.{% endif %}{{it.name}}`
-<code><strong>{% if it.isStatic %}static {% endif %}{{it.returnType | link}} {{it.name}}</strong>({{it.params | params}});</code>
 
-{{it.docs}}
-{% include "params_table.md.jinja2" %}
+### {{categoryDisplay}}
+<dl>
+{% endif %}
+<dt>
+
+<span class="dart-code">
+{%- if it.isStatic %}<strong>static</strong> {% endif %}{{it.returnType | link}} {% if className and it.isStatic -%}
+{{className}}.
+{%- endif -%}
+[{% if it.isOperator %}operator {% endif -%}
+<strong>{{it.name}}]({{it.name|e}})</strong>({{it.params | params}});</span>
+</dt>
+{% if it.docs %}
+<dd>
+
+{{it.docs | summarize}}
+</dd>
+{% endif %}
+{% if loop.last %}
+</dl>
+{% endif %}
+{% endfor %}
 {% endfor %}

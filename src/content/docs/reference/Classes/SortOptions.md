@@ -3,48 +3,55 @@ title: "SortOptions"
 description: |
   
 ---
+*Inheritance*  
+<code>Object</code> &rsaquo;
+ `SortOptions`
 
-
-### Fields
-#### `descending`
-<code>final bool descending;</code>
-
-
-#### `nullsLast`
-<code>final bool nullsLast;</code>
-
-
-#### `multithreaded`
-<code>final bool multithreaded;</code>
-
-
-#### `maintainOrder`
-<code>final bool maintainOrder;</code>
-
-
-### Properties
-#### `hashCode`
-<code>int get hashCode;</code>
 
 
 ### Constructors
-#### `.new`
-<code><strong>const SortOptions</strong>({<i>descending</i>, <i>nullsLast</i>, <i>multithreaded</i>, <i>maintainOrder</i>});</code>
+<dl>
+<dt>
 
+<span class="dart-code"><strong>const SortOptions</strong>({<span class="nobr">bool <i>descending</i></span>, <span class="nobr">bool <i>nullsLast</i></span>, <span class="nobr">bool <i>multithreaded</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>});</span>
+</dt>
+</dl>
 
-Parameter|Type|Default|
--|-|-|
-`descending`|<code>bool</code>|`false`|
-`nullsLast`|<code>bool</code>|`false`|
-`multithreaded`|<code>bool</code>|`true`|
-`maintainOrder`|<code>bool</code>|`false`|
-### Methods
-#### `==`
-<code><strong>bool ==</strong>(other);</code>
+### Fields
+<dl>
+<dt>
 
+<span class="dart-code"><strong>final </strong>bool <strong>descending</strong>;</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`other`|<code>Object</code>||
+<span class="dart-code"><strong>final </strong>bool <strong>nullsLast</strong>;</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>final </strong>bool <strong>multithreaded</strong>;</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>final </strong>bool <strong>maintainOrder</strong>;</span>
+</dt>
+</dl>
+
+### Properties
+<dl>
+<dt>
+
+<span class="dart-code">int <strong>get [hashCode](hashCode)</strong>;</span>
+</dt>
+</dl>
+
+### Operators
+<dl>
+<dt>
+
+<span class="dart-code">bool [operator <strong>==](==)</strong>(<span class="nobr">Object other</span>);</span>
+</dt>
+</dl>
+
 
 

@@ -8,35 +8,18 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>nearest</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>lower</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>higher</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>midpoint</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>linear</code></dt>
-  <dd>
-  
-
-  </dd>
+<dt><span class="dart-code">nearest</span></dt>
+<dt><span class="dart-code">lower</span></dt>
+<dt><span class="dart-code">higher</span></dt>
+<dt><span class="dart-code">midpoint</span></dt>
+<dt><span class="dart-code">linear</span></dt>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<QuantileInterpolOptions> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<QuantileInterpolOptions> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>

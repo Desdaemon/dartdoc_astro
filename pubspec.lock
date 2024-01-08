@@ -260,11 +260,12 @@ packages:
   jinja:
     dependency: "direct main"
     description:
-      name: jinja
-      sha256: bec5ecbc8f067d2092d8f25c7f861c7875a29c935cffb7628acd4038aef0f129
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.0"
+      path: "."
+      ref: HEAD
+      resolved-ref: aa5fe2912d38e483a9b219bd7973ff5eea905db1
+      url: "https://github.com/ykmnkmi/jinja.dart"
+    source: git
+    version: "0.6.0-dev.7"
   js:
     dependency: transitive
     description:

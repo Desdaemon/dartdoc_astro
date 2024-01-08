@@ -3,23 +3,34 @@ title: "Excluded"
 description: |
   
 ---
+*Inheritance*  
+<code>Object</code> &rsaquo;
+ `Excluded`
+
 
 
 ### Constructors
-#### `.name`
-<code><strong>const factory Excluded.name</strong>(field0);</code>
+<dl>
+<dt>
+
+<span class="dart-code"><strong>const factory Excluded.[name](name)</strong>(<span class="nobr">String field0</span>);</span>
+</dt>
+<dt>
+
+<span class="dart-code"><strong>const factory Excluded.[dtype](dtype)</strong>(<span class="nobr">[DataType] field0</span>);</span>
+</dt>
+</dl>
 
 
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>String</code>||
-#### `.dtype`
-<code><strong>const factory Excluded.dtype</strong>(field0);</code>
 
+## Inherited from `_$Excluded`
 
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[DataType]</code>||
+### Properties
+<dl>
+<dt>
 
+<span class="dart-code">Object <strong>get [field0](field0)</strong>;</span>
+</dt>
+</dl>
 
 [DataType]: /reference/classes/datatype

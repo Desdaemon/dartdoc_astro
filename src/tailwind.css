@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dart-code {
+  @apply font-mono text-sm font-normal;
+}
+
+p:has(> .dart-code) {
+  text-indent: 1rem hanging;
+}
+
+.nobr {
+  white-space: nowrap;
+}

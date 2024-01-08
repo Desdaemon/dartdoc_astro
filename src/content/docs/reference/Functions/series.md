@@ -3,15 +3,8 @@ title: series
 description: |
   
 ---
-<code><strong>[Series] series</strong>(data, {<i>name</i>, <i>dtype</i>});</code>
+<span class="dart-code"><strong>[Series] series\<T></strong>(<span class="nobr">List\<T> data</span>, {<span class="nobr">String <i>name</i></span>, <span class="nobr">[DataType] <i>dtype</i></span>});</span>
 
-
-
-Parameter|Type|Default|
--|-|-|
-`data`|<code>List\<T></code>||
-`name`|<code>String</code>|`''`|
-`dtype`|<code>[DataType]</code>|`const DataType.utf8()`|
 
 ### Implementation
 ```dart

@@ -3,139 +3,161 @@ title: "LiteralValue"
 description: |
    Literal values for use in [Expr]essions.
 ---
+*Inheritance*  
+<code>Object</code> &rsaquo;
+ `LiteralValue`
+
  Literal values for use in [Expr]essions.
 
 ### Constructors
-#### `.Null`
-<code><strong>const factory LiteralValue.Null</strong>();</code>
+<dl>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[Null](Null)</strong>();</span>
+</dt>
+<dd>
 
  Null value.
-#### `.boolean`
-<code><strong>const factory LiteralValue.boolean</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[boolean](boolean)</strong>(<span class="nobr">bool field0</span>);</span>
+</dt>
+<dd>
 
  A binary true or false.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>bool</code>||
-#### `.utf8`
-<code><strong>const factory LiteralValue.utf8</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[utf8](utf8)</strong>(<span class="nobr">String field0</span>);</span>
+</dt>
+<dd>
 
  A UTF8 encoded string type.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>String</code>||
-#### `.binary`
-<code><strong>const factory LiteralValue.binary</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[binary](binary)</strong>(<span class="nobr">Uint8List field0</span>);</span>
+</dt>
+<dd>
 
  A raw binary array
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>Uint8List</code>||
-#### `.uint32`
-<code><strong>const factory LiteralValue.uint32</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[uint32](uint32)</strong>(<span class="nobr">int field0</span>);</span>
+</dt>
+<dd>
 
  An unsigned 32-bit integer number.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
-#### `.uint64`
-<code><strong>const factory LiteralValue.uint64</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[uint64](uint64)</strong>(<span class="nobr">int field0</span>);</span>
+</dt>
+<dd>
 
  An unsigned 64-bit integer number.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
-#### `.int32`
-<code><strong>const factory LiteralValue.int32</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[int32](int32)</strong>(<span class="nobr">int field0</span>);</span>
+</dt>
+<dd>
 
  A 32-bit integer number.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
-#### `.int64`
-<code><strong>const factory LiteralValue.int64</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[int64](int64)</strong>(<span class="nobr">int field0</span>);</span>
+</dt>
+<dd>
 
  A 64-bit integer number.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
-#### `.float32`
-<code><strong>const factory LiteralValue.float32</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[float32](float32)</strong>(<span class="nobr">double field0</span>);</span>
+</dt>
+<dd>
 
  A 32-bit floating point number.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>double</code>||
-#### `.float64`
-<code><strong>const factory LiteralValue.float64</strong>(field0);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[float64](float64)</strong>(<span class="nobr">double field0</span>);</span>
+</dt>
+<dd>
 
  A 64-bit floating point number.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>double</code>||
-#### `.range`
-<code><strong>const factory LiteralValue.range</strong>({<strong>required</strong> low, <strong>required</strong> high, <strong>required</strong> dataType});</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[range](range)</strong>({<span class="nobr"><strong>required</strong> int low</span>, <span class="nobr"><strong>required</strong> int high</span>, <span class="nobr"><strong>required</strong> [DataType] dataType</span>});</span>
+</dt>
+<dd>
 
  A range between integers.
-Parameter|Type|Default|
--|-|-|
-`low`|<code>int</code>||
-`high`|<code>int</code>||
-`dataType`|<code>[DataType]</code>||
-#### `.dateTime`
-<code><strong>const factory LiteralValue.dateTime</strong>(field0, field1,[<i>field2</i>]);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[dateTime](dateTime)</strong>(<span class="nobr">int field0</span>, <span class="nobr">[TimeUnit] field1</span>, [<i><span class="nobr">String? field2</span></i>]);</span>
+</dt>
+<dd>
 
  Datetimes, with optional timezone.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
-`field1`|<code>[TimeUnit]</code>||
-`field2`|<code>String?</code>||
-#### `.duration`
-<code><strong>const factory LiteralValue.duration</strong>(field0, field1);</code>
+</dd>
+<dt>
+
+<span class="dart-code"><strong>const factory LiteralValue.[duration](duration)</strong>(<span class="nobr">int field0</span>, <span class="nobr">[TimeUnit] field1</span>);</span>
+</dt>
+<dd>
 
  Durations.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
-`field1`|<code>[TimeUnit]</code>||
-#### `.series`
-<code><strong>const factory LiteralValue.series</strong>(field0);</code>
+</dd>
+<dt>
 
+<span class="dart-code"><strong>const factory LiteralValue.[series](series)</strong>(<span class="nobr">[SpecialEqPSeries] field0</span>);</span>
+</dt>
+<dt>
 
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>[SpecialEqPSeries]</code>||
-#### `.date`
-<code><strong>const factory LiteralValue.date</strong>(field0);</code>
+<span class="dart-code"><strong>const factory LiteralValue.[date](date)</strong>(<span class="nobr">int field0</span>);</span>
+</dt>
+<dt>
 
-
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
-#### `.time`
-<code><strong>const factory LiteralValue.time</strong>(field0);</code>
+<span class="dart-code"><strong>const factory LiteralValue.[time](time)</strong>(<span class="nobr">int field0</span>);</span>
+</dt>
+<dd>
 
  Nanoseconds elapsed since midnight.
-Parameter|Type|Default|
--|-|-|
-`field0`|<code>int</code>||
+</dd>
+</dl>
+
 ### Methods
-#### `LiteralValue.fromSeries`
-<code><strong>static [LiteralValue] fromSeries</strong>({<strong>required</strong> series, <i>hint</i>});</code>
+<dl>
+<dt>
 
+<span class="dart-code"><strong>static</strong> [LiteralValue] LiteralValue.[<strong>fromSeries](fromSeries)</strong>({<span class="nobr"><strong>required</strong> [Series] series</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+</dl>
 
-Parameter|Type|Default|
--|-|-|
-`series`|<code>[Series]</code>||
-`hint`|<code>dynamic</code>||
 
 ## `LiteralValueExt` extensions
+
 ### Properties
-#### `expr`
-<code>[Expr] get expr;</code>
+<dl>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [expr](expr)</strong>;</span>
+</dt>
+<dd>
 
  Returns an expression representing this literal value.
+</dd>
+</dl>
+
+
+## Inherited from `_$LiteralValue`
 
 [DataType]: /reference/classes/datatype
 [TimeUnit]: /reference/enums/timeunit

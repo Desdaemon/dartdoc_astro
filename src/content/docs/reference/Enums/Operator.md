@@ -8,100 +8,31 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>eq</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>eqValidity</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>notEq</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>notEqValidity</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>lt</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>ltEq</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>gt</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>gtEq</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>plus</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>minus</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>multiply</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>divide</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>trueDivide</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>floorDivide</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>modulus</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>and</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>or</code></dt>
-  <dd>
-  
-
-  </dd>
-  <dt><code>xor</code></dt>
-  <dd>
-  
-
-  </dd>
+<dt><span class="dart-code">eq</span></dt>
+<dt><span class="dart-code">eqValidity</span></dt>
+<dt><span class="dart-code">notEq</span></dt>
+<dt><span class="dart-code">notEqValidity</span></dt>
+<dt><span class="dart-code">lt</span></dt>
+<dt><span class="dart-code">ltEq</span></dt>
+<dt><span class="dart-code">gt</span></dt>
+<dt><span class="dart-code">gtEq</span></dt>
+<dt><span class="dart-code">plus</span></dt>
+<dt><span class="dart-code">minus</span></dt>
+<dt><span class="dart-code">multiply</span></dt>
+<dt><span class="dart-code">divide</span></dt>
+<dt><span class="dart-code">trueDivide</span></dt>
+<dt><span class="dart-code">floorDivide</span></dt>
+<dt><span class="dart-code">modulus</span></dt>
+<dt><span class="dart-code">and</span></dt>
+<dt><span class="dart-code">or</span></dt>
+<dt><span class="dart-code">xor</span></dt>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<Operator> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<Operator> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>

@@ -3,7 +3,7 @@ title: scanCsv
 description: |
    Prepares a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file for reading into a [LazyFrame].
 ---
-<code><strong>Future\<LazyFrame> scanCsv</strong>({<strong>required</strong> path, <strong>required</strong> dtypeOverwrite, <i>hasHeader</i>, <i>commentChar</i>, <i>eolChar</i>, <i>quoteChar</i>, <i>skipRows</i>, <i>skipRowsAfterHeader</i>, <i>rowCount</i>, <i>encoding</i>, <i>nRows</i>, <i>nullValues</i>, <i>ignoreErrors</i>, <i>rechunk</i>, <i>tryParseDates</i>, <i>inferSchemaLength</i>, <i>cache</i>, <i>hint</i>});</code>
+<span class="dart-code"><strong>Future\<LazyFrame> scanCsv</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr"><strong>required</strong> [OptionSchema] dtypeOverwrite</span>, <span class="nobr">bool? <i>hasHeader</i></span>, <span class="nobr">String? <i>commentChar</i></span>, <span class="nobr">String? <i>eolChar</i></span>, <span class="nobr">String? <i>quoteChar</i></span>, <span class="nobr">int <i>skipRows</i></span>, <span class="nobr">int <i>skipRowsAfterHeader</i></span>, <span class="nobr">[RowCount?] <i>rowCount</i></span>, <span class="nobr">[CsvEncoding?] <i>encoding</i></span>, <span class="nobr">int? <i>nRows</i></span>, <span class="nobr">[NullValues?] <i>nullValues</i></span>, <span class="nobr">bool <i>ignoreErrors</i></span>, <span class="nobr">bool <i>rechunk</i></span>, <span class="nobr">bool <i>tryParseDates</i></span>, <span class="nobr">int? <i>inferSchemaLength</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Prepares a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file for reading into a [LazyFrame].
 
@@ -19,28 +19,6 @@ description: |
               Slow, but improves performance for later operations.
  - `inferSchemaLength`: Specify how many rows to read to infer the schema, if null the entire table is scanned.
  - `cache`: Cache the dataframe after reading.
-
-Parameter|Type|Default|
--|-|-|
-`path`|<code>String</code>||
-`dtypeOverwrite`|<code>[OptionSchema]</code>||
-`hasHeader`|<code>bool?</code>||
-`commentChar`|<code>String?</code>||
-`eolChar`|<code>String?</code>||
-`quoteChar`|<code>String?</code>|`'"'`|
-`skipRows`|<code>int</code>|`0`|
-`skipRowsAfterHeader`|<code>int</code>|`0`|
-`rowCount`|<code>[RowCount?]</code>||
-`encoding`|<code>[CsvEncoding?]</code>||
-`nRows`|<code>int?</code>||
-`nullValues`|<code>[NullValues?]</code>||
-`ignoreErrors`|<code>bool</code>|`false`|
-`rechunk`|<code>bool</code>|`false`|
-`tryParseDates`|<code>bool</code>|`true`|
-`inferSchemaLength`|<code>int?</code>|`100`|
-`cache`|<code>bool</code>|`false`|
-`hint`|<code>dynamic</code>||
-
 ### Implementation
 ```dart
 /// Prepares a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file for reading into a [LazyFrame].

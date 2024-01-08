@@ -3,17 +3,9 @@ title: readJson
 description: |
    Reads a [.json](https://en.wikipedia.org/wiki/JSON) file into a [DataFrame].
 ---
-<code><strong>Future\<DataFrame> readJson</strong>({<strong>required</strong> path, <i>batchSize</i>, <i>projection</i>, <i>hint</i>});</code>
+<span class="dart-code"><strong>Future\<DataFrame> readJson</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr">int? <i>batchSize</i></span>, <span class="nobr">List\<String>? <i>projection</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Reads a [.json](https://en.wikipedia.org/wiki/JSON) file into a [DataFrame].
-
-Parameter|Type|Default|
--|-|-|
-`path`|<code>String</code>||
-`batchSize`|<code>int?</code>||
-`projection`|<code>List\<String>?</code>||
-`hint`|<code>dynamic</code>||
-
 ### Implementation
 ```dart
 /// Reads a [.json](https://en.wikipedia.org/wiki/JSON) file into a [DataFrame].

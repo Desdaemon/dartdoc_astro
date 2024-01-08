@@ -3,13 +3,8 @@ title: parseCell
 description: |
   
 ---
-<code><strong>dynamic parseCell</strong>(raw);</code>
+<span class="dart-code"><strong>dynamic parseCell</strong>(<span class="nobr">dynamic raw</span>);</span>
 
-
-
-Parameter|Type|Default|
--|-|-|
-`raw`|<code>dynamic</code>||
 
 ### Implementation
 ```dart

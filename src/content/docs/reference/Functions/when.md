@@ -3,7 +3,7 @@ title: when
 description: |
    Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.
 ---
-<code><strong>[When] when</strong>(condition, {<strong>required</strong> then});</code>
+<span class="dart-code"><strong>[When] when</strong>(<span class="nobr">Object? condition</span>, {<span class="nobr"><strong>required</strong> Object? then</span>});</span>
 
  Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.
 
@@ -16,12 +16,6 @@ description: |
      .alias('new_a'),
  ]).collect();
  ```
-
-Parameter|Type|Default|
--|-|-|
-`condition`|<code>Object?</code>||
-`then`|<code>Object?</code>||
-
 ### Implementation
 ```dart
 /// Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.

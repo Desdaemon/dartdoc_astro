@@ -9,11 +9,13 @@ description: |
 
 <dl>
 {% for it in it.fields if it.isEnumConstant %}
-  <dt><code>{{it.name}}</code></dt>
-  <dd>
+<dt><span class="dart-code">{{it.name}}</span></dt>
+{% if it.docs %}
+<dd>
   
 {{it.docs}}
-  </dd>
+</dd>
+{% endif %}
 {% endfor %}
 </dl>
 

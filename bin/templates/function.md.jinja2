@@ -3,12 +3,13 @@ title: {{it.name}}
 description: |
   {{it.docs | summarize}}
 ---
-<code><strong>{{it.returnType | link}} {{it.name}}</strong>({{it.params | params}}){% if it.modifier %} {{it.modifier}}{% endif %};</code>
+<span class="dart-code"><strong>{{it.returnType | link}} {{it.name}}
+{%- if it.typeParams -%}
+  \<{{it.typeParams | join(', ')}}>
+{%- endif -%}</strong>({{it.params | params}})
+{%- if it.modifier %} {{it.modifier}}{% endif %};</span>
 
 {{it.docs}}
-
-{% include "params_table.md.jinja2" %}
-
 ### Implementation
 ```dart
 {{it | displaySource}}

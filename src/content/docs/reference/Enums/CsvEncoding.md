@@ -8,20 +8,23 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>utf8</code></dt>
-  <dd>
+<dt><span class="dart-code">utf8</span></dt>
+<dd>
   
  Utf8 encoding
-  </dd>
-  <dt><code>lossyUtf8</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">lossyUtf8</span></dt>
+<dd>
   
  Utf8 encoding and unknown bytes are replaced with �
-  </dd>
+</dd>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<CsvEncoding> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<CsvEncoding> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>

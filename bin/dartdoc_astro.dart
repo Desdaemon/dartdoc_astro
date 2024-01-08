@@ -12,11 +12,13 @@ import 'package:glob/list_local_fs.dart';
 import 'package:jinja/loaders.dart';
 import 'package:yaml/yaml.dart' as yaml;
 import 'package:jinja/jinja.dart';
+import 'package:jinja/src/renderer.dart';
+import 'package:jinja/src/nodes.dart';
 
 part 'utils.dart';
-part 'resolve.dart';
 part 'config.dart';
 part 'template.dart';
+part 'renderer.dart';
 
 const root = './src/content/docs/reference';
 
@@ -90,6 +92,8 @@ class CompositeLibrary {
           .putIfAbsent(export, () => Filter.fromExport(export))
           .isAllowed(elm.name!);
 }
+
+final ResourceProvider provider = PhysicalResourceProvider();
 
 Stream<Future<void>> run(List<String> arguments) async* {
   final config = Config.merge(arguments);

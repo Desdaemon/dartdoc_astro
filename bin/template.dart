@@ -1,5 +1,7 @@
 part of 'dartdoc_astro.dart';
 
+const _nobr = "nobr";
+
 class Renderer {
   final CompositeLibrary library;
 
@@ -35,32 +37,37 @@ class Renderer {
 
   Future<void> createTopLevelFunctions(List<FunctionElement> functions) async {
     for (final fn in functions) {
-      final sink = io.File('$root/Functions/${fn.name}.md').openWrite();
-      final template = env
-          .copyWith(getAttribute: getAttribute)
-          .getTemplate('function.md.jinja2');
-      final collector = ReferenceCollector();
-      template.environment.getItem;
-      template.environment.filters['link'] = collector.link;
-      template.environment.globals['generateReferences'] =
-          collector.generateReferences;
-      template.environment.filters['displaySource'] = (Element? elm) {
-        // get the element's span
-        if (elm!.session!.getParsedLibraryByElement(elm.library!)
-            case ParsedLibraryResult lib) {
-          if (lib.getElementDeclaration(elm) case final decl?) {
-            return elm.source?.contents.data
-                .substring(decl.node.offset, decl.node.end);
-          }
-        }
-      };
+      await _createFunctionImpl(fn, '$root/Functions/${fn.name}.md');
+    }
+  }
 
-      try {
-        template.renderTo(sink, {'it': fn});
-      } finally {
-        await sink.flush();
-        await sink.close();
+  Future<void> _createFunctionImpl(FunctionElement fn, String filename) async {
+    final sink = io.File(filename).openWrite();
+    final template = env
+        .copyWith(getAttribute: getAttribute)
+        .getTemplate('function.md.jinja2');
+    final collector = ReferenceCollector();
+    template.environment.filters['params'] =
+        ParamsRenderer(collector.link).call;
+    template.environment.filters['link'] = collector.link;
+    template.environment.filters['displaySource'] = (Element? elm) {
+      // get the element's span
+      if (elm!.session!.getParsedLibraryByElement(elm.library!)
+          case ParsedLibraryResult lib) {
+        if (lib.getElementDeclaration(elm) case final decl?) {
+          return elm.source?.contents.data
+              .substring(decl.node.offset, decl.node.end);
+        }
       }
+    };
+    try {
+      template.renderTo(sink, {
+        'it': fn,
+        'generateReferences': collector.generateReferences,
+      });
+    } finally {
+      await sink.flush();
+      await sink.close();
     }
   }
 
@@ -72,6 +79,8 @@ class Renderer {
           .getTemplate('enum.md.jinja2');
       final collector = ReferenceCollector();
       template.environment.filters['link'] = collector.link;
+      template.environment.filters['params'] =
+          ParamsRenderer(collector.link).call;
       try {
         template.renderTo(sink, {'it': enu});
       } finally {
@@ -89,10 +98,13 @@ class Renderer {
           .getTemplate('class.md.jinja2');
       final collector = ReferenceCollector();
       template.environment.filters['link'] = collector.link;
-      template.environment.globals['generateReferences'] =
-          collector.generateReferences;
+      template.environment.filters['params'] =
+          ParamsRenderer(collector.link).call;
       try {
-        template.renderTo(sink, {'it': clazz});
+        template.renderTo(sink, {
+          'it': clazz,
+          'generateReferences': collector.generateReferences,
+        });
       } finally {
         await sink.flush();
         await sink.close();
@@ -125,20 +137,26 @@ class Renderer {
       case ('isPublic', Element elm):
         return elm.isPublic;
       case ('methods', InstanceElement inst):
-        return inst.methods;
+        final (methods, operators) =
+            inst.methods.partitionBy((method) => method.isOperator);
+        return [methods, operators];
       case ('fields', InstanceElement inst):
         return inst.fields;
       case ('constructors', InterfaceElement elm):
         return elm.constructors;
       case ('props', InstanceElement inst):
         return inst.accessors;
-      case ('extensions', Element? intf):
+      case ('extensions', Element? self):
         // realistically, anyone can extend anything at any time without fearing
         // of something like Rust's orphan rules, but we have to at least limit
         // ourselves to the root library.
         return library
             .getCached<ExtensionElement>()
-            .where((ext) => ext.extendedType.element == intf);
+            .where((ext) => ext.extendedType.element == self);
+      case ('super', InterfaceElement intf):
+        return intf.supertype;
+      case ('supers', InterfaceElement intf):
+        return intf.allSupertypes.map((zuper) => zuper.element);
       case ('isConst', ConstructorElement ctor):
         return ctor.isConst;
       case ('isFactory', ConstructorElement ctor):
@@ -147,6 +165,10 @@ class Renderer {
         return val.isNotEmpty;
       case ('params', FunctionTypedElement func):
         return func.parameters;
+      case ('typeParams', TypeParameterizedElement elm):
+        return elm.typeParameters;
+      case ('isOperator', ExecutableElement func):
+        return func.isOperator;
       case ('returnType', FunctionTypedElement func):
         return func.returnType;
       case ('modifier', ExecutableElement exec):
@@ -158,6 +180,9 @@ class Renderer {
         };
       case ('isStatic', ClassMemberElement member):
         return member.isStatic;
+      case ('type', PropertyAccessorElement prop):
+        if (prop.isGetter) return prop.returnType;
+        if (prop.isSetter) return prop.parameters.first.type;
       case ('type', VariableElement param):
         return param.type;
       case ('default', ParameterElement param):
@@ -178,16 +203,30 @@ class Renderer {
       case ('isSetter', PropertyAccessorElement prop):
         return prop.isSetter;
       default:
-        throw Exception((obj: '${obj.runtimeType}($obj)', key: key));
+        return (obj as dynamic)[key];
+      // throw Exception((obj: '${obj.runtimeType}($obj)', key: key));
     }
+  }
+}
+
+extension on String {
+  Iterable<String> get lines sync* {
+    int current = 0;
+    int next;
+    while ((next = indexOf('\n', current)) != -1) {
+      yield substring(current, next);
+      current = next + 1;
+    }
+    yield substring(current);
   }
 }
 
 final env = Environment(
   trimBlocks: true,
   filters: {
-    'summarize': (String? doc) => doc?.split('\n').firstOrNull,
-    'params': _methodParams,
+    'summarize': (String? doc) =>
+        doc?.lines.takeWhile((line) => line.isNotEmpty).join('\n'),
+    'params': const ParamsRenderer().call,
     'defaultIfBlank': (String? doc, String replacement) =>
         (doc?.isEmpty ?? true) ? replacement : doc,
     'display': (Object? obj) => switch (obj) {
@@ -201,40 +240,53 @@ final env = Environment(
   ),
 );
 
-String _methodParams(List<ParameterElement> params) {
-  final firstNamed = params.indexWhere((param) => param.isNamed);
-  if (firstNamed != -1) {
-    final positional = params.sublist(0, firstNamed);
-    final named = params.sublist(firstNamed);
-    final positionalFormatted =
-        positional.map((param) => param.name).join(', ');
-    final namedFormatted = named.map((param) {
-      if (param.isRequiredNamed) {
-        return '<strong>required</strong> ${param.name}';
-      } else {
-        return '<i>${param.name}</i>';
-      }
-    }).join(', ');
-    return [
-      if (positionalFormatted.isNotEmpty) positionalFormatted,
-      if (namedFormatted.isNotEmpty) '{$namedFormatted}'
-    ].join(', ');
-  }
+class ParamsRenderer {
+  final String Function(DartType) formatType;
+  const ParamsRenderer([this.formatType = _defaultLinker]);
+  static String _defaultLinker(DartType type) =>
+      type.getDisplayString(withNullability: true);
 
-  final firstPositional =
-      params.indexWhere((param) => param.isOptionalPositional);
-  if (firstPositional != -1) {
-    final required = params.sublist(0, firstPositional);
-    final optional = params.sublist(firstPositional);
-    final requiredFormatted = required.map((param) => param.name).join(', ');
-    final optionalFormatted = optional.map((param) => param.name).join(', ');
-    return [
-      if (requiredFormatted.isNotEmpty) requiredFormatted,
-      if (optionalFormatted.isNotEmpty) '[<i>$optionalFormatted</i>]',
-    ].join(',');
-  }
+  String call(List<ParameterElement> params) {
+    final firstNamed = params.indexWhere((param) => param.isNamed);
+    if (firstNamed != -1) {
+      final positional = params.sublist(0, firstNamed);
+      final named = params.sublist(firstNamed);
+      final positionalFormatted = positional
+          .map((param) =>
+              '<span class="$_nobr">${formatType(param.type)} ${param.name}</span>')
+          .join(', ');
+      final namedFormatted = named.map((param) {
+        final type = formatType(param.type);
+        if (param.isRequiredNamed) {
+          return '<span class="$_nobr"><strong>required</strong> $type ${param.name}</span>';
+        } else {
+          return '<span class="$_nobr">$type <i>${param.name}</i></span>';
+        }
+      }).join(', ');
+      return [
+        if (positionalFormatted.isNotEmpty) positionalFormatted,
+        if (namedFormatted.isNotEmpty) '{$namedFormatted}'
+      ].join(', ');
+    }
 
-  return params.map((param) => param.name).join(', ');
+    String makeParam(ParameterElement param) =>
+        '<span class="$_nobr">${formatType(param.type)} ${param.name}</span>';
+
+    final firstPositional =
+        params.indexWhere((param) => param.isOptionalPositional);
+    if (firstPositional != -1) {
+      final required = params.sublist(0, firstPositional);
+      final optional = params.sublist(firstPositional);
+      final requiredFormatted = required.map(makeParam).join(', ');
+      final optionalFormatted = optional.map(makeParam).join(', ');
+      return [
+        if (requiredFormatted.isNotEmpty) requiredFormatted,
+        if (optionalFormatted.isNotEmpty) '[<i>$optionalFormatted</i>]',
+      ].join(', ');
+    }
+
+    return params.map(makeParam).join(', ');
+  }
 }
 
 class ReferenceCollector {

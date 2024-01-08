@@ -8,25 +8,28 @@ description: |
 ### Values
 
 <dl>
-  <dt><code>nanoseconds</code></dt>
-  <dd>
+<dt><span class="dart-code">nanoseconds</span></dt>
+<dd>
   
  One-billionth of a second.
-  </dd>
-  <dt><code>microseconds</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">microseconds</span></dt>
+<dd>
   
  One-millionth of a second.
-  </dd>
-  <dt><code>milliseconds</code></dt>
-  <dd>
+</dd>
+<dt><span class="dart-code">milliseconds</span></dt>
+<dd>
   
  One-thousandth of a second.
-  </dd>
+</dd>
 </dl>
 
+
 ### Properties
-#### `values`
-<code>List\<TimeUnit> get values;</code>
+<dl>
+<dt>
 
-
+<span class="dart-code">List\<TimeUnit> <strong>get [values](values)</strong>;</span>
+</dt>
+</dl>
