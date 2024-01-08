@@ -1,15 +1,17 @@
 ---
 title: "{{it.name}}"
 description: |
-  {{it.docs | summarize}}
+{{it.docs | summarize | indent(2)}}
 ---
-*Inheritance*  
-{% for it in [it.super] if it recursive -%}
-{% if it and it.super -%}
-{{loop([it.super])}}
-{%- endif -%}
-<code>{{it | link}}</code> &rsaquo;
-{% endfor %} `{{it.name}}`
+{% if not it.super.isObject -%}
+*Inheritance*:  
+{% for type in [it.super] recursive %}
+{% if type.super %}
+{{loop([type.super])}}
+{% endif %}
+<code>{{type | link}}</code> &rsaquo; {% endfor -%}
+`{{it.name}}`
+{% endif %}
 
 {{it.docs}}
 {% set className = it.name %}
@@ -23,7 +25,7 @@ description: |
 
 <span class="dart-code"><strong>{% if it.isConst %}const {% endif -%}
 {%- if it.isFactory %}factory {% endif %}{{className}}
-{%- if it.name.isNotEmpty %}.[{{it.name}}]({{it.name}}){% endif %}</strong>({{it.params | params}});</span>
+{%- if it.name.isNotEmpty %}.[{{it.name}}]({{it.name | slug}}){% endif %}</strong>({{it.params | params}});</span>
 </dt>
 {% if it.name and it.docs %}
 <dd>
@@ -40,6 +42,7 @@ description: |
 </dl>
 {% endif %}
 {% endfor %}
+{% set className = false %}
 {% for it in it.fields if it.isPublic and not it.isSynthetic %}
 {% if loop.first %}
 
@@ -70,16 +73,17 @@ description: |
 
 ## `{{it.name}}` extensions
 {% endif %}
-{% include "props.md.jinja2" %}
 {% set className = it.name %}
+{% include "props.md.jinja2" %}
 {% include "methods.md.jinja2" %}
 {% endfor %}
 
-{% for it in it.supers if it.name != "Object" %}
+{% for it in it.supers if not it.isObject %}
+{% set it = it.element %}
 
 ## Inherited from `{{it.name}}`
-{% include "props.md.jinja2" %}
 {% set className = it.name %}
+{% include "props.md.jinja2" %}
 {% include "methods.md.jinja2" %}
 {% endfor %}
 

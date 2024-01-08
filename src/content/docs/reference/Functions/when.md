@@ -1,5 +1,5 @@
 ---
-title: when
+title: "when"
 description: |
    Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.
 ---

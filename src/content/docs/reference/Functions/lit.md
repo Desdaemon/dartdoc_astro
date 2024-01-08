@@ -1,5 +1,5 @@
 ---
-title: lit
+title: "lit"
 description: |
    Alias for `Object.expr`.
 ---

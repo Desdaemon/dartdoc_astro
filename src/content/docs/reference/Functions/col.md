@@ -1,7 +1,7 @@
 ---
-title: col
+title: "col"
 description: |
-  
+
 ---
 <span class="dart-code"><strong>[Expr] col</strong>(<span class="nobr">String column</span>);</span>
 

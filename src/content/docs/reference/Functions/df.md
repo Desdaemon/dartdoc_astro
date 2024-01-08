@@ -1,5 +1,5 @@
 ---
-title: df
+title: "df"
 description: |
    Create a [DataFrame] from a mapping of column names to homogenous lists of values, or [Series] themselves.
 ---

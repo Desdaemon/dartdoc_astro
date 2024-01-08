@@ -1,7 +1,7 @@
 ---
-title: cols
+title: "cols"
 description: |
-  
+
 ---
 <span class="dart-code"><strong>[Expr] cols</strong>(<span class="nobr">Iterable\<String> columns</span>);</span>
 

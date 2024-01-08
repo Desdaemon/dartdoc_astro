@@ -12,8 +12,11 @@
 {%- if it.isStatic %}<strong>static</strong> {% endif %}{{it.returnType | link}} {% if className and it.isStatic -%}
 {{className}}.
 {%- endif -%}
-[{% if it.isOperator %}operator {% endif -%}
-<strong>{{it.name}}]({{it.name|e}})</strong>({{it.params | params}});</span>
+[{% if it.isOperator %}<strong>operator</strong> {% endif -%}
+<strong>{{it.name}}](
+{%- if className -%}
+/reference/Classes/{{className}}/
+{%- endif -%}{{it.name | slug}})</strong>({{it.params | params}});</span>
 </dt>
 {% if it.docs %}
 <dd>

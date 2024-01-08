@@ -1,7 +1,7 @@
 ---
-title: series
+title: "series"
 description: |
-  
+
 ---
 <span class="dart-code"><strong>[Series] series\<T></strong>(<span class="nobr">List\<T> data</span>, {<span class="nobr">String <i>name</i></span>, <span class="nobr">[DataType] <i>dtype</i></span>});</span>
 

@@ -37,11 +37,16 @@ class Renderer {
 
   Future<void> createTopLevelFunctions(List<FunctionElement> functions) async {
     for (final fn in functions) {
-      await _createFunctionImpl(fn, '$root/Functions/${fn.name}.md');
+      await _createFunctionImpl(fn, '$root/Functions/${_slug(fn.name)}.md');
     }
   }
 
-  Future<void> _createFunctionImpl(FunctionElement fn, String filename) async {
+  Future<void> _createFunctionImpl(
+    FunctionTypedElement fn,
+    String filename, {
+    Map<String, dynamic> frontMatter = const {},
+  }) async {
+    await io.Directory(p.dirname(filename)).create(recursive: true);
     final sink = io.File(filename).openWrite();
     final template = env
         .copyWith(getAttribute: getAttribute)
@@ -64,6 +69,7 @@ class Renderer {
       template.renderTo(sink, {
         'it': fn,
         'generateReferences': collector.generateReferences,
+        'frontMatter': yaml.YamlMap.wrap(frontMatter).nodes
       });
     } finally {
       await sink.flush();
@@ -73,7 +79,7 @@ class Renderer {
 
   Future<void> createEnums(List<EnumElement> enums) async {
     for (final enu in enums) {
-      final sink = io.File('$root/Enums/${enu.name}.md').openWrite();
+      final sink = io.File('$root/Enums/${_slug(enu.name)}.md').openWrite();
       final template = env
           .copyWith(getAttribute: getAttribute)
           .getTemplate('enum.md.jinja2');
@@ -92,7 +98,7 @@ class Renderer {
 
   Future<void> createClasses(List<ClassElement> classes) async {
     for (final clazz in classes) {
-      final sink = io.File('$root/Classes/${clazz.name}.md').openWrite();
+      final sink = io.File('$root/Classes/${_slug(clazz.name)}.md').openWrite();
       final template = env
           .copyWith(getAttribute: getAttribute)
           .getTemplate('class.md.jinja2');
@@ -105,6 +111,16 @@ class Renderer {
           'it': clazz,
           'generateReferences': collector.generateReferences,
         });
+        await Future.wait([
+          for (final method in clazz.methods)
+            _createFunctionImpl(
+              method,
+              '$root/Classes/${clazz.name}/${_slug(method.name)}.md',
+              frontMatter: const {
+                'sidebar': {'hidden': true}
+              },
+            ),
+        ]);
       } finally {
         await sink.flush();
         await sink.close();
@@ -156,7 +172,9 @@ class Renderer {
       case ('super', InterfaceElement intf):
         return intf.supertype;
       case ('supers', InterfaceElement intf):
-        return intf.allSupertypes.map((zuper) => zuper.element);
+        return intf.allSupertypes;
+      case ('element', DartType type):
+        return type.element;
       case ('isConst', ConstructorElement ctor):
         return ctor.isConst;
       case ('isFactory', ConstructorElement ctor):
@@ -191,6 +209,8 @@ class Renderer {
         return param.isFinal;
       case ('isStatic', VariableElement param):
         return param.isStatic;
+      case ('isObject', DartType elm):
+        return elm.isDartCoreObject;
       case ('isSynthetic', Element param):
         return param.isSynthetic;
       case ('isEnumConstant', FieldElement field):
@@ -233,6 +253,8 @@ final env = Environment(
           Element? elm => elm?.getDisplayString(withNullability: true),
           _ => obj,
         },
+    'indent': _indent,
+    'slug': _slug,
   },
   loader: FileSystemLoader(
     paths: [Uri.base.resolve('bin/templates').toFilePath()],
@@ -299,9 +321,9 @@ class ReferenceCollector {
     }
     final link = references.putIfAbsent(key, () {
       return switch (ty.element) {
-        ClassElement clazz => '/reference/classes/${clazz.name.toLowerCase()}',
-        EnumElement enu => '/reference/enums/${enu.name.toLowerCase()}',
-        MixinElement mixin => '/reference/mixins/${mixin.name.toLowerCase()}',
+        ClassElement clazz => '/reference/classes/${_slug(clazz.name)}',
+        EnumElement enu => '/reference/enums/${_slug(enu.name)}',
+        MixinElement mixin => '/reference/mixins/${_slug(mixin.name)}',
         _ => '#'
       };
     });

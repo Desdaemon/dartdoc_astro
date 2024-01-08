@@ -53,8 +53,39 @@ extension<T> on Iterable<T> {
   }
 }
 
-// extension<T> on Iterable<T> {
-//   /// Parallel [map]. [mapper] should not be a closure so as to not share data with the main isolate.
-//   Stream<U> parMap<U>(FutureOr<U> Function(T) mapper) =>
-//       Stream.fromFutures(map((item) => Isolate.run(() => mapper(item))));
-// }
+final _whitespace = RegExp(r'^(\s*?)');
+String? _indent(String? input, int width) {
+  if (input == null) return null;
+  if (_whitespace.matchAsPrefix(input.lines.first) case final match?) {
+    final indent = match.group(1)!;
+    return input.replaceAll(RegExp('^$indent', multiLine: true), ' ' * width);
+  } else {
+    return input;
+  }
+}
+
+String? _slug(String? input) =>
+    const {
+      '>': 'op_gt',
+      '>=': 'op_ge',
+      '<': 'op_lt',
+      '<=': 'op_le',
+      '+': 'op_add',
+      '-': 'op_sub',
+      '*': 'op_mul',
+      '/': 'op_div',
+      '~/': 'op_idiv',
+      '%': 'op_mod',
+      '&': 'op_and',
+      '|': 'op_or',
+      '^': 'op_xor',
+      '~': 'op_not',
+      '==': 'op_eq',
+      '!=': 'op_ne',
+      '<<': 'op_shl',
+      '>>': 'op_shr',
+      '>>>': 'op_ushr',
+      '[]': 'op_get',
+      '[]=': 'op_set',
+    }[input] ??
+    (input != null ? slugify.slugify(input) : null);

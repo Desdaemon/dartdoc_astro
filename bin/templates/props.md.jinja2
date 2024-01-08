@@ -9,7 +9,10 @@
 <span class="dart-code">
 {%- if not it.isSetter %}{{it.returnType | link}} {% endif -%}
 <strong>{%- if it.isGetter %}get {% endif -%}
-[{{it.name}}]({{it.name}})</strong>
+[{{it.name}}](
+{%- if className -%}
+/reference/Classes/{{className}}/
+{%- endif -%}{{it.name | slug}})</strong>
 {%- if it.isSetter %}({{it.type | link}}){% endif %};</span>
 </dt>
 {% if it.docs %}

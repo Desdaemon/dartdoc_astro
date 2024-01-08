@@ -1,7 +1,7 @@
 ---
-title: dtypes
+title: "dtypes"
 description: |
-  
+
 ---
 <span class="dart-code"><strong>[Expr] dtypes</strong>(<span class="nobr">Iterable\<DataType> dtypes</span>);</span>
 

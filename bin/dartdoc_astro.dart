@@ -12,8 +12,11 @@ import 'package:glob/list_local_fs.dart';
 import 'package:jinja/loaders.dart';
 import 'package:yaml/yaml.dart' as yaml;
 import 'package:jinja/jinja.dart';
-import 'package:jinja/src/renderer.dart';
-import 'package:jinja/src/nodes.dart';
+import 'package:path/path.dart' as p;
+import 'package:slugify/slugify.dart' as slugify;
+
+// import 'package:jinja/src/renderer.dart';
+// import 'package:jinja/src/nodes.dart';
 
 part 'utils.dart';
 part 'config.dart';

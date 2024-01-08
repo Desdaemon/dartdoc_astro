@@ -1,12 +1,18 @@
 ---
-title: {{it.name}}
+title: "{{it.name|e}}"
 description: |
-  {{it.docs | summarize}}
+{{it.docs | summarize | indent(2)}}
+{% for key, val in frontMatter %}
+{{key}}: {{val}}
+{% endfor %}
 ---
-<span class="dart-code"><strong>{{it.returnType | link}} {{it.name}}
+<span class="dart-code"><strong>{{it.returnType | link}} {% if it.isOperator -%}
+operator {% endif -%}
+{{it.name}}
 {%- if it.typeParams -%}
   \<{{it.typeParams | join(', ')}}>
-{%- endif -%}</strong>({{it.params | params}})
+{%- endif -%}
+</strong>({{it.params | params}})
 {%- if it.modifier %} {{it.modifier}}{% endif %};</span>
 
 {{it.docs}}
