@@ -29,4 +29,4 @@ description: |
 </dt>
 </dl>
 
-[DataType]: /reference/classes/datatype
+[DataType]: /reference/classes/datatype/

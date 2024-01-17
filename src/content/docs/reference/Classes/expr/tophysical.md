@@ -13,4 +13,4 @@ Expr get toPhysical => RustLib.instance.api.exprToPhysical(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -155,9 +155,9 @@ description: |
 
 ## Inherited from `_$LiteralValue`
 
-[DataType]: /reference/classes/datatype
-[TimeUnit]: /reference/enums/timeunit
-[SpecialEqPSeries]: /reference/classes/specialeqpseries
-[LiteralValue]: /reference/classes/literalvalue
-[Series]: /reference/classes/series
-[Expr]: /reference/classes/expr
+[DataType]: /reference/classes/datatype/
+[TimeUnit]: /reference/enums/timeunit/
+[SpecialEqPSeries]: /reference/classes/specialeqpseries/
+[LiteralValue]: /reference/classes/literalvalue/
+[Series]: /reference/classes/series/
+[Expr]: /reference/classes/expr/

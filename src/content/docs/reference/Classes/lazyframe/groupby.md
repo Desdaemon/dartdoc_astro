@@ -21,4 +21,4 @@ sidebar: {hidden: true}
       );
 ```
 
-[LazyGroupBy]: /reference/classes/lazygroupby
+[LazyGroupBy]: /reference/classes/lazygroupby/

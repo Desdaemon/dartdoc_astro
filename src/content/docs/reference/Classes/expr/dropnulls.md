@@ -13,4 +13,4 @@ Expr get dropNulls => RustLib.instance.api.exprDropNulls(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

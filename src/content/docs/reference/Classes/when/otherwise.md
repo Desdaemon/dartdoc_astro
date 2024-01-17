@@ -15,4 +15,4 @@ Expr otherwise(Object? otherwise) {
   }
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

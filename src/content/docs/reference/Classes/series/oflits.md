@@ -14,5 +14,5 @@ static Series ofLits(
       RustLib.instance.api.seriesOfLits(name: name, values: values, hint: hint);
 ```
 
-[Series]: /reference/classes/series
-[Literals]: /reference/classes/literals
+[Series]: /reference/classes/series/
+[Literals]: /reference/classes/literals/

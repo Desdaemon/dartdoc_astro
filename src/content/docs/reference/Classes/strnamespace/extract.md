@@ -13,4 +13,4 @@ Expr extract(String pat, {required int groupIndex}) =>
       expr.strExtract(pat: pat, groupIndex: groupIndex);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

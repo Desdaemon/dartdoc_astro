@@ -31,19 +31,19 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[VecSeries] <strong>get [columns](columns)</strong>;</span>
-</dt>
-<dd>
-
- Get all columns of this dataframe.
-</dd>
-<dt>
-
 <span class="dart-code">int <strong>get [estimatedSize](estimatedsize)</strong>;</span>
 </dt>
 <dd>
 
  Returns the amount of bytes occupied by this series.
+</dd>
+<dt>
+
+<span class="dart-code">[VecSeries] <strong>get [getColumns](getcolumns)</strong>;</span>
+</dt>
+<dd>
+
+ Get all columns of this dataframe.
 </dd>
 <dt>
 
@@ -254,6 +254,10 @@ description: |
 
  Add a new column at index 0 denoting the row number.
 </dd>
+<dt>
+
+<span class="dart-code">Future&lt;void&gt; [<strong>writeCsv](writecsv)</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr">bool <i>includeBom</i></span>, <span class="nobr">bool <i>includeHeader</i></span>, <span class="nobr">bool <i>append</i></span>, <span class="nobr">bool <i>createNew</i></span>, <span class="nobr">String? <i>nullValue</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
 </dl>
 
 
@@ -318,9 +322,9 @@ description: |
 </dd>
 </dl>
 
-[RustOpaque]: /reference/classes/rustopaque
-[VecSeries]: /reference/classes/vecseries
-[DataFrame]: /reference/classes/dataframe
-[Series]: /reference/classes/series
-[LazyFrame]: /reference/classes/lazyframe
-[Schema]: /reference/classes/schema
+[RustOpaque]: /reference/classes/rustopaque/
+[VecSeries]: /reference/classes/vecseries/
+[DataFrame]: /reference/classes/dataframe/
+[Series]: /reference/classes/series/
+[LazyFrame]: /reference/classes/lazyframe/
+[Schema]: /reference/classes/schema/

@@ -22,4 +22,4 @@ Expr strSplitExact(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

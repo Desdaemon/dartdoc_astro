@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Series operator -(Series other) => subtract(other: other);
 ```
 
-[Series]: /reference/classes/series
+[Series]: /reference/classes/series/

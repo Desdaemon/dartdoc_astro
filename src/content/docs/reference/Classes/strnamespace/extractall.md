@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr extractAll(Object? pat) => expr.strExtractAll(pat: pat.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

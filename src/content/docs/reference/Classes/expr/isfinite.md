@@ -13,4 +13,4 @@ Expr get isFinite => RustLib.instance.api.exprIsFinite(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

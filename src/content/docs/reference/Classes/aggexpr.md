@@ -69,5 +69,5 @@ description: |
 
 ## Inherited from `_$AggExpr`
 
-[Expr]: /reference/classes/expr
-[QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions
+[Expr]: /reference/classes/expr/
+[QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions/

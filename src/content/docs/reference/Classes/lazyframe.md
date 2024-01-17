@@ -341,10 +341,10 @@ description: |
 </dd>
 </dl>
 
-[RustOpaque]: /reference/classes/rustopaque
-[LazyFrame]: /reference/classes/lazyframe
-[Expr]: /reference/classes/expr
-[LazyGroupBy]: /reference/classes/lazygroupby
-[JoinType]: /reference/enums/jointype
-[QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions
-[UniqueKeepStrategy]: /reference/enums/uniquekeepstrategy
+[RustOpaque]: /reference/classes/rustopaque/
+[LazyFrame]: /reference/classes/lazyframe/
+[Expr]: /reference/classes/expr/
+[LazyGroupBy]: /reference/classes/lazygroupby/
+[JoinType]: /reference/enums/jointype/
+[QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions/
+[UniqueKeepStrategy]: /reference/enums/uniquekeepstrategy/

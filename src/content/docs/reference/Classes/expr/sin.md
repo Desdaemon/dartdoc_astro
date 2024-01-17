@@ -13,4 +13,4 @@ Expr get sin => RustLib.instance.api.exprSin(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

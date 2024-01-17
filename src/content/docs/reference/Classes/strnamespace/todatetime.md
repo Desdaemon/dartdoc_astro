@@ -21,5 +21,5 @@ Expr toDatetime({
       );
 ```
 
-[Expr]: /reference/classes/expr
-[TimeUnit?]: /reference/enums/timeunit
+[Expr]: /reference/classes/expr/
+[TimeUnit?]: /reference/enums/timeunit/

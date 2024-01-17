@@ -17,4 +17,4 @@ Expr append({required Expr other, bool upcast = true, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -16,4 +16,4 @@ Expr log({required double base, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

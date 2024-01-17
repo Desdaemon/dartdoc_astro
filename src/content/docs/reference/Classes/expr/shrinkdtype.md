@@ -13,4 +13,4 @@ Expr get shrinkDtype => RustLib.instance.api.exprShrinkDtype(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

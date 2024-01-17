@@ -342,7 +342,7 @@ String? _describeElementType(Element? obj, {bool throwIfAbsent = false}) {
 String _linkElement(Element? elm) {
   if (elm != null) {
     if (_describeElementType(elm) case final descriptor?) {
-      return '/reference/${descriptor.toLowerCase()}/${_slug(elm.name)}';
+      return '/reference/${descriptor.toLowerCase()}/${_slug(elm.name)}/';
     }
   }
   return '#';

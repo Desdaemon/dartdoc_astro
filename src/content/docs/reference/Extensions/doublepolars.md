@@ -29,5 +29,5 @@ description: |
 </dl>
 
 
-[Expr]: /reference/classes/expr
-[DataType]: /reference/classes/datatype
+[Expr]: /reference/classes/expr/
+[DataType]: /reference/classes/datatype/

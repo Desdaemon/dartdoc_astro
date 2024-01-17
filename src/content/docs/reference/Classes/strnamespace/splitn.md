@@ -13,4 +13,4 @@ Expr splitN({required Expr by, required int n}) =>
       expr.strSplitn(by: by, n: n);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

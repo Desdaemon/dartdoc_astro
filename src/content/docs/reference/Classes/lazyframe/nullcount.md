@@ -15,4 +15,4 @@ LazyFrame nullCount({dynamic hint}) =>
       );
 ```
 
-[LazyFrame]: /reference/classes/lazyframe
+[LazyFrame]: /reference/classes/lazyframe/

@@ -25,5 +25,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[Series]: /reference/classes/series
-[Operator]: /reference/enums/operator
+[Series]: /reference/classes/series/
+[Operator]: /reference/enums/operator/

@@ -11,4 +11,4 @@ description: |
 Expr get expr => i64;
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -15,4 +15,4 @@ LiteralValue intoLiteral({dynamic hint}) =>
       );
 ```
 
-[LiteralValue]: /reference/classes/literalvalue
+[LiteralValue]: /reference/classes/literalvalue/

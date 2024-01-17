@@ -85,6 +85,6 @@ Future<DataFrame> readCsv(
         hint: hint);
 ```
 
-[RowCount?]: /reference/classes/rowcount
-[CsvEncoding?]: /reference/enums/csvencoding
-[NullValues?]: /reference/classes/nullvalues
+[RowCount?]: /reference/classes/rowcount/
+[CsvEncoding?]: /reference/enums/csvencoding/
+[NullValues?]: /reference/classes/nullvalues/

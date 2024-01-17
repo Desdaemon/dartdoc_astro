@@ -16,4 +16,4 @@ Expr pow({required double exponent, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -67,4 +67,4 @@ description: |
 </dd>
 </dl>
 
-[RustOpaque]: /reference/classes/rustopaque
+[RustOpaque]: /reference/classes/rustopaque/

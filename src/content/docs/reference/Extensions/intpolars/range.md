@@ -20,5 +20,5 @@ Expr range(int other, {DataType? dataType}) {
   }
 ```
 
-[Expr]: /reference/classes/expr
-[DataType?]: /reference/classes/datatype
+[Expr]: /reference/classes/expr/
+[DataType?]: /reference/classes/datatype/

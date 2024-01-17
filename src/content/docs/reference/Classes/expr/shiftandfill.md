@@ -17,4 +17,4 @@ Expr shiftAndFill({required Expr n, required Expr fillValue, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

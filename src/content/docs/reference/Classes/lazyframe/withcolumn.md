@@ -17,5 +17,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[LazyFrame]: /reference/classes/lazyframe
-[Expr]: /reference/classes/expr
+[LazyFrame]: /reference/classes/lazyframe/
+[Expr]: /reference/classes/expr/

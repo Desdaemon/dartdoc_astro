@@ -15,4 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
-[Schema]: /reference/classes/schema
+[Schema]: /reference/classes/schema/

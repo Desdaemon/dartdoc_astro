@@ -16,5 +16,5 @@ Expr reshape({required Int64List dims, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
-[Int64List]: /reference/classes/int64list
+[Expr]: /reference/classes/expr/
+[Int64List]: /reference/classes/int64list/

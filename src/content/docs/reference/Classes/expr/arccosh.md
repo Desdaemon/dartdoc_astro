@@ -13,4 +13,4 @@ Expr get arccosh => RustLib.instance.api.exprArccosh(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

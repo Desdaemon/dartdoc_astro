@@ -26,5 +26,5 @@ sidebar: {hidden: true}
       Expr.cast(expr: this, dataType: dataType, strict: strict);
 ```
 
-[Expr]: /reference/classes/expr
-[DataType]: /reference/classes/datatype
+[Expr]: /reference/classes/expr/
+[DataType]: /reference/classes/datatype/

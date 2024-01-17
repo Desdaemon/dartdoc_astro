@@ -14,4 +14,4 @@ sidebar: {hidden: true}
       Expr.binaryExpr(left: this, op: Operator.and, right: other.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

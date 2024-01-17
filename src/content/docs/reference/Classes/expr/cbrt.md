@@ -13,4 +13,4 @@ Expr get cbrt => RustLib.instance.api.exprCbrt(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

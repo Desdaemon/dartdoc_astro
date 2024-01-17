@@ -14,4 +14,4 @@ sidebar: {hidden: true}
       RustLib.instance.api.dataFrameOfLits(series: series, hint: hint);
 ```
 
-[DataFrame]: /reference/classes/dataframe
+[DataFrame]: /reference/classes/dataframe/

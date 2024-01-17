@@ -13,4 +13,4 @@ Expr get ceil => RustLib.instance.api.exprCeil(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

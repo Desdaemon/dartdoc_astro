@@ -95,5 +95,5 @@ description: |
 </dd>
 </dl>
 
-[RustOpaque]: /reference/classes/rustopaque
-[LazyFrame]: /reference/classes/lazyframe
+[RustOpaque]: /reference/classes/rustopaque/
+[LazyFrame]: /reference/classes/lazyframe/

@@ -13,4 +13,4 @@ Expr get degrees => RustLib.instance.api.exprDegrees(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

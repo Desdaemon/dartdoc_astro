@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr stripChars(Object? matches) => expr.strStripChars(matches: matches.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

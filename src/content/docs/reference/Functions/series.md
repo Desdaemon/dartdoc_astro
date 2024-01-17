@@ -16,5 +16,5 @@ Series series<T>(
     Series.ofLits(values: LiteralsExt.from(data, dtype), name: name);
 ```
 
-[Series]: /reference/classes/series
-[DataType]: /reference/classes/datatype
+[Series]: /reference/classes/series/
+[DataType]: /reference/classes/datatype/

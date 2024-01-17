@@ -152,7 +152,7 @@ description: |
 
 
 
-[Expr]: /reference/classes/expr
-[DataType]: /reference/classes/datatype
-[Ambiguous]: /reference/enums/ambiguous
-[TimeUnit?]: /reference/enums/timeunit
+[Expr]: /reference/classes/expr/
+[DataType]: /reference/classes/datatype/
+[Ambiguous]: /reference/enums/ambiguous/
+[TimeUnit?]: /reference/enums/timeunit/

@@ -13,4 +13,4 @@ Expr gather(Object? idx) =>
       Expr.gather(expr: this, idx: idx.expr, returnsScalar: false);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -11,4 +11,4 @@ description: |
 Expr get toLowercase => expr.strToLowercase();
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

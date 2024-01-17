@@ -13,4 +13,4 @@ Expr get radians => RustLib.instance.api.exprRadians(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

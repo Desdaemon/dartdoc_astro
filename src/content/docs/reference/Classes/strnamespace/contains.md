@@ -13,4 +13,4 @@ Expr contains(Object? pat, {bool strict = true}) =>
       expr.strContains(pat: pat.expr, strict: strict);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

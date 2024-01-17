@@ -16,4 +16,4 @@ sidebar: {hidden: true}
       );
 ```
 
-[Literals]: /reference/classes/literals
+[Literals]: /reference/classes/literals/

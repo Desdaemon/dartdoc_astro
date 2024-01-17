@@ -30,6 +30,6 @@ Expr strToDatetime(
       );
 ```
 
-[Expr]: /reference/classes/expr
-[TimeUnit?]: /reference/enums/timeunit
-[Ambiguous]: /reference/enums/ambiguous
+[Expr]: /reference/classes/expr/
+[TimeUnit?]: /reference/enums/timeunit/
+[Ambiguous]: /reference/enums/ambiguous/

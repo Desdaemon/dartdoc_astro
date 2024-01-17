@@ -11,4 +11,4 @@ description: |
 Expr get last => Expr.agg(AggExpr.last(this));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

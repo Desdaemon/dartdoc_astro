@@ -12,4 +12,4 @@ DataType get dtype => DataType.datetime(
       _kIsWeb ? TimeUnit.milliseconds : TimeUnit.microseconds);
 ```
 
-[DataType]: /reference/classes/datatype
+[DataType]: /reference/classes/datatype/

@@ -21,5 +21,5 @@ description: |
 </dl>
 
 
-[LiteralValue]: /reference/classes/literalvalue
-[Expr]: /reference/classes/expr
+[LiteralValue]: /reference/classes/literalvalue/
+[Expr]: /reference/classes/expr/

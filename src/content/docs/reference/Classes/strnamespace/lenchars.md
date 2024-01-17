@@ -11,4 +11,4 @@ description: |
 Expr get lenChars => expr.strLenChars();
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

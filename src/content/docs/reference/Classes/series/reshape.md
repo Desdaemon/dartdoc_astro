@@ -17,5 +17,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[Series]: /reference/classes/series
-[Int64List]: /reference/classes/int64list
+[Series]: /reference/classes/series/
+[Int64List]: /reference/classes/int64list/

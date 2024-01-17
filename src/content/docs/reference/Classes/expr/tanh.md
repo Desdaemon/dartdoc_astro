@@ -13,4 +13,4 @@ Expr get tanh => RustLib.instance.api.exprTanh(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

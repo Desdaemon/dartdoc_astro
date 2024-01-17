@@ -13,4 +13,4 @@ Expr get lowerBound => RustLib.instance.api.exprLowerBound(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

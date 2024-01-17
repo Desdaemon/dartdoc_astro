@@ -11,4 +11,4 @@ description: |
 Expr get nanMax => Expr.agg(AggExpr.max(input: this, propagateNans: true));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

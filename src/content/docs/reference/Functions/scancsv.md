@@ -75,7 +75,7 @@ Future<LazyFrame> scanCsv(
         hint: hint);
 ```
 
-[OptionSchema]: /reference/classes/optionschema
-[RowCount?]: /reference/classes/rowcount
-[CsvEncoding?]: /reference/enums/csvencoding
-[NullValues?]: /reference/classes/nullvalues
+[OptionSchema]: /reference/classes/optionschema/
+[RowCount?]: /reference/classes/rowcount/
+[CsvEncoding?]: /reference/enums/csvencoding/
+[NullValues?]: /reference/classes/nullvalues/

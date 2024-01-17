@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr stripSuffix(Object? suffix) => expr.strStripSuffix(suffix: suffix.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

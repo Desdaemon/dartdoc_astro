@@ -11,4 +11,4 @@ description: |
 Expr col(String column) => Expr.column(column);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

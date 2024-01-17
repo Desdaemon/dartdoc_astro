@@ -12,4 +12,4 @@ description: |
 Expr lit(Object? value) => value.expr;
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

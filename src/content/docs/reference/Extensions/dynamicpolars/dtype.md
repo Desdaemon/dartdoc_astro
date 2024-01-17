@@ -20,4 +20,4 @@ DataType get dtype => switch (this) {
       };
 ```
 
-[DataType]: /reference/classes/datatype
+[DataType]: /reference/classes/datatype/

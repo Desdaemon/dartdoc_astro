@@ -43,4 +43,4 @@ description: |
 
 
 
-[DataType]: /reference/classes/datatype
+[DataType]: /reference/classes/datatype/

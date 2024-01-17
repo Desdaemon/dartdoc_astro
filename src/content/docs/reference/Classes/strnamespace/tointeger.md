@@ -13,4 +13,4 @@ Expr toInteger({required int base, bool strict = true}) =>
       expr.strToInteger(base: base, strict: strict);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

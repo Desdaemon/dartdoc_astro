@@ -29,5 +29,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[Expr]: /reference/classes/expr
-[ClosedWindow?]: /reference/enums/closedwindow
+[Expr]: /reference/classes/expr/
+[ClosedWindow?]: /reference/enums/closedwindow/

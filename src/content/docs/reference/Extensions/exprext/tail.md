@@ -13,4 +13,4 @@ Expr tail({int length = 10}) =>
       Expr.slice(input: this, offset: (-length).expr, length: length.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

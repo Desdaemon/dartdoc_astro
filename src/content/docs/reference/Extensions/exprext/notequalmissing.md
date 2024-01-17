@@ -13,4 +13,4 @@ Expr notEqualMissing(Object? other) => Expr.binaryExpr(
       left: this, op: Operator.notEqValidity, right: other.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

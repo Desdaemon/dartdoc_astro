@@ -13,4 +13,4 @@ Expr get isNotNull => RustLib.instance.api.exprIsNotNull(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -16,4 +16,4 @@ Expr roundSigFigs({required int digits, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

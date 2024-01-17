@@ -26,4 +26,4 @@ LazyFrame sort(
       );
 ```
 
-[LazyFrame]: /reference/classes/lazyframe
+[LazyFrame]: /reference/classes/lazyframe/

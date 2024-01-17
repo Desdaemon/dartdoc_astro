@@ -19,4 +19,4 @@ sidebar: {hidden: true}
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

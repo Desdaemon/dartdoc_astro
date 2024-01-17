@@ -16,4 +16,4 @@ Expr fillNull({required Expr value, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

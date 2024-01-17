@@ -16,4 +16,4 @@ Expr arctan2({required Expr x, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

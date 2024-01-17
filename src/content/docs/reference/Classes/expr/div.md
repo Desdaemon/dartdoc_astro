@@ -15,4 +15,4 @@ Expr div({required Expr other, dynamic hint}) => RustLib.instance.api.exprDiv(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -13,4 +13,4 @@ Expr get tan => RustLib.instance.api.exprTan(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

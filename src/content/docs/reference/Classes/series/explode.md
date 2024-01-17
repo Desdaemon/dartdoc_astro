@@ -15,4 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
-[Series]: /reference/classes/series
+[Series]: /reference/classes/series/

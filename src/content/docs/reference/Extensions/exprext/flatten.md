@@ -12,4 +12,4 @@ description: |
   Expr get flatten => Expr.explode(this);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

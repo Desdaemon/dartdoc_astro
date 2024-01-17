@@ -13,4 +13,4 @@ Expr get argUnique => RustLib.instance.api.exprArgUnique(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

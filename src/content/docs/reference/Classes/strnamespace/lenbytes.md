@@ -11,4 +11,4 @@ description: |
 Expr get lenBytes => expr.strLenBytes();
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

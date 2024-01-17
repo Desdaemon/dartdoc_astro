@@ -15,4 +15,4 @@ Expr shift({required Expr n, dynamic hint}) => RustLib.instance.api.exprShift(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

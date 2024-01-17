@@ -71,7 +71,7 @@ description: |
 </dt>
 </dl>
 
-[Int64List]: /reference/classes/int64list
-[DataType]: /reference/classes/datatype
-[PSeries]: /reference/classes/pseries
-[Literals]: /reference/classes/literals
+[Int64List]: /reference/classes/int64list/
+[DataType]: /reference/classes/datatype/
+[PSeries]: /reference/classes/pseries/
+[Literals]: /reference/classes/literals/

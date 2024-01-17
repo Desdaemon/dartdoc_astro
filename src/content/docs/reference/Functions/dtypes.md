@@ -12,4 +12,4 @@ Expr dtypes(Iterable<DataType> dtypes) =>
     Expr.dtypeColumn(dtypes.toList(growable: false));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

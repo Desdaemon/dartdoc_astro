@@ -79,5 +79,5 @@ description: |
 </dd>
 </dl>
 
-[RustOpaque]: /reference/classes/rustopaque
-[Schema]: /reference/classes/schema
+[RustOpaque]: /reference/classes/rustopaque/
+[Schema]: /reference/classes/schema/

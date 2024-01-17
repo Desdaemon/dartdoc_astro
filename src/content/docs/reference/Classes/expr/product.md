@@ -13,4 +13,4 @@ Expr get product => RustLib.instance.api.exprProduct(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

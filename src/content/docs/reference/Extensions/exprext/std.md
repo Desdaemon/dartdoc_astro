@@ -16,4 +16,4 @@ sidebar: {hidden: true}
   Expr std(int ddof) => Expr.agg(AggExpr.std(this, ddof));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

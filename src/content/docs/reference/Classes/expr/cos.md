@@ -13,4 +13,4 @@ Expr get cos => RustLib.instance.api.exprCos(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

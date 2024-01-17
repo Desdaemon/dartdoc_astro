@@ -37,4 +37,4 @@ description: |
 </dl>
 
 
-[Series]: /reference/classes/series
+[Series]: /reference/classes/series/

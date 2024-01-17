@@ -43,5 +43,5 @@ static Literals from(dynamic value, DataType dtype) => switch (value) {
       };
 ```
 
-[Literals]: /reference/classes/literals
-[DataType]: /reference/classes/datatype
+[Literals]: /reference/classes/literals/
+[DataType]: /reference/classes/datatype/

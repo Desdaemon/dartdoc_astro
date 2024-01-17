@@ -17,4 +17,4 @@ Expr valueCounts({bool sort = false, bool parallel = true, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

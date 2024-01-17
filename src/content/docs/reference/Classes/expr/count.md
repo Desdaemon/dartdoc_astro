@@ -13,4 +13,4 @@ Expr get count => RustLib.instance.api.exprCount(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

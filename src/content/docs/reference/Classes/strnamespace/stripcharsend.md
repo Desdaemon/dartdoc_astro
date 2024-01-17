@@ -13,4 +13,4 @@ Expr stripCharsEnd(Object? matches) =>
       expr.strStripCharsEnd(matches: matches.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

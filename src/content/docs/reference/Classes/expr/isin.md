@@ -14,4 +14,4 @@ Expr get isIn => RustLib.instance.api.exprIsIn(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

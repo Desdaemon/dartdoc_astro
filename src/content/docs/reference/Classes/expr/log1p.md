@@ -13,4 +13,4 @@ Expr get log1P => RustLib.instance.api.exprLog1P(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

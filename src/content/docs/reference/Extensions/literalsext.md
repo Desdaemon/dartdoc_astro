@@ -17,5 +17,5 @@ description: |
 </dl>
 
 
-[Literals]: /reference/classes/literals
-[DataType]: /reference/classes/datatype
+[Literals]: /reference/classes/literals/
+[DataType]: /reference/classes/datatype/

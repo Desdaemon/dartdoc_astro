@@ -17,4 +17,4 @@ sidebar: {hidden: true}
       );
 ```
 
-[DataFrame]: /reference/classes/dataframe
+[DataFrame]: /reference/classes/dataframe/

@@ -11,4 +11,4 @@ description: |
 Expr get aggGroups => Expr.agg(AggExpr.aggGroups(this));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr containsLiteral(Object? pat) => expr.strContainsLiteral(pat: pat.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

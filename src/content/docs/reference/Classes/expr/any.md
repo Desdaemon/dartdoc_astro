@@ -16,4 +16,4 @@ Expr any({bool ignoreNulls = false, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

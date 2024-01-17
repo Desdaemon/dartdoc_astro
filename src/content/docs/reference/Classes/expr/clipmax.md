@@ -16,4 +16,4 @@ Expr clipMax({required Expr max, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

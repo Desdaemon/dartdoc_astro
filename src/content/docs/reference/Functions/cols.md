@@ -12,4 +12,4 @@ Expr cols(Iterable<String> columns) =>
     Expr.columns(columns.toList(growable: false));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -13,4 +13,4 @@ Expr get not => RustLib.instance.api.exprNot(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -34,5 +34,5 @@ description: |
 </dt>
 </dl>
 
-[WindowMapping]: /reference/enums/windowmapping
-[$WindowTypeCopyWith&lt;WindowType&gt;]: /reference/classes/windowtypecopywith
+[WindowMapping]: /reference/enums/windowmapping/
+[$WindowTypeCopyWith&lt;WindowType&gt;]: /reference/classes/windowtypecopywith/

@@ -13,4 +13,4 @@ Expr replaceAll(Object? pat, Object? val, {bool literal = false}) =>
       expr.strReplaceAll(pat: pat.expr, val: val.expr, literal: literal);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

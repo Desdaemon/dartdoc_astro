@@ -18,4 +18,4 @@ Expr replaceN(
       expr.strReplaceN(pat: pat.expr, val: val.expr, n: n, literal: literal);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

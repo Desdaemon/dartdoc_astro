@@ -13,4 +13,4 @@ Expr concat(String delimiter, {bool ignoreNulls = true}) =>
       expr.strConcat(delimiter: delimiter, ignoreNulls: ignoreNulls);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

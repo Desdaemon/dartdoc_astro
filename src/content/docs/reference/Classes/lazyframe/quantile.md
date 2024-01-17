@@ -21,6 +21,6 @@ sidebar: {hidden: true}
       );
 ```
 
-[LazyFrame]: /reference/classes/lazyframe
-[Expr]: /reference/classes/expr
-[QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions
+[LazyFrame]: /reference/classes/lazyframe/
+[Expr]: /reference/classes/expr/
+[QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions/

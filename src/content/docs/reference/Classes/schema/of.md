@@ -14,4 +14,4 @@ sidebar: {hidden: true}
       RustLib.instance.api.schemaOf(fields: fields, hint: hint);
 ```
 
-[Schema]: /reference/classes/schema
+[Schema]: /reference/classes/schema/

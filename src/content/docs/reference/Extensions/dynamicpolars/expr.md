@@ -8,7 +8,8 @@ description: |
 
 ### Implementation
 ```dart
-Expr get expr => switch (this) {
+@pragma('vm:prefer-inline')
+  Expr get expr => switch (this) {
         int value => value.expr,
         double value => value.expr,
         String value => value.expr,
@@ -18,10 +19,11 @@ Expr get expr => switch (this) {
         Expr expr => expr,
         When ternary => ternary.expr,
         StrNamespace ns => ns.expr,
+        ListNamespace ns => ns.expr,
         LiteralValue lit => Expr.literal(lit),
         null => const Expr.literal(LiteralValue.Null()),
         _ => '$this'.expr,
       };
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

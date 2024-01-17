@@ -11,4 +11,4 @@ description: |
 Expr get expr => Expr.literal(LiteralValue.utf8(this));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

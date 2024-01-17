@@ -6,11 +6,12 @@ import dartdoc from "./src/plugin"
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://desdaemon.github.io/dartdoc_astro/',
   integrations: [
     starlight({
       title: "polars-dart",
       customCss: ["./src/tailwind.css"],
-      plugins: [dartdoc],
+      plugins: [dartdoc()],
       social: {
         github: "https://github.com/Desdaemon/dartdoc_astro",
       },
@@ -23,6 +24,10 @@ export default defineConfig({
               label: "Intro",
               link: "/guides/example/",
             },
+            {
+              label: "Usage",
+              link: "/guides/usage/",
+            }
           ],
         },
         {

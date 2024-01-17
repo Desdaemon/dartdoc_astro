@@ -29,6 +29,6 @@ sidebar: {hidden: true}
       );
 ```
 
-[Expr]: /reference/classes/expr
-[DataType]: /reference/classes/datatype
-[Ambiguous]: /reference/enums/ambiguous
+[Expr]: /reference/classes/expr/
+[DataType]: /reference/classes/datatype/
+[Ambiguous]: /reference/enums/ambiguous/

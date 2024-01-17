@@ -13,4 +13,4 @@ Expr get sqrt => RustLib.instance.api.exprSqrt(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

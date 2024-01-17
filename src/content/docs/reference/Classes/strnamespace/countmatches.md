@@ -13,4 +13,4 @@ Expr countMatches(Object? pat, {bool literal = false}) =>
       expr.strCountMatches(pat: pat.expr, literal: literal);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

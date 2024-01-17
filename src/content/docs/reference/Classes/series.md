@@ -558,14 +558,14 @@ description: |
 </dd>
 </dl>
 
-[RustOpaque]: /reference/classes/rustopaque
-[Series]: /reference/classes/series
-[Operator]: /reference/enums/operator
-[DataType]: /reference/classes/datatype
-[Int64List]: /reference/classes/int64list
-[DataFrame]: /reference/classes/dataframe
-[LiteralValue]: /reference/classes/literalvalue
-[Literals]: /reference/classes/literals
-[Int64List?]: /reference/classes/int64list
-[ClosedWindow?]: /reference/enums/closedwindow
-[TimeUnit?]: /reference/enums/timeunit
+[RustOpaque]: /reference/classes/rustopaque/
+[Series]: /reference/classes/series/
+[Operator]: /reference/enums/operator/
+[DataType]: /reference/classes/datatype/
+[Int64List]: /reference/classes/int64list/
+[DataFrame]: /reference/classes/dataframe/
+[LiteralValue]: /reference/classes/literalvalue/
+[Literals]: /reference/classes/literals/
+[Int64List?]: /reference/classes/int64list/
+[ClosedWindow?]: /reference/enums/closedwindow/
+[TimeUnit?]: /reference/enums/timeunit/

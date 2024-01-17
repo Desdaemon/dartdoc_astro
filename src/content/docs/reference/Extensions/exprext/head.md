@@ -15,4 +15,4 @@ Expr head({int length = 10}) => Expr.slice(
       length: length.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

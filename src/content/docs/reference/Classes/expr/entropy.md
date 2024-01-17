@@ -17,4 +17,4 @@ Expr entropy({required double base, bool normalize = false, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -16,4 +16,4 @@ Expr cumSum({bool reverse = false, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

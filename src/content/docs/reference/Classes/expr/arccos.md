@@ -13,4 +13,4 @@ Expr get arccos => RustLib.instance.api.exprArccos(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -17,4 +17,4 @@ Expr splitExact({
       expr.strSplitExact(by: by.expr, n: n, inclusive: inclusive);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

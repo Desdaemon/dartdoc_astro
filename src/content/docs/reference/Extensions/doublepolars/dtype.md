@@ -11,4 +11,4 @@ description: |
 DataType get dtype => const DataType.float64();
 ```
 
-[DataType]: /reference/classes/datatype
+[DataType]: /reference/classes/datatype/

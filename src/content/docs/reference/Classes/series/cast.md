@@ -18,5 +18,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[Series]: /reference/classes/series
-[DataType]: /reference/classes/datatype
+[Series]: /reference/classes/series/
+[DataType]: /reference/classes/datatype/

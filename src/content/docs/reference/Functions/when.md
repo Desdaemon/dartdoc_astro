@@ -7,7 +7,7 @@ description: |
 
  Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.
 
- ### Example:
+ **Example:**
  ```dart
  final data = await df.clone().lazy().select([
    when(col('a') > 0, then: col('a') * 2)
@@ -20,7 +20,7 @@ description: |
 ```dart
 /// Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.
 ///
-/// ### Example:
+/// **Example:**
 /// ```dart
 /// final data = await df.clone().lazy().select([
 ///   when(col('a') > 0, then: col('a') * 2)
@@ -36,4 +36,4 @@ When when(
     When(condition, then);
 ```
 
-[When]: /reference/classes/when
+[When]: /reference/classes/when/

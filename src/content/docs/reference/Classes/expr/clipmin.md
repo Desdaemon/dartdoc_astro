@@ -16,4 +16,4 @@ Expr clipMin({required Expr min, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

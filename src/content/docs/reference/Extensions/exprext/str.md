@@ -11,4 +11,4 @@ description: |
 StrNamespace get str => StrNamespace(this);
 ```
 
-[StrNamespace]: /reference/classes/strnamespace
+[StrNamespace]: /reference/classes/strnamespace/

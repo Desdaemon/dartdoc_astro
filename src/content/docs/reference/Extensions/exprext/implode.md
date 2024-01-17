@@ -11,4 +11,4 @@ description: |
 Expr get implode => Expr.agg(AggExpr.implode(this));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

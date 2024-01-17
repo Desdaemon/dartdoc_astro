@@ -13,4 +13,4 @@ Expr get floor => RustLib.instance.api.exprFloor(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

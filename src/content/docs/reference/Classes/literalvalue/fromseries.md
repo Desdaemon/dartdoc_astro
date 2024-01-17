@@ -13,5 +13,5 @@ static LiteralValue fromSeries({required Series series, dynamic hint}) =>
       RustLib.instance.api.literalValueFromSeries(series: series, hint: hint);
 ```
 
-[LiteralValue]: /reference/classes/literalvalue
-[Series]: /reference/classes/series
+[LiteralValue]: /reference/classes/literalvalue/
+[Series]: /reference/classes/series/

@@ -13,4 +13,4 @@ Expr get upperBound => RustLib.instance.api.exprUpperBound(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -65,5 +65,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[LazyFrame]: /reference/classes/lazyframe
-[JoinType]: /reference/enums/jointype
+[LazyFrame]: /reference/classes/lazyframe/
+[JoinType]: /reference/enums/jointype/

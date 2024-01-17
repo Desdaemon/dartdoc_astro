@@ -14,4 +14,4 @@ description: |
       );
 ```
 
-[LazyFrame]: /reference/classes/lazyframe
+[LazyFrame]: /reference/classes/lazyframe/

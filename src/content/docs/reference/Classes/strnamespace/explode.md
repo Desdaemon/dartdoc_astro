@@ -11,4 +11,4 @@ description: |
 Expr get explode => expr.strExplode();
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -16,4 +16,4 @@ Expr split({
       expr.strSplit(by: by.expr, inclusive: inclusive);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

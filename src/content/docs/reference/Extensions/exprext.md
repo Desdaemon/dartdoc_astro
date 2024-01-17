@@ -54,6 +54,10 @@ description: |
 
 <span class="dart-code">[StrNamespace] <strong>get [str](str)</strong>;</span>
 </dt>
+<dt>
+
+<span class="dart-code">[ListNamespace] <strong>get [list](list)</strong>;</span>
+</dt>
 </dl>
 
 ### Methods
@@ -231,6 +235,7 @@ description: |
 </dl>
 
 
-[Expr]: /reference/classes/expr
-[StrNamespace]: /reference/classes/strnamespace
-[DataType]: /reference/classes/datatype
+[Expr]: /reference/classes/expr/
+[StrNamespace]: /reference/classes/strnamespace/
+[ListNamespace]: /reference/classes/listnamespace/
+[DataType]: /reference/classes/datatype/

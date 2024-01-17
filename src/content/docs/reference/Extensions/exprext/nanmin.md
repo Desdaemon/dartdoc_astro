@@ -11,4 +11,4 @@ description: |
 Expr get nanMin => Expr.agg(AggExpr.min(input: this, propagateNans: true));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

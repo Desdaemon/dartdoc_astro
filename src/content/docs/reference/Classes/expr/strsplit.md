@@ -17,4 +17,4 @@ Expr strSplit({required Expr by, bool inclusive = false, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

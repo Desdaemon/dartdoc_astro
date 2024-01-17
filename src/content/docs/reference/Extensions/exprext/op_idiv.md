@@ -14,4 +14,4 @@ sidebar: {hidden: true}
       Expr.binaryExpr(left: this, op: Operator.floorDivide, right: other.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

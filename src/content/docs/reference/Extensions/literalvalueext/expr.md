@@ -12,4 +12,4 @@ description: |
   Expr get expr => Expr.literal(this);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

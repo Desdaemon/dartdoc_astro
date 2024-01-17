@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Series operator +(Series other) => addTo(other: other);
 ```
 
-[Series]: /reference/classes/series
+[Series]: /reference/classes/series/

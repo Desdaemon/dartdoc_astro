@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr filter({required Object? by}) => Expr.filter(input: this, by: by.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

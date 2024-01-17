@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr stripPrefix(Object? prefix) => expr.strStripPrefix(prefix: prefix.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

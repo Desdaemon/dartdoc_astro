@@ -19,4 +19,4 @@ Expr get expr => Expr.literal(_kIsWeb
         ));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -13,4 +13,4 @@ Expr get arcsin => RustLib.instance.api.exprArcsin(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

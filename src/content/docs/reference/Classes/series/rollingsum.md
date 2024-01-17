@@ -33,7 +33,7 @@ sidebar: {hidden: true}
       );
 ```
 
-[Series]: /reference/classes/series
-[Int64List?]: /reference/classes/int64list
-[ClosedWindow?]: /reference/enums/closedwindow
-[TimeUnit?]: /reference/enums/timeunit
+[Series]: /reference/classes/series/
+[Int64List?]: /reference/classes/int64list/
+[ClosedWindow?]: /reference/enums/closedwindow/
+[TimeUnit?]: /reference/enums/timeunit/

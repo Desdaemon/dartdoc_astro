@@ -11,4 +11,4 @@ description: |
 Expr get toUppercase => expr.strToUppercase();
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

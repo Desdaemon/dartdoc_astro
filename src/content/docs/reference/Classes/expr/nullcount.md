@@ -13,4 +13,4 @@ Expr get nullCount => RustLib.instance.api.exprNullCount(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

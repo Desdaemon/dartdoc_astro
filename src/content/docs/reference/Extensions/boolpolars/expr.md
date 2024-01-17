@@ -13,4 +13,4 @@ Expr get expr => Expr.literal(this
       : const LiteralValue.boolean(false));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

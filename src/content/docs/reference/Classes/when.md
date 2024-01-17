@@ -35,5 +35,5 @@ description: |
 
 
 
-[Expr]: /reference/classes/expr
-[When]: /reference/classes/when
+[Expr]: /reference/classes/expr/
+[When]: /reference/classes/when/

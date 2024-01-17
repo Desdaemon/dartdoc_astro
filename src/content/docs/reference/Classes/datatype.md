@@ -179,5 +179,5 @@ description: |
 
 ## Inherited from `_$DataType`
 
-[TimeUnit]: /reference/enums/timeunit
-[DataType]: /reference/classes/datatype
+[TimeUnit]: /reference/enums/timeunit/
+[DataType]: /reference/classes/datatype/

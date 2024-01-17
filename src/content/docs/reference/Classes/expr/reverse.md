@@ -13,4 +13,4 @@ Expr get reverse => RustLib.instance.api.exprReverse(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

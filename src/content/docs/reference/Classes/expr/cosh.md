@@ -13,4 +13,4 @@ Expr get cosh => RustLib.instance.api.exprCosh(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

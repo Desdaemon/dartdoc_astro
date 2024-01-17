@@ -11,4 +11,4 @@ description: |
 Expr get first => Expr.agg(AggExpr.first(this));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

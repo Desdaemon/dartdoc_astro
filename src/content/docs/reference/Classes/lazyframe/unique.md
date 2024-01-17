@@ -21,5 +21,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[LazyFrame]: /reference/classes/lazyframe
-[UniqueKeepStrategy]: /reference/enums/uniquekeepstrategy
+[LazyFrame]: /reference/classes/lazyframe/
+[UniqueKeepStrategy]: /reference/enums/uniquekeepstrategy/

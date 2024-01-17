@@ -13,4 +13,4 @@ Expr slice(int offset, int length) =>
       Expr.slice(input: this, offset: offset.expr, length: length.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -13,4 +13,4 @@ Expr exclude(Iterable<String> columns) =>
       Expr.exclude(this, columns.map(Excluded.name).toList(growable: false));
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

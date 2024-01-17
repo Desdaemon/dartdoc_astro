@@ -30,4 +30,4 @@ DataFrame df(
 }
 ```
 
-[DataFrame]: /reference/classes/dataframe
+[DataFrame]: /reference/classes/dataframe/

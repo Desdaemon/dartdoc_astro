@@ -13,4 +13,4 @@ Expr get exp => RustLib.instance.api.exprExp(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

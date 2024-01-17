@@ -14,4 +14,4 @@ DataFrame clone({dynamic hint}) => RustLib.instance.api.dataFrameClone(
       );
 ```
 
-[DataFrame]: /reference/classes/dataframe
+[DataFrame]: /reference/classes/dataframe/

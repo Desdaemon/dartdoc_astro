@@ -15,4 +15,4 @@ When when(Object? condition, {required Object? then}) {
   }
 ```
 
-[When]: /reference/classes/when
+[When]: /reference/classes/when/

@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr endsWith(Object? pat) => expr.strEndsWith(pat: pat.expr);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -16,5 +16,5 @@ Expr setSortedFlag({required IsSorted sorted, dynamic hint}) =>
       );
 ```
 
-[Expr]: /reference/classes/expr
-[IsSorted]: /reference/enums/issorted
+[Expr]: /reference/classes/expr/
+[IsSorted]: /reference/enums/issorted/

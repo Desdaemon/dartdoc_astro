@@ -13,4 +13,4 @@ Expr get isNan => RustLib.instance.api.exprIsNan(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

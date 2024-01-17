@@ -13,4 +13,4 @@ Expr get argMax => RustLib.instance.api.exprArgMax(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

@@ -25,5 +25,5 @@ sidebar: {hidden: true}
       );
 ```
 
-[DataFrame]: /reference/classes/dataframe
-[Series]: /reference/classes/series
+[DataFrame]: /reference/classes/dataframe/
+[Series]: /reference/classes/series/

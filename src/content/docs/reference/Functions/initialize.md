@@ -13,4 +13,4 @@ Future<void> initialize({ExternalLibrary? dylib}) {
 }
 ```
 
-[ExternalLibrary?]: /reference/classes/externallibrary
+[ExternalLibrary?]: /reference/classes/externallibrary/

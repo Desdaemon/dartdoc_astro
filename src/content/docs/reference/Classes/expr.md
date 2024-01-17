@@ -289,6 +289,86 @@ description: |
 </dt>
 <dt>
 
+<span class="dart-code">[Expr] <strong>get [listArgMax](listargmax)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for arg_max
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listArgMin](listargmin)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for arg_min
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listFirst](listfirst)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for first
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listLast](listlast)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for last
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listLen](listlen)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for len
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listMax](listmax)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for max
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listMean](listmean)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for mean
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listMin](listmin)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for min
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listReverse](listreverse)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for reverse
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] <strong>get [listSum](listsum)</strong>;</span>
+</dt>
+<dd>
+
+ TODO: Docs for sum
+</dd>
+<dt>
+
 <span class="dart-code">[Expr] <strong>get [strExplode](strexplode)</strong>;</span>
 </dt>
 <dd>
@@ -514,6 +594,66 @@ description: |
 <dt>
 
 <span class="dart-code">[Expr] [<strong>valueCounts](valuecounts)</strong>({<span class="nobr">bool <i>sort</i></span>, <span class="nobr">bool <i>parallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listContains](listcontains)</strong>({<span class="nobr"><strong>required</strong> [Expr] other</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ TODO: Docs for contains
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listGet](listget)</strong>({<span class="nobr"><strong>required</strong> [Expr] index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ TODO: Docs for get
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listHead](listhead)</strong>({<span class="nobr"><strong>required</strong> [Expr] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ TODO: Docs for head
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listJoin](listjoin)</strong>({<span class="nobr"><strong>required</strong> [Expr] separator</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ TODO: Docs for join
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listShift](listshift)</strong>({<span class="nobr"><strong>required</strong> [Expr] periods</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ TODO: Docs for shift
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listSlice](listslice)</strong>({<span class="nobr"><strong>required</strong> [Expr] offset</span>, <span class="nobr"><strong>required</strong> [Expr] length</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ TODO: Docs for slice
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listTail](listtail)</strong>({<span class="nobr"><strong>required</strong> [Expr] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+</dt>
+<dd>
+
+ TODO: Docs for tail
+</dd>
+<dt>
+
+<span class="dart-code">[Expr] [<strong>listUnique](listunique)</strong>({<span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -746,6 +886,10 @@ description: |
 
 <span class="dart-code">[StrNamespace] <strong>get [str](/reference/extensions/exprext/str)</strong>;</span>
 </dt>
+<dt>
+
+<span class="dart-code">[ListNamespace] <strong>get [list](/reference/extensions/exprext/list)</strong>;</span>
+</dt>
 </dl>
 
 ### Methods
@@ -925,17 +1069,18 @@ description: |
 
 ## Inherited from `_$Expr`
 
-[Expr]: /reference/classes/expr
-[LiteralValue]: /reference/classes/literalvalue
-[Operator]: /reference/enums/operator
-[DataType]: /reference/classes/datatype
-[SortOptions]: /reference/classes/sortoptions
-[AggExpr]: /reference/classes/aggexpr
-[WindowType]: /reference/classes/windowtype
-[PExpr]: /reference/classes/pexpr
-[Int64List]: /reference/classes/int64list
-[ClosedWindow?]: /reference/enums/closedwindow
-[IsSorted]: /reference/enums/issorted
-[TimeUnit?]: /reference/enums/timeunit
-[Ambiguous]: /reference/enums/ambiguous
-[StrNamespace]: /reference/classes/strnamespace
+[Expr]: /reference/classes/expr/
+[LiteralValue]: /reference/classes/literalvalue/
+[Operator]: /reference/enums/operator/
+[DataType]: /reference/classes/datatype/
+[SortOptions]: /reference/classes/sortoptions/
+[AggExpr]: /reference/classes/aggexpr/
+[WindowType]: /reference/classes/windowtype/
+[PExpr]: /reference/classes/pexpr/
+[Int64List]: /reference/classes/int64list/
+[ClosedWindow?]: /reference/enums/closedwindow/
+[IsSorted]: /reference/enums/issorted/
+[TimeUnit?]: /reference/enums/timeunit/
+[Ambiguous]: /reference/enums/ambiguous/
+[StrNamespace]: /reference/classes/strnamespace/
+[ListNamespace]: /reference/classes/listnamespace/

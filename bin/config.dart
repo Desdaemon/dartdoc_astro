@@ -46,7 +46,6 @@ class Config {
 
     config ??= Config.parse();
     if (included.isNotEmpty) config.included = included;
-    // Expand
     config.included = [
       for (final path in config.included)
         if (dbg(path, 'path').contains('*'))

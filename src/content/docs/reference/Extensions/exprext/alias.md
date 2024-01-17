@@ -12,4 +12,4 @@ sidebar: {hidden: true}
 Expr alias(String name) => Expr.alias(this, name);
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/

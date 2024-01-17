@@ -13,4 +13,4 @@ Expr get argMin => RustLib.instance.api.exprArgMin(
       );
 ```
 
-[Expr]: /reference/classes/expr
+[Expr]: /reference/classes/expr/
