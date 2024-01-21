@@ -4,7 +4,7 @@ description: |
    Dump the contents of this entire series.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>String dump</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[String] dump</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Dump the contents of this entire series.
 ### Implementation
@@ -15,3 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html

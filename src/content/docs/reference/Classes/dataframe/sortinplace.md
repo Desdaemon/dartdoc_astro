@@ -4,7 +4,7 @@ description: |
    Sorts this dataframe by the specified columns.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>void sortInPlace</strong>({<span class="nobr">List&lt;String&gt; <i>byColumn</i></span>, <span class="nobr">List&lt;bool&gt; <i>descending</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>void sortInPlace</strong>({<span class="nobr">[List]\<[String]> <i>byColumn</i></span>, <span class="nobr">[List]\<[bool]> <i>descending</i></span>, <span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Sorts this dataframe by the specified columns.
 ### Implementation
@@ -23,3 +23,6 @@ sidebar: {hidden: true}
       );
 ```
 
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

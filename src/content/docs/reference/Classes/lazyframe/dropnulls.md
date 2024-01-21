@@ -4,7 +4,7 @@ description: |
    Drop null rows.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] dropNulls</strong>({<span class="nobr">List&lt;Expr&gt;? <i>subset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] dropNulls</strong>({<span class="nobr">[List]\<[Expr]> <i>subset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Drop null rows.
 
@@ -22,3 +22,5 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[Expr]: /reference/classes/expr/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

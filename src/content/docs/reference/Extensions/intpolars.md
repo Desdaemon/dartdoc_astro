@@ -4,7 +4,7 @@ description: |
    Extensions on [int].
 ---
 *Extends*  
-<code>int</code>
+<code>[int]</code>
 
  Extensions on [int].
 
@@ -40,11 +40,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>range](range)</strong>(<span class="nobr">int other</span>, {<span class="nobr">[DataType?] <i>dataType</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>range](range)</strong>(<span class="nobr">[int] other</span>, {<span class="nobr">[DataType] <i>dataType</i></span>});</span>
 </dt>
 </dl>
 
 
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
 [Expr]: /reference/classes/expr/
 [DataType]: /reference/classes/datatype/
-[DataType?]: /reference/classes/datatype/

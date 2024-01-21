@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strSplit</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr">bool <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strSplit</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr">[bool] <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -18,3 +18,4 @@ Expr strSplit({required Expr by, bool inclusive = false, dynamic hint}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] pow</strong>({<span class="nobr"><strong>required</strong> double exponent</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] pow</strong>({<span class="nobr"><strong>required</strong> [double] exponent</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -17,3 +17,4 @@ Expr pow({required double exponent, dynamic hint}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html

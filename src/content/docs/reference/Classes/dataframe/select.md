@@ -4,7 +4,7 @@ description: |
    Makes a new dataframe with the specified columns from this dataframe.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[DataFrame] select</strong>({<span class="nobr"><strong>required</strong> List&lt;String&gt; columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[DataFrame] select</strong>({<span class="nobr"><strong>required</strong> [List]\<[String]> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Makes a new dataframe with the specified columns from this dataframe.
 ### Implementation
@@ -18,3 +18,5 @@ sidebar: {hidden: true}
 ```
 
 [DataFrame]: /reference/classes/dataframe/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

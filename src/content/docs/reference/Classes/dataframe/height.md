@@ -3,7 +3,7 @@ title: "height"
 description: |
    Returns the height of this dataframe, aka the number of rows.
 ---
-<span class="dart-code"><strong>int height</strong>();</span>
+<span class="dart-code"><strong>[int] height</strong>();</span>
 
  Returns the height of this dataframe, aka the number of rows.
 ### Implementation
@@ -14,3 +14,4 @@ description: |
       );
 ```
 
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

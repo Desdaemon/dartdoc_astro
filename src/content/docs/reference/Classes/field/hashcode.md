@@ -3,7 +3,7 @@ title: "hashCode"
 description: |
 
 ---
-<span class="dart-code"><strong>int hashCode</strong>();</span>
+<span class="dart-code"><strong>[int] hashCode</strong>();</span>
 
 
 ### Implementation
@@ -12,3 +12,4 @@ description: |
   int get hashCode => name.hashCode ^ dtype.hashCode;
 ```
 
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

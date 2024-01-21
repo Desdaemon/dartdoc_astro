@@ -4,7 +4,7 @@ description: |
    Get the last few values of this series.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] tail</strong>({<span class="nobr">int? <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Series] tail</strong>({<span class="nobr">[int] <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Get the last few values of this series.
 ### Implementation
@@ -17,3 +17,4 @@ sidebar: {hidden: true}
 ```
 
 [Series]: /reference/classes/series/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

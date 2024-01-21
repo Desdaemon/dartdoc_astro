@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] tail</strong>({<span class="nobr">int <i>length</i></span>});</span>
+<span class="dart-code"><strong>[Expr] tail</strong>({<span class="nobr">[int] <i>length</i></span>});</span>
 
 
 ### Implementation
@@ -14,3 +14,4 @@ Expr tail({int length = 10}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

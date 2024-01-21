@@ -4,7 +4,7 @@ description: |
    Returns the amount of bytes occupied by this series.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>int estimatedSize</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[int] estimatedSize</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns the amount of bytes occupied by this series.
 ### Implementation
@@ -15,3 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

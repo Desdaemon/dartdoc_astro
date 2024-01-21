@@ -33,6 +33,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List&lt;Operator&gt; <strong>get [values](values)</strong>;</span>
+<span class="dart-code">[List]\<[Operator]> <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>

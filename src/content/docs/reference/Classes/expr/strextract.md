@@ -4,7 +4,7 @@ description: |
    TODO: Docs for extract
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strExtract</strong>({<span class="nobr"><strong>required</strong> String pat</span>, <span class="nobr"><strong>required</strong> int groupIndex</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strExtract</strong>({<span class="nobr"><strong>required</strong> [String] pat</span>, <span class="nobr"><strong>required</strong> [int] groupIndex</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  TODO: Docs for extract
 ### Implementation
@@ -20,3 +20,5 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

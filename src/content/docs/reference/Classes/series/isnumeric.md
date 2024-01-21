@@ -4,7 +4,7 @@ description: |
    Returns whether this is a series of numeric values.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>bool isNumeric</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[bool] isNumeric</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns whether this is a series of numeric values.
 ### Implementation
@@ -15,3 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

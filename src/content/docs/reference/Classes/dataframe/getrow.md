@@ -4,7 +4,7 @@ description: |
    Get a row of data from this dataframe.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>List&lt;dynamic&gt; getRow</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[List]\<dynamic> getRow</strong>({<span class="nobr"><strong>required</strong> [int] index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Get a row of data from this dataframe.
 
@@ -23,3 +23,5 @@ sidebar: {hidden: true}
       );
 ```
 
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

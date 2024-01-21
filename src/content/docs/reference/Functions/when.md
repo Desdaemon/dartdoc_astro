@@ -3,7 +3,7 @@ title: "when"
 description: |
    Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.
 ---
-<span class="dart-code"><strong>[When] when</strong>(<span class="nobr">Object? condition</span>, {<span class="nobr"><strong>required</strong> Object? then</span>});</span>
+<span class="dart-code"><strong>[When] when</strong>(<span class="nobr">[Object] condition</span>, {<span class="nobr"><strong>required</strong> [Object] then</span>});</span>
 
  Begin a chain of [when-then-otherwise](https://docs.pola.rs/user-guide/expressions/functions/#conditionals) expressions.
 
@@ -37,3 +37,4 @@ When when(
 ```
 
 [When]: /reference/classes/when/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

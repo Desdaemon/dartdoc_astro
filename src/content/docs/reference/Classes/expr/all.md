@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] all</strong>({<span class="nobr">bool <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] all</strong>({<span class="nobr">[bool] <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -17,3 +17,4 @@ Expr all({bool ignoreNulls = false, dynamic hint}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

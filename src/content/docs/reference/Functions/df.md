@@ -3,7 +3,7 @@ title: "df"
 description: |
    Create a [DataFrame] from a mapping of column names to homogenous lists of values, or [Series] themselves.
 ---
-<span class="dart-code"><strong>[DataFrame] df</strong>(<span class="nobr">Map&lt;String, dynamic&gt; data</span>, {<span class="nobr">Map&lt;String, DataType&gt; <i>dtypes</i></span>});</span>
+<span class="dart-code"><strong>[DataFrame] df</strong>(<span class="nobr">[Map]\<[String], dynamic> data</span>, {<span class="nobr">[Map]\<[String], [DataType]> <i>dtypes</i></span>});</span>
 
  Create a [DataFrame] from a mapping of column names to homogenous lists of values, or [Series] themselves.
 
@@ -31,3 +31,6 @@ DataFrame df(
 ```
 
 [DataFrame]: /reference/classes/dataframe/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[Map]: https://api.flutter.dev/flutter/dart-core/Map-class.html
+[DataType]: /reference/classes/datatype/

@@ -4,7 +4,7 @@ description: |
    Select the column at the given index.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] columnAt</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Series] columnAt</strong>({<span class="nobr"><strong>required</strong> [int] index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Select the column at the given index.
 ### Implementation
@@ -18,3 +18,4 @@ sidebar: {hidden: true}
 ```
 
 [Series]: /reference/classes/series/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

@@ -4,7 +4,7 @@ description: |
    Iterate through this dataframe's rows.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>Stream&lt;List&lt;dynamic&gt;&gt; iter</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Stream]\<[List]\<dynamic>> iter</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Iterate through this dataframe's rows.
 
@@ -20,3 +20,5 @@ sidebar: {hidden: true}
       );
 ```
 
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[Stream]: https://api.flutter.dev/flutter/dart-async/Stream-class.html

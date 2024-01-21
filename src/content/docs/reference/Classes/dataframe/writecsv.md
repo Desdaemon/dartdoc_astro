@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>Future&lt;void&gt; writeCsv</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr">bool <i>includeBom</i></span>, <span class="nobr">bool <i>includeHeader</i></span>, <span class="nobr">bool <i>append</i></span>, <span class="nobr">bool <i>createNew</i></span>, <span class="nobr">String? <i>nullValue</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Future]\<void> writeCsv</strong>({<span class="nobr"><strong>required</strong> [String] path</span>, <span class="nobr">[bool] <i>includeBom</i></span>, <span class="nobr">[bool] <i>includeHeader</i></span>, <span class="nobr">[bool] <i>append</i></span>, <span class="nobr">[bool] <i>createNew</i></span>, <span class="nobr">[String] <i>nullValue</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -28,3 +28,6 @@ Future<void> writeCsv(
       );
 ```
 
+[Future]: https://api.flutter.dev/flutter/dart-async/Future-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

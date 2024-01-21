@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] containsLiteral</strong>(<span class="nobr">Object? pat</span>);</span>
+<span class="dart-code"><strong>[Expr] containsLiteral</strong>(<span class="nobr">[Object] pat</span>);</span>
 
 
 ### Implementation
@@ -13,3 +13,4 @@ Expr containsLiteral(Object? pat) => expr.strContainsLiteral(pat: pat.expr);
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

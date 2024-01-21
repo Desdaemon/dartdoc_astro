@@ -4,7 +4,7 @@ description: |
    If this series contains [Duration]s, returns its Dart representation.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>List&lt;Duration?&gt; asDurations</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[List]\<[Duration]> asDurations</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  If this series contains [Duration]s, returns its Dart representation.
 ### Implementation
@@ -16,3 +16,5 @@ sidebar: {hidden: true}
       );
 ```
 
+[Duration]: https://api.flutter.dev/flutter/dart-core/Duration-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

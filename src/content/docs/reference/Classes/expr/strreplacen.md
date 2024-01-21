@@ -4,7 +4,7 @@ description: |
    TODO: Docs for replace_n
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strReplaceN</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">bool <i>literal</i></span>, <span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strReplaceN</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">[bool] <i>literal</i></span>, <span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  TODO: Docs for replace_n
 ### Implementation
@@ -26,3 +26,5 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

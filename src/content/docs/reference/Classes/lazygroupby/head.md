@@ -4,7 +4,7 @@ description: |
    Return the first [n] rows of each group.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] head</strong>({<span class="nobr">int? <i>n</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] head</strong>({<span class="nobr">[int] <i>n</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Return the first [n] rows of each group.
 ### Implementation
@@ -18,3 +18,4 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

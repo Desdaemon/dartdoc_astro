@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>double? operator []</strong>(<span class="nobr">int index</span>);</span>
+<span class="dart-code"><strong>[double] operator []</strong>(<span class="nobr">[int] index</span>);</span>
 
 
 ### Implementation
@@ -12,3 +12,5 @@ sidebar: {hidden: true}
 double? operator [](int index) => get(index: index);
 ```
 
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

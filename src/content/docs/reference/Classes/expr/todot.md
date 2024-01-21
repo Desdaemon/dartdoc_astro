@@ -4,7 +4,7 @@ description: |
    Returns a dot representation of this expression.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>String toDot</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[String] toDot</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns a dot representation of this expression.
 ### Implementation
@@ -15,3 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html

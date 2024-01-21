@@ -3,7 +3,7 @@ title: "initialize"
 description: |
 
 ---
-<span class="dart-code"><strong>Future&lt;void&gt; initialize</strong>({<span class="nobr">[ExternalLibrary?] <i>dylib</i></span>});</span>
+<span class="dart-code"><strong>[Future]\<void> initialize</strong>({<span class="nobr">[ExternalLibrary] <i>dylib</i></span>});</span>
 
 
 ### Implementation
@@ -13,4 +13,5 @@ Future<void> initialize({ExternalLibrary? dylib}) {
 }
 ```
 
-[ExternalLibrary?]: /reference/classes/externallibrary/
+[Future]: https://api.flutter.dev/flutter/dart-async/Future-class.html
+[ExternalLibrary]: /reference/classes/externallibrary/

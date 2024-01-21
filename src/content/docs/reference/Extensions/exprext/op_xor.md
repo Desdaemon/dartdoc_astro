@@ -5,7 +5,7 @@ description: |
    i.e. whether this and [other] are not equal.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] operator ^</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code"><strong>[Expr] operator ^</strong>(<span class="nobr">[Object] other</span>);</span>
 
  Returns an expression evaluating whether at most one of this and [other] is true,
  i.e. whether this and [other] are not equal.
@@ -18,3 +18,4 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

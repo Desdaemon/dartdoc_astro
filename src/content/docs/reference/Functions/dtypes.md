@@ -3,7 +3,7 @@ title: "dtypes"
 description: |
 
 ---
-<span class="dart-code"><strong>[Expr] dtypes</strong>(<span class="nobr">Iterable&lt;DataType&gt; dtypes</span>);</span>
+<span class="dart-code"><strong>[Expr] dtypes</strong>(<span class="nobr">[Iterable]\<[DataType]> dtypes</span>);</span>
 
 
 ### Implementation
@@ -13,3 +13,5 @@ Expr dtypes(Iterable<DataType> dtypes) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[DataType]: /reference/classes/datatype/
+[Iterable]: https://api.flutter.dev/flutter/dart-core/Iterable-class.html

@@ -4,7 +4,7 @@ description: |
    TODO: Docs for to_integer
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strToInteger</strong>({<span class="nobr"><strong>required</strong> int base</span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strToInteger</strong>({<span class="nobr"><strong>required</strong> [int] base</span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  TODO: Docs for to_integer
 ### Implementation
@@ -19,3 +19,5 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

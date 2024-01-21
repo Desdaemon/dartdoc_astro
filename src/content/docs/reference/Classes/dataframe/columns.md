@@ -4,7 +4,7 @@ description: |
    Select multiple columns by name.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[VecSeries] columns</strong>({<span class="nobr"><strong>required</strong> List&lt;String&gt; columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[VecSeries] columns</strong>({<span class="nobr"><strong>required</strong> [List]\<[String]> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Select multiple columns by name.
 
@@ -22,3 +22,5 @@ sidebar: {hidden: true}
 ```
 
 [VecSeries]: /reference/classes/vecseries/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

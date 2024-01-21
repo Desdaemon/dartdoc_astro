@@ -13,35 +13,35 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[nullInt64](nullint64)</strong>(<span class="nobr">List&lt;int?&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[nullInt64](nullint64)</strong>(<span class="nobr">[List]\<[int]> field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[float64](float64)</strong>(<span class="nobr">Float64List field0</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[float64](float64)</strong>(<span class="nobr">[Float64List] field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[nullFloat64](nullfloat64)</strong>(<span class="nobr">List&lt;double?&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[nullFloat64](nullfloat64)</strong>(<span class="nobr">[List]\<[double]> field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[boolean](boolean)</strong>(<span class="nobr">List&lt;bool&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[boolean](boolean)</strong>(<span class="nobr">[List]\<[bool]> field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[duration](duration)</strong>(<span class="nobr">List&lt;Duration&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[duration](duration)</strong>(<span class="nobr">[List]\<[Duration]> field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[nullDuration](nullduration)</strong>(<span class="nobr">List&lt;Duration?&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[nullDuration](nullduration)</strong>(<span class="nobr">[List]\<[Duration]> field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[stringLike](stringlike)</strong>(<span class="nobr">List&lt;String&gt; field0</span>, <span class="nobr">[DataType] field1</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[stringLike](stringlike)</strong>(<span class="nobr">[List]\<[String]> field0</span>, <span class="nobr">[DataType] field1</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Literals.[nullStringLike](nullstringlike)</strong>(<span class="nobr">List&lt;String?&gt; field0</span>, <span class="nobr">[DataType] field1</span>);</span>
+<span class="dart-code"><strong>const factory Literals.[nullStringLike](nullstringlike)</strong>(<span class="nobr">[List]\<[String]> field0</span>, <span class="nobr">[DataType] field1</span>);</span>
 </dt>
 <dt>
 
@@ -67,11 +67,19 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Object <strong>get [field0](/reference/mixins/_literals/field0)</strong>;</span>
+<span class="dart-code">[Object] <strong>get [field0](/reference/mixins/_literals/field0)</strong>;</span>
 </dt>
 </dl>
 
 [Int64List]: /reference/classes/int64list/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[Float64List]: https://api.flutter.dev/flutter/dart-typed_data/Float64List-class.html
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[Duration]: https://api.flutter.dev/flutter/dart-core/Duration-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [DataType]: /reference/classes/datatype/
 [PSeries]: /reference/classes/pseries/
 [Literals]: /reference/classes/literals/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

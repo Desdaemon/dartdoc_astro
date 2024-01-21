@@ -11,11 +11,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>LazyFrame.[dcoDecode](dcodecode)</strong>(<span class="nobr">List&lt;dynamic&gt; wire</span>);</span>
+<span class="dart-code"><strong>LazyFrame.[dcoDecode](dcodecode)</strong>(<span class="nobr">[List]\<dynamic> wire</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>LazyFrame.[sseDecode](ssedecode)</strong>(<span class="nobr">int ptr</span>, <span class="nobr">int externalSizeOnNative</span>);</span>
+<span class="dart-code"><strong>LazyFrame.[sseDecode](ssedecode)</strong>(<span class="nobr">[int] ptr</span>, <span class="nobr">[int] externalSizeOnNative</span>);</span>
 </dt>
 </dl>
 
@@ -51,7 +51,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">Future&lt;DataFrame&gt; [<strong>collect](collect)</strong>({<span class="nobr">bool <i>streaming</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Future]\<[DataFrame]> [<strong>collect](collect)</strong>({<span class="nobr">[bool] <i>streaming</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -68,7 +68,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>dropNulls](dropnulls)</strong>({<span class="nobr">List&lt;Expr&gt;? <i>subset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>dropNulls](dropnulls)</strong>({<span class="nobr">[List]\<[Expr]> <i>subset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -76,7 +76,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>explode](explode)</strong>({<span class="nobr"><strong>required</strong> List&lt;Expr&gt; columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>explode](explode)</strong>({<span class="nobr"><strong>required</strong> [List]\<[Expr]> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -84,7 +84,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">Future&lt;DataFrame&gt; [<strong>fetch](fetch)</strong>({<span class="nobr"><strong>required</strong> int nRows</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Future]\<[DataFrame]> [<strong>fetch](fetch)</strong>({<span class="nobr"><strong>required</strong> [int] nRows</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -100,7 +100,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyGroupBy] [<strong>groupBy](groupby)</strong>({<span class="nobr"><strong>required</strong> List&lt;Expr&gt; exprs</span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyGroupBy] [<strong>groupBy](groupby)</strong>({<span class="nobr"><strong>required</strong> [List]\<[Expr]> exprs</span>, <span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -116,7 +116,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>join](join)</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr">List&lt;Expr&gt;? <i>on</i></span>, <span class="nobr">List&lt;Expr&gt;? <i>leftOn</i></span>, <span class="nobr">List&lt;Expr&gt;? <i>rightOn</i></span>, <span class="nobr">String <i>suffix</i></span>, <span class="nobr">[JoinType] <i>how</i></span>, <span class="nobr">bool <i>allowParallel</i></span>, <span class="nobr">bool <i>forceParallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>join](join)</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr">[List]\<[Expr]> <i>on</i></span>, <span class="nobr">[List]\<[Expr]> <i>leftOn</i></span>, <span class="nobr">[List]\<[Expr]> <i>rightOn</i></span>, <span class="nobr">[String] <i>suffix</i></span>, <span class="nobr">[JoinType] <i>how</i></span>, <span class="nobr">[bool] <i>allowParallel</i></span>, <span class="nobr">[bool] <i>forceParallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -132,7 +132,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>limit](limit)</strong>({<span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>limit](limit)</strong>({<span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -164,7 +164,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>melt](melt)</strong>({<span class="nobr"><strong>required</strong> List&lt;String&gt; idVars</span>, <span class="nobr"><strong>required</strong> List&lt;String&gt; valueVars</span>, <span class="nobr">String? <i>variableName</i></span>, <span class="nobr">String? <i>valueName</i></span>, <span class="nobr">bool <i>streamable</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>melt](melt)</strong>({<span class="nobr"><strong>required</strong> [List]\<[String]> idVars</span>, <span class="nobr"><strong>required</strong> [List]\<[String]> valueVars</span>, <span class="nobr">[String] <i>variableName</i></span>, <span class="nobr">[String] <i>valueName</i></span>, <span class="nobr">[bool] <i>streamable</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -209,7 +209,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>select](select)</strong>({<span class="nobr"><strong>required</strong> List&lt;Expr&gt; exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>select](select)</strong>({<span class="nobr"><strong>required</strong> [List]\<[Expr]> exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -217,7 +217,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>slice](slice)</strong>({<span class="nobr"><strong>required</strong> int offset</span>, <span class="nobr"><strong>required</strong> int len</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>slice](slice)</strong>({<span class="nobr"><strong>required</strong> [int] offset</span>, <span class="nobr"><strong>required</strong> [int] len</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -225,11 +225,11 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>sort](sort)</strong>({<span class="nobr"><strong>required</strong> String byColumn</span>, <span class="nobr">bool <i>descending</i></span>, <span class="nobr">bool <i>nullsLast</i></span>, <span class="nobr">bool <i>multithreaded</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>sort](sort)</strong>({<span class="nobr"><strong>required</strong> [String] byColumn</span>, <span class="nobr">[bool] <i>descending</i></span>, <span class="nobr">[bool] <i>nullsLast</i></span>, <span class="nobr">[bool] <i>multithreaded</i></span>, <span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>std](std)</strong>({<span class="nobr"><strong>required</strong> int ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>std](std)</strong>({<span class="nobr"><strong>required</strong> [int] ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -245,7 +245,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>tail](tail)</strong>({<span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>tail](tail)</strong>({<span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -253,7 +253,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>unique](unique)</strong>({<span class="nobr">List&lt;String&gt;? <i>subset</i></span>, <span class="nobr"><strong>required</strong> [UniqueKeepStrategy] keepStrategy</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>unique](unique)</strong>({<span class="nobr">[List]\<[String]> <i>subset</i></span>, <span class="nobr"><strong>required</strong> [UniqueKeepStrategy] keepStrategy</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -261,7 +261,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>variance](variance)</strong>({<span class="nobr"><strong>required</strong> int ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>variance](variance)</strong>({<span class="nobr"><strong>required</strong> [int] ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -277,7 +277,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>withColumns](withcolumns)</strong>({<span class="nobr"><strong>required</strong> List&lt;Expr&gt; exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>withColumns](withcolumns)</strong>({<span class="nobr"><strong>required</strong> [List]\<[Expr]> exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -285,7 +285,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[LazyFrame] [<strong>withRowCount](withrowcount)</strong>({<span class="nobr"><strong>required</strong> String name</span>, <span class="nobr">int? <i>offset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[LazyFrame] [<strong>withRowCount](withrowcount)</strong>({<span class="nobr"><strong>required</strong> [String] name</span>, <span class="nobr">[int] <i>offset</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -301,11 +301,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>[move=](/reference/classes/rustopaque/move)</strong>(bool?);</span>
+<span class="dart-code"><strong>[move=](/reference/classes/rustopaque/move)</strong>([bool]);</span>
 </dt>
 <dt>
 
-<span class="dart-code">bool <strong>get [isDisposed](/reference/classes/rustopaque/isdisposed)</strong>;</span>
+<span class="dart-code">[bool] <strong>get [isDisposed](/reference/classes/rustopaque/isdisposed)</strong>;</span>
 </dt>
 <dd>
 
@@ -317,7 +317,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Pointer&lt;Void&gt; [<strong>cstEncode](/reference/classes/rustopaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">[Pointer]\<[Void]> [<strong>cstEncode](/reference/classes/rustopaque/cstencode)</strong>({<span class="nobr">[bool] <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -325,7 +325,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">int [<strong>sseEncode](/reference/classes/rustopaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">[int] [<strong>sseEncode](/reference/classes/rustopaque/sseencode)</strong>({<span class="nobr">[bool] <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -342,9 +342,17 @@ description: |
 </dl>
 
 [RustOpaque]: /reference/classes/rustopaque/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
 [LazyFrame]: /reference/classes/lazyframe/
+[DataFrame]: /reference/classes/dataframe/
+[Future]: https://api.flutter.dev/flutter/dart-async/Future-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
 [Expr]: /reference/classes/expr/
 [LazyGroupBy]: /reference/classes/lazygroupby/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [JoinType]: /reference/enums/jointype/
 [QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions/
 [UniqueKeepStrategy]: /reference/enums/uniquekeepstrategy/
+[Void]: https://api.flutter.dev/flutter/dart-ffi/Void-class.html
+[Pointer]: https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html

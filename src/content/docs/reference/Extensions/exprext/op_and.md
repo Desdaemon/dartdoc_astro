@@ -4,7 +4,7 @@ description: |
    Returns an expression evaluating whether both this and [other] are true.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] operator &</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code"><strong>[Expr] operator &</strong>(<span class="nobr">[Object] other</span>);</span>
 
  Returns an expression evaluating whether both this and [other] are true.
 ### Implementation
@@ -15,3 +15,4 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

@@ -4,7 +4,7 @@ description: |
    Extensions on [double].
 ---
 *Extends*  
-<code>double</code>
+<code>[double]</code>
 
  Extensions on [double].
 
@@ -29,5 +29,6 @@ description: |
 </dl>
 
 
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
 [Expr]: /reference/classes/expr/
 [DataType]: /reference/classes/datatype/

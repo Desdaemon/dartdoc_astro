@@ -3,7 +3,7 @@ title: "isEmpty"
 description: |
    Returns whether this dataframe has no rows.
 ---
-<span class="dart-code"><strong>bool isEmpty</strong>();</span>
+<span class="dart-code"><strong>[bool] isEmpty</strong>();</span>
 
  Returns whether this dataframe has no rows.
 ### Implementation
@@ -14,3 +14,4 @@ description: |
       );
 ```
 
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

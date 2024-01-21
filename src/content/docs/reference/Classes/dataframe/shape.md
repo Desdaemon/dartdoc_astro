@@ -3,7 +3,7 @@ title: "shape"
 description: |
    Returns the height and width of this dataframe.
 ---
-<span class="dart-code"><strong>(int, int) shape</strong>();</span>
+<span class="dart-code"><strong>([int], [int]) shape</strong>();</span>
 
  Returns the height and width of this dataframe.
 ### Implementation
@@ -14,3 +14,4 @@ description: |
       );
 ```
 
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

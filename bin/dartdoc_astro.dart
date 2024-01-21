@@ -5,8 +5,8 @@ import 'dart:io' as io;
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/dart/element/nullability_suffix.dart';
 import 'package:analyzer/dart/element/type.dart';
-import 'package:analyzer/file_system/file_system.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:glob/glob.dart';
 import 'package:glob/list_local_fs.dart';
@@ -16,13 +16,11 @@ import 'package:jinja/jinja.dart';
 import 'package:path/path.dart' as p;
 import 'package:slugify/slugify.dart' as slugify;
 
-// import 'package:jinja/src/renderer.dart';
-// import 'package:jinja/src/nodes.dart';
-
 part 'utils.dart';
 part 'config.dart';
 part 'template.dart';
 part 'renderer.dart';
+part 'generator.dart';
 
 const root = './src/content/docs/reference';
 
@@ -97,7 +95,7 @@ class CompositeLibrary {
           .isAllowed(elm.name!);
 }
 
-final ResourceProvider provider = PhysicalResourceProvider();
+// final ResourceProvider provider = PhysicalResourceProvider();
 
 Stream<Future<void>> run(List<String> arguments) async* {
   final config = Config.merge(arguments);
@@ -110,7 +108,7 @@ Stream<Future<void>> run(List<String> arguments) async* {
   ];
   final collection = AnalysisContextCollection(
     includedPaths: dbg(config.included, 'config.included'),
-    resourceProvider: provider,
+    resourceProvider: PhysicalResourceProvider.INSTANCE,
   );
   for (final root in config.included) {
     await for (final libPath in Glob('$root/**.dart').list()) {

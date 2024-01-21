@@ -3,7 +3,7 @@ title: "estimatedSize"
 description: |
    Returns the amount of bytes occupied by this series.
 ---
-<span class="dart-code"><strong>int estimatedSize</strong>();</span>
+<span class="dart-code"><strong>[int] estimatedSize</strong>();</span>
 
  Returns the amount of bytes occupied by this series.
 ### Implementation
@@ -14,3 +14,4 @@ description: |
       );
 ```
 
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

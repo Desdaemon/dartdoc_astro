@@ -3,7 +3,7 @@ title: "cols"
 description: |
 
 ---
-<span class="dart-code"><strong>[Expr] cols</strong>(<span class="nobr">Iterable&lt;String&gt; columns</span>);</span>
+<span class="dart-code"><strong>[Expr] cols</strong>(<span class="nobr">[Iterable]\<[String]> columns</span>);</span>
 
 
 ### Implementation
@@ -13,3 +13,5 @@ Expr cols(Iterable<String> columns) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[Iterable]: https://api.flutter.dev/flutter/dart-core/Iterable-class.html

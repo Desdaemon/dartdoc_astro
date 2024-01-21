@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>bool operator ==</strong>(<span class="nobr">Object other</span>);</span>
+<span class="dart-code"><strong>[bool] operator ==</strong>(<span class="nobr">[Object] other</span>);</span>
 
 
 ### Implementation
@@ -18,3 +18,5 @@ sidebar: {hidden: true}
           offset == other.offset;
 ```
 
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

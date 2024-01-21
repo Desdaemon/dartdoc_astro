@@ -9,11 +9,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>const factory AggExpr.[min](min)</strong>({<span class="nobr"><strong>required</strong> [Expr] input</span>, <span class="nobr"><strong>required</strong> bool propagateNans</span>});</span>
+<span class="dart-code"><strong>const factory AggExpr.[min](min)</strong>({<span class="nobr"><strong>required</strong> [Expr] input</span>, <span class="nobr"><strong>required</strong> [bool] propagateNans</span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory AggExpr.[max](max)</strong>({<span class="nobr"><strong>required</strong> [Expr] input</span>, <span class="nobr"><strong>required</strong> bool propagateNans</span>});</span>
+<span class="dart-code"><strong>const factory AggExpr.[max](max)</strong>({<span class="nobr"><strong>required</strong> [Expr] input</span>, <span class="nobr"><strong>required</strong> [bool] propagateNans</span>});</span>
 </dt>
 <dt>
 
@@ -57,11 +57,11 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory AggExpr.[std](std)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">int field1</span>);</span>
+<span class="dart-code"><strong>const factory AggExpr.[std](std)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">[int] field1</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory AggExpr.[Var](var)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">int field1</span>);</span>
+<span class="dart-code"><strong>const factory AggExpr.[Var](var)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">[int] field1</span>);</span>
 </dt>
 </dl>
 
@@ -70,4 +70,6 @@ description: |
 ## Inherited from `_$AggExpr`
 
 [Expr]: /reference/classes/expr/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
 [QuantileInterpolOptions]: /reference/enums/quantileinterpoloptions/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

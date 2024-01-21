@@ -17,7 +17,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[boolean](boolean)</strong>(<span class="nobr">bool field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[boolean](boolean)</strong>(<span class="nobr">[bool] field0</span>);</span>
 </dt>
 <dd>
 
@@ -25,7 +25,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[utf8](utf8)</strong>(<span class="nobr">String field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[utf8](utf8)</strong>(<span class="nobr">[String] field0</span>);</span>
 </dt>
 <dd>
 
@@ -33,7 +33,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[binary](binary)</strong>(<span class="nobr">Uint8List field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[binary](binary)</strong>(<span class="nobr">[Uint8List] field0</span>);</span>
 </dt>
 <dd>
 
@@ -41,7 +41,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[uint32](uint32)</strong>(<span class="nobr">int field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[uint32](uint32)</strong>(<span class="nobr">[int] field0</span>);</span>
 </dt>
 <dd>
 
@@ -49,7 +49,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[uint64](uint64)</strong>(<span class="nobr">int field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[uint64](uint64)</strong>(<span class="nobr">[int] field0</span>);</span>
 </dt>
 <dd>
 
@@ -57,7 +57,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[int32](int32)</strong>(<span class="nobr">int field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[int32](int32)</strong>(<span class="nobr">[int] field0</span>);</span>
 </dt>
 <dd>
 
@@ -65,7 +65,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[int64](int64)</strong>(<span class="nobr">int field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[int64](int64)</strong>(<span class="nobr">[int] field0</span>);</span>
 </dt>
 <dd>
 
@@ -73,7 +73,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[float32](float32)</strong>(<span class="nobr">double field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[float32](float32)</strong>(<span class="nobr">[double] field0</span>);</span>
 </dt>
 <dd>
 
@@ -81,7 +81,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[float64](float64)</strong>(<span class="nobr">double field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[float64](float64)</strong>(<span class="nobr">[double] field0</span>);</span>
 </dt>
 <dd>
 
@@ -89,7 +89,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[range](range)</strong>({<span class="nobr"><strong>required</strong> int low</span>, <span class="nobr"><strong>required</strong> int high</span>, <span class="nobr"><strong>required</strong> [DataType] dataType</span>});</span>
+<span class="dart-code"><strong>const factory LiteralValue.[range](range)</strong>({<span class="nobr"><strong>required</strong> [int] low</span>, <span class="nobr"><strong>required</strong> [int] high</span>, <span class="nobr"><strong>required</strong> [DataType] dataType</span>});</span>
 </dt>
 <dd>
 
@@ -97,7 +97,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[dateTime](datetime)</strong>(<span class="nobr">int field0</span>, <span class="nobr">[TimeUnit] field1</span>, [<i><span class="nobr">String? field2</span></i>]);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[dateTime](datetime)</strong>(<span class="nobr">[int] field0</span>, <span class="nobr">[TimeUnit] field1</span>, [<i><span class="nobr">[String] field2</span></i>]);</span>
 </dt>
 <dd>
 
@@ -105,7 +105,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[duration](duration)</strong>(<span class="nobr">int field0</span>, <span class="nobr">[TimeUnit] field1</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[duration](duration)</strong>(<span class="nobr">[int] field0</span>, <span class="nobr">[TimeUnit] field1</span>);</span>
 </dt>
 <dd>
 
@@ -117,11 +117,11 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[date](date)</strong>(<span class="nobr">int field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[date](date)</strong>(<span class="nobr">[int] field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory LiteralValue.[time](time)</strong>(<span class="nobr">int field0</span>);</span>
+<span class="dart-code"><strong>const factory LiteralValue.[time](time)</strong>(<span class="nobr">[int] field0</span>);</span>
 </dt>
 <dd>
 
@@ -155,6 +155,11 @@ description: |
 
 ## Inherited from `_$LiteralValue`
 
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[Uint8List]: https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
 [DataType]: /reference/classes/datatype/
 [TimeUnit]: /reference/enums/timeunit/
 [SpecialEqPSeries]: /reference/classes/specialeqpseries/

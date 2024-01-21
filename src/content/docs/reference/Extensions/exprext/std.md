@@ -5,7 +5,7 @@ description: |
    [ddof] or [delta degrees of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)).
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] std</strong>(<span class="nobr">int ddof</span>);</span>
+<span class="dart-code"><strong>[Expr] std</strong>(<span class="nobr">[int] ddof</span>);</span>
 
  Calculate the standard deviation of this expression with the specified
  [ddof] or [delta degrees of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)).
@@ -17,3 +17,4 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

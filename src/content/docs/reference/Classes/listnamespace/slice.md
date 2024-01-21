@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] slice</strong>(<span class="nobr">Object? offset</span>, <span class="nobr">Object? length</span>);</span>
+<span class="dart-code"><strong>[Expr] slice</strong>(<span class="nobr">[Object] offset</span>, <span class="nobr">[Object] length</span>);</span>
 
 
 ### Implementation
@@ -14,3 +14,4 @@ Expr slice(Object? offset, Object? length) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

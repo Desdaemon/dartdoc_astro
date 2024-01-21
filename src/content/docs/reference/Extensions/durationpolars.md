@@ -4,7 +4,7 @@ description: |
    Extensions on [Duration].
 ---
 *Extends*  
-<code>Duration</code>
+<code>[Duration]</code>
 
  Extensions on [Duration].
 
@@ -21,5 +21,6 @@ description: |
 </dl>
 
 
+[Duration]: https://api.flutter.dev/flutter/dart-core/Duration-class.html
 [DataType]: /reference/classes/datatype/
 [Expr]: /reference/classes/expr/

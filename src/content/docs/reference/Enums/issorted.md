@@ -18,6 +18,6 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">List&lt;IsSorted&gt; <strong>get [values](values)</strong>;</span>
+<span class="dart-code">[List]\<[IsSorted]> <strong>get [values](values)</strong>;</span>
 </dt>
 </dl>

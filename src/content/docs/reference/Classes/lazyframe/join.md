@@ -4,7 +4,7 @@ description: |
    Joins this table to [other].
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] join</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr">List&lt;Expr&gt;? <i>on</i></span>, <span class="nobr">List&lt;Expr&gt;? <i>leftOn</i></span>, <span class="nobr">List&lt;Expr&gt;? <i>rightOn</i></span>, <span class="nobr">String <i>suffix</i></span>, <span class="nobr">[JoinType] <i>how</i></span>, <span class="nobr">bool <i>allowParallel</i></span>, <span class="nobr">bool <i>forceParallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] join</strong>({<span class="nobr"><strong>required</strong> [LazyFrame] other</span>, <span class="nobr">[List]\<[Expr]> <i>on</i></span>, <span class="nobr">[List]\<[Expr]> <i>leftOn</i></span>, <span class="nobr">[List]\<[Expr]> <i>rightOn</i></span>, <span class="nobr">[String] <i>suffix</i></span>, <span class="nobr">[JoinType] <i>how</i></span>, <span class="nobr">[bool] <i>allowParallel</i></span>, <span class="nobr">[bool] <i>forceParallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Joins this table to [other].
 
@@ -66,4 +66,8 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[Expr]: /reference/classes/expr/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [JoinType]: /reference/enums/jointype/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

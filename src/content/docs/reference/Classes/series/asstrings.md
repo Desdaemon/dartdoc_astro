@@ -4,7 +4,7 @@ description: |
    If this series is a UTF-8 series, returns its Dart representation.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>List&lt;String?&gt; asStrings</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[List]\<[String]> asStrings</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  If this series is a UTF-8 series, returns its Dart representation.
 ### Implementation
@@ -16,3 +16,5 @@ sidebar: {hidden: true}
       );
 ```
 
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

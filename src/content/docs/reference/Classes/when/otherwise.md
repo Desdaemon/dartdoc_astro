@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] otherwise</strong>(<span class="nobr">Object? otherwise</span>);</span>
+<span class="dart-code"><strong>[Expr] otherwise</strong>(<span class="nobr">[Object] otherwise</span>);</span>
 
 
 ### Implementation
@@ -16,3 +16,4 @@ Expr otherwise(Object? otherwise) {
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

@@ -12,7 +12,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">double? [<strong>operator</strong> <strong>[]](op_get)</strong>(<span class="nobr">int index</span>);</span>
+<span class="dart-code">[double] [<strong>operator</strong> <strong>[]](op_get)</strong>(<span class="nobr">[int] index</span>);</span>
 </dt>
 <dt>
 
@@ -38,3 +38,5 @@ description: |
 
 
 [Series]: /reference/classes/series/
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

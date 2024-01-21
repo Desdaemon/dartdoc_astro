@@ -4,7 +4,7 @@ description: |
    Retrieves the columns either by name or index.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] operator []</strong>(<span class="nobr">Object key</span>);</span>
+<span class="dart-code"><strong>[Series] operator []</strong>(<span class="nobr">[Object] key</span>);</span>
 
  Retrieves the columns either by name or index.
 ### Implementation
@@ -23,3 +23,4 @@ sidebar: {hidden: true}
 ```
 
 [Series]: /reference/classes/series/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

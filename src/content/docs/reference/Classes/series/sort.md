@@ -4,7 +4,7 @@ description: |
    Returns a new sorted series.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] sort</strong>({<span class="nobr">bool <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Series] sort</strong>({<span class="nobr">[bool] <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns a new sorted series.
 ### Implementation
@@ -18,3 +18,4 @@ sidebar: {hidden: true}
 ```
 
 [Series]: /reference/classes/series/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

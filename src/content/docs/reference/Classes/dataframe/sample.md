@@ -4,7 +4,7 @@ description: |
    Sample [n] datapoints from this dataframe.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[DataFrame] sample</strong>({<span class="nobr"><strong>required</strong> [Series] n</span>, <span class="nobr">bool <i>withReplacement</i></span>, <span class="nobr">bool <i>shuffle</i></span>, <span class="nobr">int? <i>seed</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[DataFrame] sample</strong>({<span class="nobr"><strong>required</strong> [Series] n</span>, <span class="nobr">[bool] <i>withReplacement</i></span>, <span class="nobr">[bool] <i>shuffle</i></span>, <span class="nobr">[int] <i>seed</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Sample [n] datapoints from this dataframe.
 ### Implementation
@@ -27,3 +27,5 @@ sidebar: {hidden: true}
 
 [DataFrame]: /reference/classes/dataframe/
 [Series]: /reference/classes/series/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

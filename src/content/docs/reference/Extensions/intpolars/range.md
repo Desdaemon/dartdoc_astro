@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] range</strong>(<span class="nobr">int other</span>, {<span class="nobr">[DataType?] <i>dataType</i></span>});</span>
+<span class="dart-code"><strong>[Expr] range</strong>(<span class="nobr">[int] other</span>, {<span class="nobr">[DataType] <i>dataType</i></span>});</span>
 
 
 ### Implementation
@@ -21,4 +21,5 @@ Expr range(int other, {DataType? dataType}) {
 ```
 
 [Expr]: /reference/classes/expr/
-[DataType?]: /reference/classes/datatype/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[DataType]: /reference/classes/datatype/

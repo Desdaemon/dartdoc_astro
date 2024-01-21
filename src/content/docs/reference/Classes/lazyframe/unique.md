@@ -4,7 +4,7 @@ description: |
    Keep unique rows without maintaining order.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] unique</strong>({<span class="nobr">List&lt;String&gt;? <i>subset</i></span>, <span class="nobr"><strong>required</strong> [UniqueKeepStrategy] keepStrategy</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] unique</strong>({<span class="nobr">[List]\<[String]> <i>subset</i></span>, <span class="nobr"><strong>required</strong> [UniqueKeepStrategy] keepStrategy</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Keep unique rows without maintaining order.
 ### Implementation
@@ -22,4 +22,6 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
 [UniqueKeepStrategy]: /reference/enums/uniquekeepstrategy/

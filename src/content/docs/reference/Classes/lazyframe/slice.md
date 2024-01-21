@@ -4,7 +4,7 @@ description: |
    Slice the frame.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] slice</strong>({<span class="nobr"><strong>required</strong> int offset</span>, <span class="nobr"><strong>required</strong> int len</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] slice</strong>({<span class="nobr"><strong>required</strong> [int] offset</span>, <span class="nobr"><strong>required</strong> [int] len</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Slice the frame.
 ### Implementation
@@ -19,3 +19,4 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

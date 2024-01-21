@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strToDatetime</strong>({<span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timeZone</i></span>, <span class="nobr">String? <i>format</i></span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">bool <i>exact</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">[Ambiguous] <i>ambiguous</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strToDatetime</strong>({<span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timeZone</i></span>, <span class="nobr">[String] <i>format</i></span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">[bool] <i>exact</i></span>, <span class="nobr">[bool] <i>cache</i></span>, <span class="nobr">[Ambiguous] <i>ambiguous</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -31,5 +31,7 @@ Expr strToDatetime(
 ```
 
 [Expr]: /reference/classes/expr/
-[TimeUnit?]: /reference/enums/timeunit/
+[TimeUnit]: /reference/enums/timeunit/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
 [Ambiguous]: /reference/enums/ambiguous/

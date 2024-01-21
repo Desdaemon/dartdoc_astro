@@ -4,7 +4,7 @@ description: |
    If this series contains [DateTime]s, returns its Dart representation.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>List&lt;DateTime?&gt; asUtcDatetime</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[List]\<[DateTime]> asUtcDatetime</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  If this series contains [DateTime]s, returns its Dart representation.
 
@@ -22,3 +22,5 @@ sidebar: {hidden: true}
       );
 ```
 
+[DateTime]: https://api.flutter.dev/flutter/dart-core/DateTime-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

@@ -122,7 +122,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory DataType.[datetime](datetime)</strong>(<span class="nobr">[TimeUnit] field0</span>, [<i><span class="nobr">String? field1</span></i>]);</span>
+<span class="dart-code"><strong>const factory DataType.[datetime](datetime)</strong>(<span class="nobr">[TimeUnit] field0</span>, [<i><span class="nobr">[String] field1</span></i>]);</span>
 </dt>
 <dd>
 
@@ -155,7 +155,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory DataType.[struct](struct)</strong>(<span class="nobr">List&lt;Field&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory DataType.[struct](struct)</strong>(<span class="nobr">[List]\<[Field]> field0</span>);</span>
 </dt>
 <dt>
 
@@ -180,4 +180,7 @@ description: |
 ## Inherited from `_$DataType`
 
 [TimeUnit]: /reference/enums/timeunit/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [DataType]: /reference/classes/datatype/
+[Field]: /reference/classes/field/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

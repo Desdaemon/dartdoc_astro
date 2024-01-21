@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] toInteger</strong>({<span class="nobr"><strong>required</strong> int base</span>, <span class="nobr">bool <i>strict</i></span>});</span>
+<span class="dart-code"><strong>[Expr] toInteger</strong>({<span class="nobr"><strong>required</strong> [int] base</span>, <span class="nobr">[bool] <i>strict</i></span>});</span>
 
 
 ### Implementation
@@ -14,3 +14,5 @@ Expr toInteger({required int base, bool strict = true}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

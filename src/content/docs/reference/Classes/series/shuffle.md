@@ -4,7 +4,7 @@ description: |
    Returns a new shuffled series.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] shuffle</strong>({<span class="nobr">int? <i>seed</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Series] shuffle</strong>({<span class="nobr">[int] <i>seed</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns a new shuffled series.
 ### Implementation
@@ -18,3 +18,4 @@ sidebar: {hidden: true}
 ```
 
 [Series]: /reference/classes/series/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

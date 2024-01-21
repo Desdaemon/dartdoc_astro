@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] notEqualMissing</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code"><strong>[Expr] notEqualMissing</strong>(<span class="nobr">[Object] other</span>);</span>
 
 
 ### Implementation
@@ -14,3 +14,4 @@ Expr notEqualMissing(Object? other) => Expr.binaryExpr(
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

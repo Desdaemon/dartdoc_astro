@@ -4,7 +4,7 @@ description: |
    Extensions on [bool].
 ---
 *Extends*  
-<code>bool</code>
+<code>[bool]</code>
 
  Extensions on [bool].
 
@@ -21,5 +21,6 @@ description: |
 </dl>
 
 
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
 [Expr]: /reference/classes/expr/
 [DataType]: /reference/classes/datatype/

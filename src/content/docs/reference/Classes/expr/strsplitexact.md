@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strSplitExact</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">bool <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strSplitExact</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">[bool] <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -23,3 +23,5 @@ Expr strSplitExact(
 ```
 
 [Expr]: /reference/classes/expr/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

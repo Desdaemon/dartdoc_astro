@@ -4,7 +4,7 @@ description: |
    Group by and aggregate.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] agg</strong>({<span class="nobr"><strong>required</strong> List&lt;Expr&gt; exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] agg</strong>({<span class="nobr"><strong>required</strong> [List]\<[Expr]> exprs</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Group by and aggregate.
 
@@ -24,3 +24,5 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[Expr]: /reference/classes/expr/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

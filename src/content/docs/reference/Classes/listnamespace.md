@@ -69,38 +69,41 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>get](get)</strong>(<span class="nobr">Object? index</span>);</span>
+<span class="dart-code">[Expr] [<strong>get](get)</strong>(<span class="nobr">[Object] index</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>join](join)</strong>(<span class="nobr">Object? separator</span>);</span>
+<span class="dart-code">[Expr] [<strong>join](join)</strong>(<span class="nobr">[Object] separator</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>shift](shift)</strong>(<span class="nobr">Object? periods</span>);</span>
+<span class="dart-code">[Expr] [<strong>shift](shift)</strong>(<span class="nobr">[Object] periods</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>slice](slice)</strong>(<span class="nobr">Object? offset</span>, <span class="nobr">Object? length</span>);</span>
+<span class="dart-code">[Expr] [<strong>slice](slice)</strong>(<span class="nobr">[Object] offset</span>, <span class="nobr">[Object] length</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>head](head)</strong>([<i><span class="nobr">int n</span></i>]);</span>
+<span class="dart-code">[Expr] [<strong>head](head)</strong>([<i><span class="nobr">[int] n</span></i>]);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>tail](tail)</strong>([<i><span class="nobr">int n</span></i>]);</span>
+<span class="dart-code">[Expr] [<strong>tail](tail)</strong>([<i><span class="nobr">[int] n</span></i>]);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>contains](contains)</strong>(<span class="nobr">Object? item</span>);</span>
+<span class="dart-code">[Expr] [<strong>contains](contains)</strong>(<span class="nobr">[Object] item</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>unique](unique)</strong>({<span class="nobr">bool <i>maintainOrder</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>unique](unique)</strong>({<span class="nobr">[bool] <i>maintainOrder</i></span>});</span>
 </dt>
 </dl>
 
 
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

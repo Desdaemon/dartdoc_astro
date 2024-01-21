@@ -4,7 +4,7 @@ description: |
    Iterate over this series' values.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>Stream&lt;dynamic&gt; iter</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Stream]\<dynamic> iter</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Iterate over this series' values.
 ### Implementation
@@ -15,3 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
+[Stream]: https://api.flutter.dev/flutter/dart-async/Stream-class.html

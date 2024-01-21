@@ -4,7 +4,7 @@ description: |
    Executes all lazy operations and collects results into a [DataFrame].
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>Future&lt;DataFrame&gt; collect</strong>({<span class="nobr">bool <i>streaming</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Future]\<[DataFrame]> collect</strong>({<span class="nobr">[bool] <i>streaming</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Executes all lazy operations and collects results into a [DataFrame].
 
@@ -21,3 +21,6 @@ sidebar: {hidden: true}
       );
 ```
 
+[DataFrame]: /reference/classes/dataframe/
+[Future]: https://api.flutter.dev/flutter/dart-async/Future-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

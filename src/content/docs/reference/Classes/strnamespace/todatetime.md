@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] toDatetime</strong>({<span class="nobr">String? <i>format</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timeZone</i></span>});</span>
+<span class="dart-code"><strong>[Expr] toDatetime</strong>({<span class="nobr">[String] <i>format</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timeZone</i></span>});</span>
 
 
 ### Implementation
@@ -22,4 +22,5 @@ Expr toDatetime({
 ```
 
 [Expr]: /reference/classes/expr/
-[TimeUnit?]: /reference/enums/timeunit/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[TimeUnit]: /reference/enums/timeunit/

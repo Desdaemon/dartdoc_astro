@@ -11,11 +11,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>Series.[dcoDecode](dcodecode)</strong>(<span class="nobr">List&lt;dynamic&gt; wire</span>);</span>
+<span class="dart-code"><strong>Series.[dcoDecode](dcodecode)</strong>(<span class="nobr">[List]\<dynamic> wire</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>Series.[sseDecode](ssedecode)</strong>(<span class="nobr">int ptr</span>, <span class="nobr">int externalSizeOnNative</span>);</span>
+<span class="dart-code"><strong>Series.[sseDecode](ssedecode)</strong>(<span class="nobr">[int] ptr</span>, <span class="nobr">[int] externalSizeOnNative</span>);</span>
 </dt>
 </dl>
 
@@ -39,7 +39,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>applyScalar](applyscalar)</strong>({<span class="nobr"><strong>required</strong> [Operator] op</span>, <span class="nobr"><strong>required</strong> double value</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>applyScalar](applyscalar)</strong>({<span class="nobr"><strong>required</strong> [Operator] op</span>, <span class="nobr"><strong>required</strong> [double] value</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -47,7 +47,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;double?&gt; [<strong>asDoubles](asdoubles)</strong>({<span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<[double]> [<strong>asDoubles](asdoubles)</strong>({<span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -55,7 +55,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;Duration?&gt; [<strong>asDurations](asdurations)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<[Duration]> [<strong>asDurations](asdurations)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -63,7 +63,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;int?&gt; [<strong>asInts](asints)</strong>({<span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<[int]> [<strong>asInts](asints)</strong>({<span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -71,7 +71,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;DateTime?&gt; [<strong>asLocalDatetime](aslocaldatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<[DateTime]> [<strong>asLocalDatetime](aslocaldatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -79,7 +79,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;DateTime?&gt; [<strong>asNaiveDatetime](asnaivedatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<[DateTime]> [<strong>asNaiveDatetime](asnaivedatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -87,7 +87,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;String?&gt; [<strong>asStrings](asstrings)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<[String]> [<strong>asStrings](asstrings)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -95,7 +95,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;DateTime?&gt; [<strong>asUtcDatetime](asutcdatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<[DateTime]> [<strong>asUtcDatetime](asutcdatetime)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -103,7 +103,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>cast](cast)</strong>({<span class="nobr"><strong>required</strong> [DataType] dtype</span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>cast](cast)</strong>({<span class="nobr"><strong>required</strong> [DataType] dtype</span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -119,7 +119,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">String [<strong>dump](dump)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[String] [<strong>dump](dump)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -127,7 +127,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">bool [<strong>equal](equal)</strong>({<span class="nobr"><strong>required</strong> [Series] other</span>, <span class="nobr">bool <i>ignoreNull</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[bool] [<strong>equal](equal)</strong>({<span class="nobr"><strong>required</strong> [Series] other</span>, <span class="nobr">[bool] <i>ignoreNull</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -135,7 +135,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">int [<strong>estimatedSize](estimatedsize)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[int] [<strong>estimatedSize](estimatedsize)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -159,7 +159,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">double? [<strong>get](get)</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[double] [<strong>get](get)</strong>({<span class="nobr"><strong>required</strong> [int] index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -167,7 +167,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">String? [<strong>getString](getstring)</strong>({<span class="nobr"><strong>required</strong> int index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[String] [<strong>getString](getstring)</strong>({<span class="nobr"><strong>required</strong> [int] index</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -175,7 +175,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>head](head)</strong>({<span class="nobr">int? <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>head](head)</strong>({<span class="nobr">[int] <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -203,7 +203,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">bool [<strong>isBool](isbool)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[bool] [<strong>isBool](isbool)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -211,7 +211,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">bool [<strong>isNumeric](isnumeric)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[bool] [<strong>isNumeric](isnumeric)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -219,7 +219,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">bool [<strong>isTemporal](istemporal)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[bool] [<strong>isTemporal](istemporal)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -227,7 +227,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">bool [<strong>isUtf8](isutf8)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[bool] [<strong>isUtf8](isutf8)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -235,7 +235,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">Stream&lt;dynamic&gt; [<strong>iter](iter)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Stream]\<dynamic> [<strong>iter](iter)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -243,7 +243,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">double? [<strong>max](max)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[double] [<strong>max](max)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -251,7 +251,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">double? [<strong>mean](mean)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[double] [<strong>mean](mean)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -267,7 +267,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">double? [<strong>median](median)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[double] [<strong>median](median)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -283,7 +283,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">double? [<strong>min](min)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[double] [<strong>min](min)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -299,7 +299,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>static</strong> [Series] [<strong>ofLits](oflits)</strong>({<span class="nobr">String <i>name</i></span>, <span class="nobr"><strong>required</strong> [Literals] values</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>static</strong> [Series] [<strong>ofLits](oflits)</strong>({<span class="nobr">[String] <i>name</i></span>, <span class="nobr"><strong>required</strong> [Literals] values</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -320,7 +320,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">void [<strong>rename](rename)</strong>({<span class="nobr"><strong>required</strong> String name</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">void [<strong>rename](rename)</strong>({<span class="nobr"><strong>required</strong> [String] name</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -336,7 +336,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingMax](rollingmax)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingMax](rollingmax)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -344,7 +344,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingMean](rollingmean)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingMean](rollingmean)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -352,7 +352,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingMedian](rollingmedian)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingMedian](rollingmedian)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -360,7 +360,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingMin](rollingmin)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingMin](rollingmin)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -368,7 +368,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingQuantile](rollingquantile)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingQuantile](rollingquantile)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -376,7 +376,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingStd](rollingstd)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingStd](rollingstd)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -384,7 +384,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingSum](rollingsum)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingSum](rollingsum)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -392,7 +392,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>rollingVar](rollingvar)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">[Int64List?] <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>rollingVar](rollingvar)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[Int64List] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timezone</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -400,7 +400,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>shuffle](shuffle)</strong>({<span class="nobr">int? <i>seed</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>shuffle](shuffle)</strong>({<span class="nobr">[int] <i>seed</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -408,7 +408,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>sort](sort)</strong>({<span class="nobr">bool <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>sort](sort)</strong>({<span class="nobr">[bool] <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -416,7 +416,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>stdAsSeries](stdasseries)</strong>({<span class="nobr"><strong>required</strong> int ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>stdAsSeries](stdasseries)</strong>({<span class="nobr"><strong>required</strong> [int] ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -432,7 +432,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">double? [<strong>sum](sum)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[double] [<strong>sum](sum)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -448,7 +448,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>tail](tail)</strong>({<span class="nobr">int? <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>tail](tail)</strong>({<span class="nobr">[int] <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -456,7 +456,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">List&lt;dynamic&gt; [<strong>toList](tolist)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[List]\<dynamic> [<strong>toList](tolist)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -464,7 +464,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>unique](unique)</strong>({<span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>unique](unique)</strong>({<span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -472,7 +472,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Series] [<strong>varAsSeries](varasseries)</strong>({<span class="nobr"><strong>required</strong> int ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Series] [<strong>varAsSeries](varasseries)</strong>({<span class="nobr"><strong>required</strong> [int] ddof</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -487,7 +487,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">double? [<strong>operator</strong> <strong>[]](/reference/extensions/seriesext/op_get)</strong>(<span class="nobr">int index</span>);</span>
+<span class="dart-code">[double] [<strong>operator</strong> <strong>[]](/reference/extensions/seriesext/op_get)</strong>(<span class="nobr">[int] index</span>);</span>
 </dt>
 <dt>
 
@@ -518,11 +518,11 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>[move=](/reference/classes/rustopaque/move)</strong>(bool?);</span>
+<span class="dart-code"><strong>[move=](/reference/classes/rustopaque/move)</strong>([bool]);</span>
 </dt>
 <dt>
 
-<span class="dart-code">bool <strong>get [isDisposed](/reference/classes/rustopaque/isdisposed)</strong>;</span>
+<span class="dart-code">[bool] <strong>get [isDisposed](/reference/classes/rustopaque/isdisposed)</strong>;</span>
 </dt>
 <dd>
 
@@ -534,7 +534,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Pointer&lt;Void&gt; [<strong>cstEncode](/reference/classes/rustopaque/cstencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">[Pointer]\<[Void]> [<strong>cstEncode](/reference/classes/rustopaque/cstencode)</strong>({<span class="nobr">[bool] <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -542,7 +542,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">int [<strong>sseEncode](/reference/classes/rustopaque/sseencode)</strong>({<span class="nobr">bool? <i>move</i></span>});</span>
+<span class="dart-code">[int] [<strong>sseEncode](/reference/classes/rustopaque/sseencode)</strong>({<span class="nobr">[bool] <i>move</i></span>});</span>
 </dt>
 <dd>
 
@@ -559,13 +559,23 @@ description: |
 </dl>
 
 [RustOpaque]: /reference/classes/rustopaque/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
 [Series]: /reference/classes/series/
 [Operator]: /reference/enums/operator/
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[Duration]: https://api.flutter.dev/flutter/dart-core/Duration-class.html
+[DateTime]: https://api.flutter.dev/flutter/dart-core/DateTime-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [DataType]: /reference/classes/datatype/
 [Int64List]: /reference/classes/int64list/
 [DataFrame]: /reference/classes/dataframe/
 [LiteralValue]: /reference/classes/literalvalue/
 [Literals]: /reference/classes/literals/
-[Int64List?]: /reference/classes/int64list/
-[ClosedWindow?]: /reference/enums/closedwindow/
-[TimeUnit?]: /reference/enums/timeunit/
+[Stream]: https://api.flutter.dev/flutter/dart-async/Stream-class.html
+[Float64List]: https://api.flutter.dev/flutter/dart-typed_data/Float64List-class.html
+[ClosedWindow]: /reference/enums/closedwindow/
+[TimeUnit]: /reference/enums/timeunit/
+[Void]: https://api.flutter.dev/flutter/dart-ffi/Void-class.html
+[Pointer]: https://api.flutter.dev/flutter/dart-ffi/Pointer-class.html

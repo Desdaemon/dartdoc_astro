@@ -4,7 +4,7 @@ description: |
    Returns a new, empty dataframe.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[DataFrame] ofLits</strong>({<span class="nobr">List&lt;(String, Literals)&gt;? <i>series</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[DataFrame] ofLits</strong>({<span class="nobr">[List]\<([String], [Literals])> <i>series</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns a new, empty dataframe.
 ### Implementation
@@ -15,3 +15,6 @@ sidebar: {hidden: true}
 ```
 
 [DataFrame]: /reference/classes/dataframe/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[Literals]: /reference/classes/literals/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

@@ -10,8 +10,8 @@ export default () => {
         const dartdoc = spawn("dart", ["run", "dartdoc_astro"], {
           stdio: "inherit",
         });
-        await new Promise((resolve) => {
-          dartdoc.once("close", resolve);
+        await new Promise((resolve, reject) => {
+          dartdoc.once("close", code => code !== 0 ? reject(dartdoc) : resolve(void 0));
         });
         logger.info("dartdoc_astro has completed.");
       },

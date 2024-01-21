@@ -4,7 +4,7 @@ description: |
    If compatible, returns a representation of this series as integers.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>List&lt;double?&gt; asDoubles</strong>({<span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[List]\<[double]> asDoubles</strong>({<span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  If compatible, returns a representation of this series as integers.
 ### Implementation
@@ -17,3 +17,6 @@ sidebar: {hidden: true}
       );
 ```
 
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

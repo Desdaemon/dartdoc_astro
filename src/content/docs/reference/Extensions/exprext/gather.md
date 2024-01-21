@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] gather</strong>(<span class="nobr">Object? idx</span>);</span>
+<span class="dart-code"><strong>[Expr] gather</strong>(<span class="nobr">[Object] idx</span>);</span>
 
 
 ### Implementation
@@ -14,3 +14,4 @@ Expr gather(Object? idx) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

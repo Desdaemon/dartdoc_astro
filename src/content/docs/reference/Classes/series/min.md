@@ -4,7 +4,7 @@ description: |
    Returns the minimum value of this series' values.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>double? min</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[double] min</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns the minimum value of this series' values.
 
@@ -19,3 +19,4 @@ sidebar: {hidden: true}
       );
 ```
 
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html

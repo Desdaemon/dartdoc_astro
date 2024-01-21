@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] log</strong>({<span class="nobr"><strong>required</strong> double base</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] log</strong>({<span class="nobr"><strong>required</strong> [double] base</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -17,3 +17,4 @@ Expr log({required double base, dynamic hint}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html

@@ -9,19 +9,19 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[alias](alias)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">String field1</span>);</span>
+<span class="dart-code"><strong>const factory Expr.[alias](alias)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">[String] field1</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[column](column)</strong>(<span class="nobr">String field0</span>);</span>
+<span class="dart-code"><strong>const factory Expr.[column](column)</strong>(<span class="nobr">[String] field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[columns](columns)</strong>(<span class="nobr">List&lt;String&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory Expr.[columns](columns)</strong>(<span class="nobr">[List]\<[String]> field0</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[dtypeColumn](dtypecolumn)</strong>(<span class="nobr">List&lt;DataType&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory Expr.[dtypeColumn](dtypecolumn)</strong>(<span class="nobr">[List]\<[DataType]> field0</span>);</span>
 </dt>
 <dt>
 
@@ -33,7 +33,7 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[cast](cast)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr"><strong>required</strong> [DataType] dataType</span>, <span class="nobr"><strong>required</strong> bool strict</span>});</span>
+<span class="dart-code"><strong>const factory Expr.[cast](cast)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr"><strong>required</strong> [DataType] dataType</span>, <span class="nobr"><strong>required</strong> [bool] strict</span>});</span>
 </dt>
 <dt>
 
@@ -41,11 +41,11 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[gather](gather)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr"><strong>required</strong> [Expr] idx</span>, <span class="nobr"><strong>required</strong> bool returnsScalar</span>});</span>
+<span class="dart-code"><strong>const factory Expr.[gather](gather)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr"><strong>required</strong> [Expr] idx</span>, <span class="nobr"><strong>required</strong> [bool] returnsScalar</span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[sortBy](sortby)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr">List&lt;Expr&gt; <i>by</i></span>, <span class="nobr">List&lt;bool&gt; <i>descending</i></span>});</span>
+<span class="dart-code"><strong>const factory Expr.[sortBy](sortby)</strong>({<span class="nobr"><strong>required</strong> [Expr] expr</span>, <span class="nobr">[List]\<[Expr]> <i>by</i></span>, <span class="nobr">[List]\<[bool]> <i>descending</i></span>});</span>
 </dt>
 <dt>
 
@@ -69,7 +69,7 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[window](window)</strong>({<span class="nobr"><strong>required</strong> [Expr] function</span>, <span class="nobr"><strong>required</strong> List&lt;Expr&gt; partitionBy</span>, <span class="nobr"><strong>required</strong> [WindowType] options</span>});</span>
+<span class="dart-code"><strong>const factory Expr.[window](window)</strong>({<span class="nobr"><strong>required</strong> [Expr] function</span>, <span class="nobr"><strong>required</strong> [List]\<[Expr]> partitionBy</span>, <span class="nobr"><strong>required</strong> [WindowType] options</span>});</span>
 </dt>
 <dt>
 
@@ -77,7 +77,7 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[exclude](exclude)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">List&lt;Excluded&gt; field1</span>);</span>
+<span class="dart-code"><strong>const factory Expr.[exclude](exclude)</strong>(<span class="nobr">[Expr] field0</span>, <span class="nobr">[List]\<[Excluded]> field1</span>);</span>
 </dt>
 <dt>
 
@@ -89,7 +89,7 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code"><strong>const factory Expr.[nth](nth)</strong>(<span class="nobr">int field0</span>);</span>
+<span class="dart-code"><strong>const factory Expr.[nth](nth)</strong>(<span class="nobr">[int] field0</span>);</span>
 </dt>
 <dt>
 
@@ -413,15 +413,15 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>all](all)</strong>({<span class="nobr">bool <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>all](all)</strong>({<span class="nobr">[bool] <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>any](any)</strong>({<span class="nobr">bool <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>any](any)</strong>({<span class="nobr">[bool] <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>append](append)</strong>({<span class="nobr"><strong>required</strong> [Expr] other</span>, <span class="nobr">bool <i>upcast</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>append](append)</strong>({<span class="nobr"><strong>required</strong> [Expr] other</span>, <span class="nobr">[bool] <i>upcast</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -429,11 +429,11 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>argSort](argsort)</strong>({<span class="nobr">bool <i>descending</i></span>, <span class="nobr">bool <i>nullsLast</i></span>, <span class="nobr">bool <i>multithreaded</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>argSort](argsort)</strong>({<span class="nobr">[bool] <i>descending</i></span>, <span class="nobr">[bool] <i>nullsLast</i></span>, <span class="nobr">[bool] <i>multithreaded</i></span>, <span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>backwardFill](backwardfill)</strong>({<span class="nobr">int? <i>limit</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>backwardFill](backwardfill)</strong>({<span class="nobr">[int] <i>limit</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -445,23 +445,23 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>cumCount](cumcount)</strong>({<span class="nobr">bool <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>cumCount](cumcount)</strong>({<span class="nobr">[bool] <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>cumMax](cummax)</strong>({<span class="nobr">bool <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>cumMax](cummax)</strong>({<span class="nobr">[bool] <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>cumMin](cummin)</strong>({<span class="nobr">bool <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>cumMin](cummin)</strong>({<span class="nobr">[bool] <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>cumProd](cumprod)</strong>({<span class="nobr">bool <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>cumProd](cumprod)</strong>({<span class="nobr">[bool] <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>cumSum](cumsum)</strong>({<span class="nobr">bool <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>cumSum](cumsum)</strong>({<span class="nobr">[bool] <i>reverse</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -473,7 +473,7 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>entropy](entropy)</strong>({<span class="nobr"><strong>required</strong> double base</span>, <span class="nobr">bool <i>normalize</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>entropy](entropy)</strong>({<span class="nobr"><strong>required</strong> [double] base</span>, <span class="nobr">[bool] <i>normalize</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -485,15 +485,15 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>forwardFill](forwardfill)</strong>({<span class="nobr">int? <i>limit</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>forwardFill](forwardfill)</strong>({<span class="nobr">[int] <i>limit</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>log](log)</strong>({<span class="nobr"><strong>required</strong> double base</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>log](log)</strong>({<span class="nobr"><strong>required</strong> [double] base</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>pow](pow)</strong>({<span class="nobr"><strong>required</strong> double exponent</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>pow](pow)</strong>({<span class="nobr"><strong>required</strong> [double] exponent</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -501,7 +501,7 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingMax](rollingmax)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingMax](rollingmax)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -509,7 +509,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingMean](rollingmean)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingMean](rollingmean)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -517,7 +517,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingMedian](rollingmedian)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingMedian](rollingmedian)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -525,7 +525,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingMin](rollingmin)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingMin](rollingmin)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -533,7 +533,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingQuantile](rollingquantile)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingQuantile](rollingquantile)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -541,7 +541,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingStd](rollingstd)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingStd](rollingstd)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -549,7 +549,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingSum](rollingsum)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingSum](rollingsum)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -557,7 +557,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>rollingVar](rollingvar)</strong>({<span class="nobr">Duration? <i>windowSize</i></span>, <span class="nobr">int <i>minPeriods</i></span>, <span class="nobr">Float64List? <i>weights</i></span>, <span class="nobr">bool <i>center</i></span>, <span class="nobr">String? <i>by</i></span>, <span class="nobr">[ClosedWindow?] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>rollingVar](rollingvar)</strong>({<span class="nobr">[Duration] <i>windowSize</i></span>, <span class="nobr">[int] <i>minPeriods</i></span>, <span class="nobr">[Float64List] <i>weights</i></span>, <span class="nobr">[bool] <i>center</i></span>, <span class="nobr">[String] <i>by</i></span>, <span class="nobr">[ClosedWindow] <i>closedWindow</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -565,11 +565,11 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>round](round)</strong>({<span class="nobr"><strong>required</strong> int decimals</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>round](round)</strong>({<span class="nobr"><strong>required</strong> [int] decimals</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>roundSigFigs](roundsigfigs)</strong>({<span class="nobr"><strong>required</strong> int digits</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>roundSigFigs](roundsigfigs)</strong>({<span class="nobr"><strong>required</strong> [int] digits</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -585,7 +585,7 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code">String [<strong>toDot](todot)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[String] [<strong>toDot](todot)</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -593,7 +593,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>valueCounts](valuecounts)</strong>({<span class="nobr">bool <i>sort</i></span>, <span class="nobr">bool <i>parallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>valueCounts](valuecounts)</strong>({<span class="nobr">[bool] <i>sort</i></span>, <span class="nobr">[bool] <i>parallel</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
@@ -653,11 +653,11 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>listUnique](listunique)</strong>({<span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>listUnique](listunique)</strong>({<span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strConcat](strconcat)</strong>({<span class="nobr"><strong>required</strong> String delimiter</span>, <span class="nobr">bool <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strConcat](strconcat)</strong>({<span class="nobr"><strong>required</strong> [String] delimiter</span>, <span class="nobr">[bool] <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -665,7 +665,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strContains](strcontains)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strContains](strcontains)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -681,7 +681,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strCountMatches](strcountmatches)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr">bool <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strCountMatches](strcountmatches)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr">[bool] <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -697,7 +697,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strExtract](strextract)</strong>({<span class="nobr"><strong>required</strong> String pat</span>, <span class="nobr"><strong>required</strong> int groupIndex</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strExtract](strextract)</strong>({<span class="nobr"><strong>required</strong> [String] pat</span>, <span class="nobr"><strong>required</strong> [int] groupIndex</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -713,7 +713,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strReplace](strreplace)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">bool <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strReplace](strreplace)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">[bool] <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -721,7 +721,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strReplaceAll](strreplaceall)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">bool <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strReplaceAll](strreplaceall)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">[bool] <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -729,7 +729,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strReplaceN](strreplacen)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">bool <i>literal</i></span>, <span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strReplaceN](strreplacen)</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">[bool] <i>literal</i></span>, <span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -737,7 +737,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strSlice](strslice)</strong>({<span class="nobr"><strong>required</strong> int start</span>, <span class="nobr">int? <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strSlice](strslice)</strong>({<span class="nobr"><strong>required</strong> [int] start</span>, <span class="nobr">[int] <i>length</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -745,15 +745,15 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strSplit](strsplit)</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr">bool <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strSplit](strsplit)</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr">[bool] <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strSplitExact](strsplitexact)</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">bool <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strSplitExact](strsplitexact)</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">[bool] <i>inclusive</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strSplitn](strsplitn)</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strSplitn](strsplitn)</strong>({<span class="nobr"><strong>required</strong> [Expr] by</span>, <span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -809,15 +809,15 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strToDate](strtodate)</strong>({<span class="nobr">String? <i>format</i></span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">bool <i>exact</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strToDate](strtodate)</strong>({<span class="nobr">[String] <i>format</i></span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">[bool] <i>exact</i></span>, <span class="nobr">[bool] <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strToDatetime](strtodatetime)</strong>({<span class="nobr">[TimeUnit?] <i>timeUnit</i></span>, <span class="nobr">String? <i>timeZone</i></span>, <span class="nobr">String? <i>format</i></span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">bool <i>exact</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">[Ambiguous] <i>ambiguous</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strToDatetime](strtodatetime)</strong>({<span class="nobr">[TimeUnit] <i>timeUnit</i></span>, <span class="nobr">[String] <i>timeZone</i></span>, <span class="nobr">[String] <i>format</i></span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">[bool] <i>exact</i></span>, <span class="nobr">[bool] <i>cache</i></span>, <span class="nobr">[Ambiguous] <i>ambiguous</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strToInteger](strtointeger)</strong>({<span class="nobr"><strong>required</strong> int base</span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strToInteger](strtointeger)</strong>({<span class="nobr"><strong>required</strong> [int] base</span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -825,11 +825,11 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strToTime](strtotime)</strong>({<span class="nobr">String? <i>format</i></span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">bool <i>exact</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strToTime](strtotime)</strong>({<span class="nobr">[String] <i>format</i></span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">[bool] <i>exact</i></span>, <span class="nobr">[bool] <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>strptime](strptime)</strong>({<span class="nobr"><strong>required</strong> [DataType] dtype</span>, <span class="nobr">String? <i>format</i></span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">bool <i>exact</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">[Ambiguous] <i>ambiguous</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>strptime](strptime)</strong>({<span class="nobr"><strong>required</strong> [DataType] dtype</span>, <span class="nobr">[String] <i>format</i></span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">[bool] <i>exact</i></span>, <span class="nobr">[bool] <i>cache</i></span>, <span class="nobr">[Ambiguous] <i>ambiguous</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 </dt>
 <dd>
 
@@ -896,19 +896,19 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>head](/reference/extensions/exprext/head)</strong>({<span class="nobr">int <i>length</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>head](/reference/extensions/exprext/head)</strong>({<span class="nobr">[int] <i>length</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>tail](/reference/extensions/exprext/tail)</strong>({<span class="nobr">int <i>length</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>tail](/reference/extensions/exprext/tail)</strong>({<span class="nobr">[int] <i>length</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>alias](/reference/extensions/exprext/alias)</strong>(<span class="nobr">String name</span>);</span>
+<span class="dart-code">[Expr] [<strong>alias](/reference/extensions/exprext/alias)</strong>(<span class="nobr">[String] name</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>cast](/reference/extensions/exprext/cast)</strong>(<span class="nobr">[DataType] dataType</span>, {<span class="nobr">bool <i>strict</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>cast](/reference/extensions/exprext/cast)</strong>(<span class="nobr">[DataType] dataType</span>, {<span class="nobr">[bool] <i>strict</i></span>});</span>
 </dt>
 <dd>
 
@@ -916,39 +916,39 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>equalMissing](/reference/extensions/exprext/equalmissing)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>equalMissing](/reference/extensions/exprext/equalmissing)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>notEqualMissing](/reference/extensions/exprext/notequalmissing)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>notEqualMissing](/reference/extensions/exprext/notequalmissing)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>exclude](/reference/extensions/exprext/exclude)</strong>(<span class="nobr">Iterable&lt;String&gt; columns</span>);</span>
+<span class="dart-code">[Expr] [<strong>exclude](/reference/extensions/exprext/exclude)</strong>(<span class="nobr">[Iterable]\<[String]> columns</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>filter](/reference/extensions/exprext/filter)</strong>({<span class="nobr"><strong>required</strong> Object? by</span>});</span>
+<span class="dart-code">[Expr] [<strong>filter](/reference/extensions/exprext/filter)</strong>({<span class="nobr"><strong>required</strong> [Object] by</span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>get](/reference/extensions/exprext/get)</strong>(<span class="nobr">Object? idx</span>);</span>
+<span class="dart-code">[Expr] [<strong>get](/reference/extensions/exprext/get)</strong>(<span class="nobr">[Object] idx</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>gather](/reference/extensions/exprext/gather)</strong>(<span class="nobr">Object? idx</span>);</span>
+<span class="dart-code">[Expr] [<strong>gather](/reference/extensions/exprext/gather)</strong>(<span class="nobr">[Object] idx</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>slice](/reference/extensions/exprext/slice)</strong>(<span class="nobr">int offset</span>, <span class="nobr">int length</span>);</span>
+<span class="dart-code">[Expr] [<strong>slice](/reference/extensions/exprext/slice)</strong>(<span class="nobr">[int] offset</span>, <span class="nobr">[int] length</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>sort](/reference/extensions/exprext/sort)</strong>({<span class="nobr">bool <i>descending</i></span>, <span class="nobr">bool <i>multithreaded</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">bool <i>nullsLast</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>sort](/reference/extensions/exprext/sort)</strong>({<span class="nobr">[bool] <i>descending</i></span>, <span class="nobr">[bool] <i>multithreaded</i></span>, <span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">[bool] <i>nullsLast</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>std](/reference/extensions/exprext/std)</strong>(<span class="nobr">int ddof</span>);</span>
+<span class="dart-code">[Expr] [<strong>std](/reference/extensions/exprext/std)</strong>(<span class="nobr">[int] ddof</span>);</span>
 </dt>
 <dd>
 
@@ -961,7 +961,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong><](/reference/extensions/exprext/op_lt)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong><](/reference/extensions/exprext/op_lt)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -969,7 +969,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong><=](/reference/extensions/exprext/op_le)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong><=](/reference/extensions/exprext/op_le)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -977,7 +977,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>](/reference/extensions/exprext/op_gt)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>](/reference/extensions/exprext/op_gt)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -985,7 +985,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>=](/reference/extensions/exprext/op_ge)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>=](/reference/extensions/exprext/op_ge)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -993,7 +993,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>+](/reference/extensions/exprext/op_add)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>+](/reference/extensions/exprext/op_add)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1001,7 +1001,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>-](/reference/extensions/exprext/op_sub)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>-](/reference/extensions/exprext/op_sub)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1009,7 +1009,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>*](/reference/extensions/exprext/op_mul)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>*](/reference/extensions/exprext/op_mul)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1017,7 +1017,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>/](/reference/extensions/exprext/op_div)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>/](/reference/extensions/exprext/op_div)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1025,7 +1025,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>~/](/reference/extensions/exprext/op_idiv)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>~/](/reference/extensions/exprext/op_idiv)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1033,7 +1033,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>%](/reference/extensions/exprext/op_mod)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>%](/reference/extensions/exprext/op_mod)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1041,7 +1041,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>&](/reference/extensions/exprext/op_and)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>&](/reference/extensions/exprext/op_and)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1049,7 +1049,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>|](/reference/extensions/exprext/op_or)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>|](/reference/extensions/exprext/op_or)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1057,7 +1057,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>^](/reference/extensions/exprext/op_xor)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>^](/reference/extensions/exprext/op_xor)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -1070,17 +1070,27 @@ description: |
 ## Inherited from `_$Expr`
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[DataType]: /reference/classes/datatype/
 [LiteralValue]: /reference/classes/literalvalue/
 [Operator]: /reference/enums/operator/
-[DataType]: /reference/classes/datatype/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
 [SortOptions]: /reference/classes/sortoptions/
 [AggExpr]: /reference/classes/aggexpr/
 [WindowType]: /reference/classes/windowtype/
+[Excluded]: /reference/classes/excluded/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
 [PExpr]: /reference/classes/pexpr/
+[double]: https://api.flutter.dev/flutter/dart-core/double-class.html
 [Int64List]: /reference/classes/int64list/
-[ClosedWindow?]: /reference/enums/closedwindow/
+[Duration]: https://api.flutter.dev/flutter/dart-core/Duration-class.html
+[Float64List]: https://api.flutter.dev/flutter/dart-typed_data/Float64List-class.html
+[ClosedWindow]: /reference/enums/closedwindow/
 [IsSorted]: /reference/enums/issorted/
-[TimeUnit?]: /reference/enums/timeunit/
+[TimeUnit]: /reference/enums/timeunit/
 [Ambiguous]: /reference/enums/ambiguous/
 [StrNamespace]: /reference/classes/strnamespace/
 [ListNamespace]: /reference/classes/listnamespace/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html
+[Iterable]: https://api.flutter.dev/flutter/dart-core/Iterable-class.html

@@ -4,7 +4,7 @@ description: |
    Extensions on [DateTime].
 ---
 *Extends*  
-<code>DateTime</code>
+<code>[DateTime]</code>
 
  Extensions on [DateTime].
 
@@ -21,5 +21,6 @@ description: |
 </dl>
 
 
+[DateTime]: https://api.flutter.dev/flutter/dart-core/DateTime-class.html
 [DataType]: /reference/classes/datatype/
 [Expr]: /reference/classes/expr/

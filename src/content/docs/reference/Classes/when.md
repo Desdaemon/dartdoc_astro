@@ -9,7 +9,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>When</strong>(<span class="nobr">Object? condition</span>, <span class="nobr">Object? then</span>);</span>
+<span class="dart-code"><strong>When</strong>(<span class="nobr">[Object] condition</span>, <span class="nobr">[Object] then</span>);</span>
 </dt>
 </dl>
 
@@ -25,15 +25,16 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[When] [<strong>when](when)</strong>(<span class="nobr">Object? condition</span>, {<span class="nobr"><strong>required</strong> Object? then</span>});</span>
+<span class="dart-code">[When] [<strong>when](when)</strong>(<span class="nobr">[Object] condition</span>, {<span class="nobr"><strong>required</strong> [Object] then</span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>otherwise](otherwise)</strong>(<span class="nobr">Object? otherwise</span>);</span>
+<span class="dart-code">[Expr] [<strong>otherwise](otherwise)</strong>(<span class="nobr">[Object] otherwise</span>);</span>
 </dt>
 </dl>
 
 
 
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html
 [Expr]: /reference/classes/expr/
 [When]: /reference/classes/when/

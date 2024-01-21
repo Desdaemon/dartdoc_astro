@@ -9,7 +9,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code"><strong>const factory NullValues.[allColumnsSingle](allcolumnssingle)</strong>(<span class="nobr">String field0</span>);</span>
+<span class="dart-code"><strong>const factory NullValues.[allColumnsSingle](allcolumnssingle)</strong>(<span class="nobr">[String] field0</span>);</span>
 </dt>
 <dd>
 
@@ -17,7 +17,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory NullValues.[allColumns](allcolumns)</strong>(<span class="nobr">List&lt;String&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory NullValues.[allColumns](allcolumns)</strong>(<span class="nobr">[List]\<[String]> field0</span>);</span>
 </dt>
 <dd>
 
@@ -25,7 +25,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code"><strong>const factory NullValues.[named](named)</strong>(<span class="nobr">List&lt;(String, String)&gt; field0</span>);</span>
+<span class="dart-code"><strong>const factory NullValues.[named](named)</strong>(<span class="nobr">[List]\<([String], [String])> field0</span>);</span>
 </dt>
 <dd>
 
@@ -41,7 +41,10 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">Object <strong>get [field0](/reference/mixins/_nullvalues/field0)</strong>;</span>
+<span class="dart-code">[Object] <strong>get [field0](/reference/mixins/_nullvalues/field0)</strong>;</span>
 </dt>
 </dl>
 
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

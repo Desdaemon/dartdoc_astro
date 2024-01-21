@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] stripPrefix</strong>(<span class="nobr">Object? prefix</span>);</span>
+<span class="dart-code"><strong>[Expr] stripPrefix</strong>(<span class="nobr">[Object] prefix</span>);</span>
 
 
 ### Implementation
@@ -13,3 +13,4 @@ Expr stripPrefix(Object? prefix) => expr.strStripPrefix(prefix: prefix.expr);
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

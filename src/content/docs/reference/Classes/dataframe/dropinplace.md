@@ -4,7 +4,7 @@ description: |
    Drops a column in-place and returns it.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] dropInPlace</strong>({<span class="nobr"><strong>required</strong> String column</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Series] dropInPlace</strong>({<span class="nobr"><strong>required</strong> [String] column</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Drops a column in-place and returns it.
 ### Implementation
@@ -18,3 +18,4 @@ sidebar: {hidden: true}
 ```
 
 [Series]: /reference/classes/series/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html

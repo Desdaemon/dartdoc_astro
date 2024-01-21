@@ -4,7 +4,7 @@ description: |
    Casts this series into one with the specified datatype.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] cast</strong>({<span class="nobr"><strong>required</strong> [DataType] dtype</span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Series] cast</strong>({<span class="nobr"><strong>required</strong> [DataType] dtype</span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Casts this series into one with the specified datatype.
 ### Implementation
@@ -20,3 +20,4 @@ sidebar: {hidden: true}
 
 [Series]: /reference/classes/series/
 [DataType]: /reference/classes/datatype/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

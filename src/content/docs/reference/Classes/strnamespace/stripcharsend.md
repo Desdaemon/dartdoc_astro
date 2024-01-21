@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] stripCharsEnd</strong>(<span class="nobr">Object? matches</span>);</span>
+<span class="dart-code"><strong>[Expr] stripCharsEnd</strong>(<span class="nobr">[Object] matches</span>);</span>
 
 
 ### Implementation
@@ -14,3 +14,4 @@ Expr stripCharsEnd(Object? matches) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

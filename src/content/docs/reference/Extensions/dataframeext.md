@@ -12,7 +12,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Series] [<strong>operator</strong> <strong>[]](op_get)</strong>(<span class="nobr">Object key</span>);</span>
+<span class="dart-code">[Series] [<strong>operator</strong> <strong>[]](op_get)</strong>(<span class="nobr">[Object] key</span>);</span>
 </dt>
 <dd>
 
@@ -23,3 +23,4 @@ description: |
 
 [DataFrame]: /reference/classes/dataframe/
 [Series]: /reference/classes/series/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html

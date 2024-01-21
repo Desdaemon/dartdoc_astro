@@ -4,7 +4,7 @@ description: |
    TODO: Docs for replace_all
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strReplaceAll</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">bool <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strReplaceAll</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr"><strong>required</strong> [Expr] val</span>, <span class="nobr">[bool] <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  TODO: Docs for replace_all
 ### Implementation
@@ -24,3 +24,4 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

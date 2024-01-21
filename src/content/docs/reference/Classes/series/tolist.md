@@ -4,7 +4,7 @@ description: |
    Returns an untyped list.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>List&lt;dynamic&gt; toList</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[List]\<dynamic> toList</strong>({<span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns an untyped list.
 ### Implementation
@@ -15,3 +15,4 @@ sidebar: {hidden: true}
       );
 ```
 
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

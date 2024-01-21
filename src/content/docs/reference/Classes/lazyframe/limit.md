@@ -4,7 +4,7 @@ description: |
    Limit this dataframe to the first [n] rows.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] limit</strong>({<span class="nobr"><strong>required</strong> int n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] limit</strong>({<span class="nobr"><strong>required</strong> [int] n</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Limit this dataframe to the first [n] rows.
 
@@ -22,3 +22,4 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

@@ -4,7 +4,7 @@ description: |
    TODO: Docs for concat
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strConcat</strong>({<span class="nobr"><strong>required</strong> String delimiter</span>, <span class="nobr">bool <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strConcat</strong>({<span class="nobr"><strong>required</strong> [String] delimiter</span>, <span class="nobr">[bool] <i>ignoreNulls</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  TODO: Docs for concat
 ### Implementation
@@ -20,3 +20,5 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

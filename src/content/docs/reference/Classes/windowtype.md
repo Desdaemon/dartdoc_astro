@@ -30,9 +30,10 @@ description: |
 </dt>
 <dt>
 
-<span class="dart-code">[$WindowTypeCopyWith&lt;WindowType&gt;] <strong>get [copyWith](/reference/mixins/_windowtype/copywith)</strong>;</span>
+<span class="dart-code">[$WindowTypeCopyWith]\<[WindowType]> <strong>get [copyWith](/reference/mixins/_windowtype/copywith)</strong>;</span>
 </dt>
 </dl>
 
 [WindowMapping]: /reference/enums/windowmapping/
-[$WindowTypeCopyWith&lt;WindowType&gt;]: /reference/classes/windowtypecopywith/
+[WindowType]: /reference/classes/windowtype/
+[$WindowTypeCopyWith]: /reference/classes/windowtypecopywith/

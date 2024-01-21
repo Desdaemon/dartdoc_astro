@@ -3,7 +3,7 @@ title: "columnNames"
 description: |
    Get the names of this dataframe's columns.
 ---
-<span class="dart-code"><strong>List&lt;String&gt; columnNames</strong>();</span>
+<span class="dart-code"><strong>[List]\<[String]> columnNames</strong>();</span>
 
  Get the names of this dataframe's columns.
 ### Implementation
@@ -14,3 +14,5 @@ description: |
       );
 ```
 
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html

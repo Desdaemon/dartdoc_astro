@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] sort</strong>({<span class="nobr"><strong>required</strong> String byColumn</span>, <span class="nobr">bool <i>descending</i></span>, <span class="nobr">bool <i>nullsLast</i></span>, <span class="nobr">bool <i>multithreaded</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] sort</strong>({<span class="nobr"><strong>required</strong> [String] byColumn</span>, <span class="nobr">[bool] <i>descending</i></span>, <span class="nobr">[bool] <i>nullsLast</i></span>, <span class="nobr">[bool] <i>multithreaded</i></span>, <span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -27,3 +27,5 @@ LazyFrame sort(
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

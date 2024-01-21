@@ -4,7 +4,7 @@ description: |
    TODO: Docs for count_matches
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strCountMatches</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr">bool <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strCountMatches</strong>({<span class="nobr"><strong>required</strong> [Expr] pat</span>, <span class="nobr">[bool] <i>literal</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  TODO: Docs for count_matches
 ### Implementation
@@ -20,3 +20,4 @@ sidebar: {hidden: true}
 ```
 
 [Expr]: /reference/classes/expr/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

@@ -4,7 +4,7 @@ description: |
    Attempt to [cast](https://docs.pola.rs/user-guide/expressions/casting) a column's [DataType] to a new one.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] cast</strong>(<span class="nobr">[DataType] dataType</span>, {<span class="nobr">bool <i>strict</i></span>});</span>
+<span class="dart-code"><strong>[Expr] cast</strong>(<span class="nobr">[DataType] dataType</span>, {<span class="nobr">[bool] <i>strict</i></span>});</span>
 
  Attempt to [cast](https://docs.pola.rs/user-guide/expressions/casting) a column's [DataType] to a new one.
 
@@ -28,3 +28,4 @@ sidebar: {hidden: true}
 
 [Expr]: /reference/classes/expr/
 [DataType]: /reference/classes/datatype/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

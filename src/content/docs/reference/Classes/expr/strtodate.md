@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] strToDate</strong>({<span class="nobr">String? <i>format</i></span>, <span class="nobr">bool <i>strict</i></span>, <span class="nobr">bool <i>exact</i></span>, <span class="nobr">bool <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] strToDate</strong>({<span class="nobr">[String] <i>format</i></span>, <span class="nobr">[bool] <i>strict</i></span>, <span class="nobr">[bool] <i>exact</i></span>, <span class="nobr">[bool] <i>cache</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -25,3 +25,5 @@ Expr strToDate(
 ```
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

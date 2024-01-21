@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] alias</strong>(<span class="nobr">String name</span>);</span>
+<span class="dart-code"><strong>[Expr] alias</strong>(<span class="nobr">[String] name</span>);</span>
 
 
 ### Implementation
@@ -13,3 +13,4 @@ Expr alias(String name) => Expr.alias(this, name);
 ```
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html

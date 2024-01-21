@@ -9,13 +9,6 @@ class Renderer {
 
   Future<void> createListing(CompilationUnitElement unit) async {
     print('Library ${unit.getExtendedDisplayName(unit.name ?? '<unnamed>')}:');
-    // unit.topLevelVariables;
-    // unit.accessors;
-    // unit.functions;
-    // unit.enums;
-    // unit.classes;
-    // unit.mixins;
-    // unit.extensions;
   }
 
   Future<void> createTopLevelAccessors(
@@ -23,7 +16,7 @@ class Renderer {
     if (accessors.isEmpty) return;
     print('  Accessors:');
     for (final accessor in accessors) {
-      print('  - $accessor;');
+      if (accessor.variable.isSynthetic) print('  - $accessor;');
     }
   }
 
@@ -142,11 +135,10 @@ class Renderer {
   }
 
   Future<void> createMixins(List<MixinElement> mixins) async {
-    if (mixins.isEmpty) return;
-    print('  Mixins:');
-    for (final mixin in mixins) {
-      print('  - $mixin');
-    }
+    await Future.wait([
+      for (final mixin in mixins)
+        _createInstanced(mixin, templateName: 'mixin.md.jinja2')
+    ]);
   }
 
   Future<void> createExtensions(List<ExtensionElement> extensions) async {
@@ -341,6 +333,10 @@ String? _describeElementType(Element? obj, {bool throwIfAbsent = false}) {
 
 String _linkElement(Element? elm) {
   if (elm != null) {
+    if (elm.library!.name.startsWith('dart.')) {
+      final library = elm.library!.name.replaceAll('.', '-');
+      return 'https://api.flutter.dev/flutter/$library/${elm.name}-class.html';
+    }
     if (_describeElementType(elm) case final descriptor?) {
       return '/reference/${descriptor.toLowerCase()}/${_slug(elm.name)}/';
     }
@@ -352,15 +348,27 @@ class ReferenceCollector {
   final Map<String, String> references = {};
 
   String link(DartType ty) {
-    final key = htmlEscape.convert(ty.getDisplayString(withNullability: true));
-    if (ty.element?.library?.name.startsWith('dart.') ?? true) {
-      return key;
-    }
-    final link = references.putIfAbsent(key, () => _linkElement(ty.element));
-    if (link != '#') {
-      return '[$key]';
+    // final element = ty.element! as TypeParameterizedElement;
+    if (ty case ParameterizedType ty) {
+      final typeArgs =
+          ty.typeArguments.map((typeArg) => this.link(typeArg)).join(', ');
+      final key = ty.element!.name!;
+      final link = references.putIfAbsent(key, () => _linkElement(ty.element));
+      final display = link == '#' ? key : '[$key]';
+      final joined = typeArgs.isNotEmpty ? '$display\\<$typeArgs>' : display;
+      return joined;
+    } else if (ty case RecordType ty) {
+      final fields =
+          ty.positionalFields.map((field) => link(field.type)).join(', ');
+      final namedFields = ty.namedFields.map((field) {
+        final linked = link(field.type);
+        return '$linked ${field.name}';
+      }).join(', ');
+      final joined =
+          [fields, if (namedFields.isNotEmpty) '{$namedFields}'].join(', ');
+      return '($joined)';
     } else {
-      return ty.toString();
+      return ty.getDisplayString(withNullability: true);
     }
   }
 

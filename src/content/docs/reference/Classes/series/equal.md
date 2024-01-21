@@ -4,7 +4,7 @@ description: |
    Returns whether this series is identical to [other].
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>bool equal</strong>({<span class="nobr"><strong>required</strong> [Series] other</span>, <span class="nobr">bool <i>ignoreNull</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[bool] equal</strong>({<span class="nobr"><strong>required</strong> [Series] other</span>, <span class="nobr">[bool] <i>ignoreNull</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns whether this series is identical to [other].
 
@@ -22,4 +22,5 @@ sidebar: {hidden: true}
       );
 ```
 
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
 [Series]: /reference/classes/series/

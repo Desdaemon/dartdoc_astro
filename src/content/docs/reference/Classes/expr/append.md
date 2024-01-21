@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] append</strong>({<span class="nobr"><strong>required</strong> [Expr] other</span>, <span class="nobr">bool <i>upcast</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Expr] append</strong>({<span class="nobr"><strong>required</strong> [Expr] other</span>, <span class="nobr">[bool] <i>upcast</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
 
 ### Implementation
@@ -18,3 +18,4 @@ Expr append({required Expr other, bool upcast = true, dynamic hint}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

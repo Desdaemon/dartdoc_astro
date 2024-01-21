@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] head</strong>({<span class="nobr">int <i>length</i></span>});</span>
+<span class="dart-code"><strong>[Expr] head</strong>({<span class="nobr">[int] <i>length</i></span>});</span>
 
 
 ### Implementation
@@ -16,3 +16,4 @@ Expr head({int length = 10}) => Expr.slice(
 ```
 
 [Expr]: /reference/classes/expr/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

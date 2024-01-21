@@ -4,7 +4,7 @@ description: |
    Extensions on [String].
 ---
 *Extends*  
-<code>String</code>
+<code>[String]</code>
 
  Extensions on [String].
 
@@ -21,5 +21,6 @@ description: |
 </dl>
 
 
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [Expr]: /reference/classes/expr/
 [DataType]: /reference/classes/datatype/

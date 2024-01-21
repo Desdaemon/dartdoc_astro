@@ -3,7 +3,7 @@ title: "series"
 description: |
 
 ---
-<span class="dart-code"><strong>[Series] series\<T></strong>(<span class="nobr">List&lt;T&gt; data</span>, {<span class="nobr">String <i>name</i></span>, <span class="nobr">[DataType] <i>dtype</i></span>});</span>
+<span class="dart-code"><strong>[Series] series\<T></strong>(<span class="nobr">[List]\<T> data</span>, {<span class="nobr">[String] <i>name</i></span>, <span class="nobr">[DataType] <i>dtype</i></span>});</span>
 
 
 ### Implementation
@@ -17,4 +17,6 @@ Series series<T>(
 ```
 
 [Series]: /reference/classes/series/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [DataType]: /reference/classes/datatype/

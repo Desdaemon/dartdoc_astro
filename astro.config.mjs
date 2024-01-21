@@ -27,6 +27,10 @@ export default defineConfig({
             {
               label: "Usage",
               link: "/guides/usage/",
+            },
+            {
+              label: "Contributing",
+              link: "/guides/contributing/"
             }
           ],
         },

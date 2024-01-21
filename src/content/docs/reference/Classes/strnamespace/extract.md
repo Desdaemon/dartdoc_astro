@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] extract</strong>(<span class="nobr">String pat</span>, {<span class="nobr"><strong>required</strong> int groupIndex</span>});</span>
+<span class="dart-code"><strong>[Expr] extract</strong>(<span class="nobr">[String] pat</span>, {<span class="nobr"><strong>required</strong> [int] groupIndex</span>});</span>
 
 
 ### Implementation
@@ -14,3 +14,5 @@ Expr extract(String pat, {required int groupIndex}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

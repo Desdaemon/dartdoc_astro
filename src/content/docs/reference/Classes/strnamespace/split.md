@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] split</strong>({<span class="nobr"><strong>required</strong> Object? by</span>, <span class="nobr">bool <i>inclusive</i></span>});</span>
+<span class="dart-code"><strong>[Expr] split</strong>({<span class="nobr"><strong>required</strong> [Object] by</span>, <span class="nobr">[bool] <i>inclusive</i></span>});</span>
 
 
 ### Implementation
@@ -17,3 +17,5 @@ Expr split({
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

@@ -4,7 +4,7 @@ description: |
    Returns the unique values of this series.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Series] unique</strong>({<span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Series] unique</strong>({<span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Returns the unique values of this series.
 
@@ -22,3 +22,4 @@ sidebar: {hidden: true}
 ```
 
 [Series]: /reference/classes/series/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

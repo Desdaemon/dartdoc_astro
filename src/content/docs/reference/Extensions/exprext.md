@@ -64,19 +64,19 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>head](head)</strong>({<span class="nobr">int <i>length</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>head](head)</strong>({<span class="nobr">[int] <i>length</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>tail](tail)</strong>({<span class="nobr">int <i>length</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>tail](tail)</strong>({<span class="nobr">[int] <i>length</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>alias](alias)</strong>(<span class="nobr">String name</span>);</span>
+<span class="dart-code">[Expr] [<strong>alias](alias)</strong>(<span class="nobr">[String] name</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>cast](cast)</strong>(<span class="nobr">[DataType] dataType</span>, {<span class="nobr">bool <i>strict</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>cast](cast)</strong>(<span class="nobr">[DataType] dataType</span>, {<span class="nobr">[bool] <i>strict</i></span>});</span>
 </dt>
 <dd>
 
@@ -84,39 +84,39 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>equalMissing](equalmissing)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>equalMissing](equalmissing)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>notEqualMissing](notequalmissing)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>notEqualMissing](notequalmissing)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>exclude](exclude)</strong>(<span class="nobr">Iterable&lt;String&gt; columns</span>);</span>
+<span class="dart-code">[Expr] [<strong>exclude](exclude)</strong>(<span class="nobr">[Iterable]\<[String]> columns</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>filter](filter)</strong>({<span class="nobr"><strong>required</strong> Object? by</span>});</span>
+<span class="dart-code">[Expr] [<strong>filter](filter)</strong>({<span class="nobr"><strong>required</strong> [Object] by</span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>get](get)</strong>(<span class="nobr">Object? idx</span>);</span>
+<span class="dart-code">[Expr] [<strong>get](get)</strong>(<span class="nobr">[Object] idx</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>gather](gather)</strong>(<span class="nobr">Object? idx</span>);</span>
+<span class="dart-code">[Expr] [<strong>gather](gather)</strong>(<span class="nobr">[Object] idx</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>slice](slice)</strong>(<span class="nobr">int offset</span>, <span class="nobr">int length</span>);</span>
+<span class="dart-code">[Expr] [<strong>slice](slice)</strong>(<span class="nobr">[int] offset</span>, <span class="nobr">[int] length</span>);</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>sort](sort)</strong>({<span class="nobr">bool <i>descending</i></span>, <span class="nobr">bool <i>multithreaded</i></span>, <span class="nobr">bool <i>maintainOrder</i></span>, <span class="nobr">bool <i>nullsLast</i></span>});</span>
+<span class="dart-code">[Expr] [<strong>sort](sort)</strong>({<span class="nobr">[bool] <i>descending</i></span>, <span class="nobr">[bool] <i>multithreaded</i></span>, <span class="nobr">[bool] <i>maintainOrder</i></span>, <span class="nobr">[bool] <i>nullsLast</i></span>});</span>
 </dt>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>std](std)</strong>(<span class="nobr">int ddof</span>);</span>
+<span class="dart-code">[Expr] [<strong>std](std)</strong>(<span class="nobr">[int] ddof</span>);</span>
 </dt>
 <dd>
 
@@ -129,7 +129,7 @@ description: |
 <dl>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong><](op_lt)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong><](op_lt)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -137,7 +137,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong><=](op_le)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong><=](op_le)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -145,7 +145,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>](op_gt)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>](op_gt)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -153,7 +153,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>=](op_ge)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>>=](op_ge)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -161,7 +161,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>+](op_add)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>+](op_add)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -169,7 +169,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>-](op_sub)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>-](op_sub)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -177,7 +177,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>*](op_mul)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>*](op_mul)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -185,7 +185,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>/](op_div)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>/](op_div)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -193,7 +193,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>~/](op_idiv)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>~/](op_idiv)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -201,7 +201,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>%](op_mod)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>%](op_mod)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -209,7 +209,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>&](op_and)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>&](op_and)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -217,7 +217,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>|](op_or)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>|](op_or)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -225,7 +225,7 @@ description: |
 </dd>
 <dt>
 
-<span class="dart-code">[Expr] [<strong>operator</strong> <strong>^](op_xor)</strong>(<span class="nobr">Object? other</span>);</span>
+<span class="dart-code">[Expr] [<strong>operator</strong> <strong>^](op_xor)</strong>(<span class="nobr">[Object] other</span>);</span>
 </dt>
 <dd>
 
@@ -238,4 +238,9 @@ description: |
 [Expr]: /reference/classes/expr/
 [StrNamespace]: /reference/classes/strnamespace/
 [ListNamespace]: /reference/classes/listnamespace/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
 [DataType]: /reference/classes/datatype/
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html
+[Iterable]: https://api.flutter.dev/flutter/dart-core/Iterable-class.html

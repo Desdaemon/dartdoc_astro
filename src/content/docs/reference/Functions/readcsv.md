@@ -3,7 +3,7 @@ title: "readCsv"
 description: |
    Reads a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file into a [DataFrame].
 ---
-<span class="dart-code"><strong>Future&lt;DataFrame&gt; readCsv</strong>({<span class="nobr"><strong>required</strong> String path</span>, <span class="nobr">List&lt;DataType&gt;? <i>dtypesSlice</i></span>, <span class="nobr">bool? <i>hasHeader</i></span>, <span class="nobr">List&lt;String&gt;? <i>columns</i></span>, <span class="nobr">String? <i>commentChar</i></span>, <span class="nobr">String? <i>eolChar</i></span>, <span class="nobr">int? <i>chunkSize</i></span>, <span class="nobr">int? <i>sampleSize</i></span>, <span class="nobr">[RowCount?] <i>rowCount</i></span>, <span class="nobr">[CsvEncoding?] <i>encoding</i></span>, <span class="nobr">int? <i>nRows</i></span>, <span class="nobr">int? <i>nThreads</i></span>, <span class="nobr">[NullValues?] <i>nullValues</i></span>, <span class="nobr">Uint32List? <i>projection</i></span>, <span class="nobr">String? <i>quoteChar</i></span>, <span class="nobr">int <i>skipRows</i></span>, <span class="nobr">int <i>skipRowsAfterHeader</i></span>, <span class="nobr">bool <i>ignoreErrors</i></span>, <span class="nobr">bool <i>rechunk</i></span>, <span class="nobr">bool <i>tryParseDates</i></span>, <span class="nobr">bool <i>lowMemory</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[Future]\<[DataFrame]> readCsv</strong>({<span class="nobr"><strong>required</strong> [String] path</span>, <span class="nobr">[List]\<[DataType]> <i>dtypesSlice</i></span>, <span class="nobr">[bool] <i>hasHeader</i></span>, <span class="nobr">[List]\<[String]> <i>columns</i></span>, <span class="nobr">[String] <i>commentChar</i></span>, <span class="nobr">[String] <i>eolChar</i></span>, <span class="nobr">[int] <i>chunkSize</i></span>, <span class="nobr">[int] <i>sampleSize</i></span>, <span class="nobr">[RowCount] <i>rowCount</i></span>, <span class="nobr">[CsvEncoding] <i>encoding</i></span>, <span class="nobr">[int] <i>nRows</i></span>, <span class="nobr">[int] <i>nThreads</i></span>, <span class="nobr">[NullValues] <i>nullValues</i></span>, <span class="nobr">[Uint32List] <i>projection</i></span>, <span class="nobr">[String] <i>quoteChar</i></span>, <span class="nobr">[int] <i>skipRows</i></span>, <span class="nobr">[int] <i>skipRowsAfterHeader</i></span>, <span class="nobr">[bool] <i>ignoreErrors</i></span>, <span class="nobr">[bool] <i>rechunk</i></span>, <span class="nobr">[bool] <i>tryParseDates</i></span>, <span class="nobr">[bool] <i>lowMemory</i></span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Reads a [.csv](https://en.wikipedia.org/wiki/Comma-separated_values) file into a [DataFrame].
 
@@ -85,6 +85,14 @@ Future<DataFrame> readCsv(
         hint: hint);
 ```
 
-[RowCount?]: /reference/classes/rowcount/
-[CsvEncoding?]: /reference/enums/csvencoding/
-[NullValues?]: /reference/classes/nullvalues/
+[DataFrame]: /reference/classes/dataframe/
+[Future]: https://api.flutter.dev/flutter/dart-async/Future-class.html
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[DataType]: /reference/classes/datatype/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html
+[RowCount]: /reference/classes/rowcount/
+[CsvEncoding]: /reference/enums/csvencoding/
+[NullValues]: /reference/classes/nullvalues/
+[Uint32List]: https://api.flutter.dev/flutter/dart-typed_data/Uint32List-class.html

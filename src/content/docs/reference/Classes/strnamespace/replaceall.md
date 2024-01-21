@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] replaceAll</strong>(<span class="nobr">Object? pat</span>, <span class="nobr">Object? val</span>, {<span class="nobr">bool <i>literal</i></span>});</span>
+<span class="dart-code"><strong>[Expr] replaceAll</strong>(<span class="nobr">[Object] pat</span>, <span class="nobr">[Object] val</span>, {<span class="nobr">[bool] <i>literal</i></span>});</span>
 
 
 ### Implementation
@@ -14,3 +14,5 @@ Expr replaceAll(Object? pat, Object? val, {bool literal = false}) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[Object]: https://api.flutter.dev/flutter/dart-core/Object-class.html
+[bool]: https://api.flutter.dev/flutter/dart-core/bool-class.html

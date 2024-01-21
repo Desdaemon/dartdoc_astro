@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] exclude</strong>(<span class="nobr">Iterable&lt;String&gt; columns</span>);</span>
+<span class="dart-code"><strong>[Expr] exclude</strong>(<span class="nobr">[Iterable]\<[String]> columns</span>);</span>
 
 
 ### Implementation
@@ -14,3 +14,5 @@ Expr exclude(Iterable<String> columns) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[String]: https://api.flutter.dev/flutter/dart-core/String-class.html
+[Iterable]: https://api.flutter.dev/flutter/dart-core/Iterable-class.html

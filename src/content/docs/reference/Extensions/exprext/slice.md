@@ -4,7 +4,7 @@ description: |
 
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[Expr] slice</strong>(<span class="nobr">int offset</span>, <span class="nobr">int length</span>);</span>
+<span class="dart-code"><strong>[Expr] slice</strong>(<span class="nobr">[int] offset</span>, <span class="nobr">[int] length</span>);</span>
 
 
 ### Implementation
@@ -14,3 +14,4 @@ Expr slice(int offset, int length) =>
 ```
 
 [Expr]: /reference/classes/expr/
+[int]: https://api.flutter.dev/flutter/dart-core/int-class.html

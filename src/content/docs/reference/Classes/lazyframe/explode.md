@@ -4,7 +4,7 @@ description: |
    Explode each column.
 sidebar: {hidden: true}
 ---
-<span class="dart-code"><strong>[LazyFrame] explode</strong>({<span class="nobr"><strong>required</strong> List&lt;Expr&gt; columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
+<span class="dart-code"><strong>[LazyFrame] explode</strong>({<span class="nobr"><strong>required</strong> [List]\<[Expr]> columns</span>, <span class="nobr">dynamic <i>hint</i></span>});</span>
 
  Explode each column.
 ### Implementation
@@ -18,3 +18,5 @@ sidebar: {hidden: true}
 ```
 
 [LazyFrame]: /reference/classes/lazyframe/
+[Expr]: /reference/classes/expr/
+[List]: https://api.flutter.dev/flutter/dart-core/List-class.html
